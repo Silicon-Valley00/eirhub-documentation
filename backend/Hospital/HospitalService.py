@@ -35,9 +35,20 @@ def createHospital():
                 return ("Connection Error: User not recorded : %s",e),400
             
             session.commit()
+            hospitalDetails = session.query(Hospital).filter(Hospital.hospital_code == hospital_code).first()
 
             return ({
-                    'msg': "New hospital created"
+                    'msg':{
+                        
+                        "hospital_name": hospitalDetails.hospital_name,
+                        "location": hospitalDetails.location,
+                        "hospital_specialities": hospitalDetails.hospital_specialities,
+                        "number_of_doctors": hospitalDetails.number_of_doctors,
+                        "hospital_code": hospitalDetails.hospital_code,
+                        "phone_number": hospitalDetails.phone_number
+
+
+                    }
 
                     ,
                     'status':True
@@ -45,8 +56,29 @@ def createHospital():
         else:
             return 'Error: Content-Type Error',400
 
-# def deleteHospital(){
+@hospital_route.route("/hospital/<id>",methods = ["DELETE"])
+def deletePrescription(id):
+    from app import session
+    try:
+        hospital = session.query(Hospital).get(id)
+        session.delete(hospital)
+        session.commit()
+        
+        return({
+            "msg": {
+                "hospital_name": hospital.hospital_name,
+                "location": hospital.location,
+                "hospital_specialities": hospital.hospital_specialities,
+                "number_of_doctors": hospital.number_of_doctors,
+                "hospital_code": hospital.hospital_code,
+                "phone_number": hospital.phone_number
+            },
+            "status": True
+            
+        }),200
+        
+    except Exception as e:
+        return ("Error: Could not delete hospital: %s",e),400
 
-# }
 
 
