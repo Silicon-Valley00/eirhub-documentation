@@ -5,8 +5,8 @@ from Hospital.HospitalModel import Hospital
 
 hospital_route = Blueprint("hospital_route",__name__)
 
-# Will move signup into a service function later. Currently cleaning
-#Hospital Sign Up
+
+#Hospital Creation
 @hospital_route.route("/hospital",methods = ['POST'])
 def createHospital():
     from app import session
@@ -58,6 +58,8 @@ def createHospital():
         else:
             return 'Error: Content-Type Error',400
 
+
+#delete hospital by id
 @hospital_route.route("/deletehospital/<id>",methods = ["DELETE"])
 def deletePrescription(id):
     from app import session
@@ -83,6 +85,8 @@ def deletePrescription(id):
     except Exception as e:
         return ("Error: Could not delete hospital: %s",e),400
 
+
+# update hospital by id
 @hospital_route.route("/updatehospital/<id>",methods = ["PUT"])
 def updateHospitalById(id):
     from app import session
@@ -123,7 +127,7 @@ def updateHospitalById(id):
             'msg': ("Connection Error: User not updated : %s",e)
         }),400
 
-
+#get all hospitals
 @hospital_route.route("/getallhospital",methods = ['GET'])
 def getHospitals():
     from app import session 
@@ -148,3 +152,26 @@ def getHospitals():
         }),200
     except Exception as e:
         return("Connection Error: %s",e),400
+
+
+
+#get the hospital based on id
+@hospital_route.route('/hospital/<id>',methods = ['GET'])
+def getHositalById(id):
+    from app import session
+    try:#query for the data and display it if it exists
+        hospital =  session.query(Hospital).get(id)
+        return ({
+            'msg': {
+                    "id": hospital.idHospital,
+                    "location" : hospital.location,
+                    "hospital_name" : hospital.hospital_name,
+                    "hospital_specialities" : hospital.hospital_specialities,
+                    "number_of_doctors" : hospital.number_of_doctors,
+                    "hospital_code" : hospital.hospital_code,
+                    "phone_number" : hospital.phone_number
+            },
+            "status": True
+            }),200
+    except Exception as e:#display error code if data doesn't exist
+        return(f"Error : Hospital does not exist :{e}"),400
