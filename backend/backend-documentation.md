@@ -20,7 +20,7 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
          
 		- 
 
-[HealthDetails](#HealthDetails )  
+[HealthDetails](#HealthDetails )    
 [Doctor](#Doctor )           
 [Guardian](#Guardian-Person )               
 [Patient](#Patient )           
@@ -699,6 +699,57 @@ RESPONSE:
         "status": true
     }
     ```
+
+- **Get All Health Details**    
+    GET: /healthdetails
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    {
+    "msg": [
+        {
+            "blood_group": "A",
+            "blood_pressure": 56.0,
+            "blood_sugar": "23",
+            "bmi": 43.0,
+            "height": 1.79,
+            "last_visit": "Thu, 12 Jan 2023 00:00:00 GMT",
+            "patient_id": 31,
+            "pulse": 79.0,
+            "respiratory_rate": "75",
+            "weight": 25.0
+        }
+    ],
+    "status": true
+        }
+    ```
+- **Delete Healh Details On ID**
+    DELETE: /healthdetails/`idHealthDetails`  
+
+    BODY PARAMS: None   
+
+    RESPONSE:
+    ```
+    {
+    "msg": {
+        "blood_group": "A",
+        "blood_pressure": 56.0,
+        "blood_sugar": "23",
+        "bmi": 43.0,
+        "height": 1.8,
+        "last_visit": "Thu, 12 Jan 2023 00:00:00 GMT",
+        "patient_id": 30,
+        "pulse": 79.0,
+        "respiratory_rate": "75",
+        "weight": 33.0
+    }
+    }
+    ```
+
+
+
 
 # Report
 
