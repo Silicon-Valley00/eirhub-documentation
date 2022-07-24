@@ -725,7 +725,7 @@ RESPONSE:
     "status": true
         }
     ```
-- **Delete Healh Details On ID**
+- **Delete Healh Details On ID**   
     DELETE: /healthdetails/`idHealthDetails`  
 
     BODY PARAMS: None   
