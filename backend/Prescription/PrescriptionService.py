@@ -1,13 +1,13 @@
-from email.errors import InvalidMultipartContentTransferEncodingDefect
-from multiprocessing import synchronize
-from operator import methodcaller
-from subprocess import IDLE_PRIORITY_CLASS
+from hashlib import new
 from flask import Blueprint,request,jsonify
+from flask_cors import CORS
 from Prescription.PrescriptionModel import Prescription 
 from flask_sqlalchemy import SQLAlchemy
 import json
 
+
 prescription_route = Blueprint("prescription_route",__name__)
+CORS(prescription_route)
 
 
 @prescription_route.route('/prescription/<id>',methods = ['GET'])
@@ -32,7 +32,7 @@ def getPrescriptionById(id):
         return(f"Error : Prescription does not exist :{e}"),400
     
 #get all prescriptions and api 
-@prescription_route.route("/getallprescription",methods = ['GET'])
+@prescription_route.route("/prescription",methods = ['GET'])
 def getPrescriptions():
     from app import session 
     try:
@@ -58,71 +58,62 @@ def getPrescriptions():
         return("Connection Error: %s",e),400
     
 
-@prescription_route.route("/createprescription",methods = ["POST"])
+@prescription_route.route("/prescription",methods = ["POST"])
 def createPrescription():
     from app import session
+    
     content_type = request.headers.get('Content-Type')
-    if content_type == 'application/json':#check if content is in json format
+    if (content_type == 'application/json' and request.method == 'POST'):#check if content is in json format
         req = request.json
-        
         drug_name = req["drug_name"]
         start_date = req["start_date"]
-        end_date = req['end_date']
-        idPatient = req['idPatient']
+        end_date = req["end_date"]
+        idPatient = req["idPatient"]
         last_taken_date = req["last_taken_date"]
         dosage = req["dosage"]
         time_of_administration = req["time_of_administration"]
             #verify that prescription doesn't already exist
-        prescriptionExists = session.query(Prescription).filter(Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient,Prescription.time_of_administration == time_of_administration).first()
-            
-        if(prescriptionExists):
-            return ({
-                'status': False,
-                'msg':"Prescription already exists. Enter another"
-            }),200
-
-            #create prescription for patient if it doesn't exist
-        drug_name = req["drug_name"]
-        dosage = req["dosage"]
-        time_of_administration  = str(req["time_of_administration"])
-        start_date  = str(req["start_date"])
-        end_date = str(req["end_date"])
-        last_taken_date  = str(req["last_taken_date"])
-        idPatient = req["idPatient"]
+        prescriptionExists = session.query(Prescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient).first()
         
-      
-            
-            
-        new_prescription = Prescription(drug_name,dosage,time_of_administration,start_date,end_date,last_taken_date,idPatient)
-            
-        try:#add prescription to the database
-            session.add(new_prescription)
+        if (prescriptionExists):
+            return ({
+                "status": False,
+                "msg":"Prescription already exists for this patient. Enter another"
+            }),200
+        #create prescription if it doesn't exist
+        newPrescription = Prescription(drug_name,dosage,time_of_administration,start_date,end_date,last_taken_date,idPatient)
+        #return jsonify(newPrescription.drug_name)
+        try:# addd it to the database
+            session.add(newPrescription)
             session.commit()
-            idPrescription = session.query(Prescription.idPrescription).filter(Prescription.drug_name == req['drug_name'],Prescription.start_date == str(req['start_date']),Prescription.end_date == str(req['end_date']),Prescription.idPatient == req['idPatient']).first()
-            return_prescription = session.query(Prescription).get(idPrescription)
-            session.commit()
-            return ({#display message to prove that it was added successfully
-                    "msg": {
-                        "id": return_prescription.idPrescription,
-                        "drug_name":return_prescription.drug_name,
-                        "dosage":return_prescription.dosage,
-                        "time_of_administration":str(return_prescription.time_of_administration),#made str because object type of date isn't json serializable
-                        "start_date":str(return_prescription.start_date),
-                        "end_date":str(return_prescription.end_date),
-                        "last_taken_date":str(return_prescription.last_taken_date),
-                        "idPatient":return_prescription.idPatient
-                    },
-                    "status": True
-                    }),200
         except Exception as e:
-            return ("Error: Prescription not recorded : %s",e),400
+            return ('Error: %s',e),400
+        prescription_id = session.query(Prescription.idPrescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient)
+        # session.commit()
+        prescription_info = session.query(Prescription).get(prescription_id)
+        session.commit()
+        return({#return it as proof that it was indeed added to the database
+                'status': True,
+                'msg':{
+                    'idPrescrition':prescription_info.idPrescrition,
+                    'drug_name': prescription_info.drug_name,
+                    'start_date': prescription_info.start_date,
+                    'end_date': prescription_info.end_date,
+                    'idPatient':prescription_info.idPatient,
+                    'last_taken_date': prescription_info.last_taken_date,
+                    'dosage': prescription_info.dosage,
+                    'time_of_administration':prescription_info.time_of_administration
+                    
+                    }
+                }),200
+#look for the particular id that it was assigned to 
     else:
-        return 'Error: Content-Type Error',400
-
+        return ('Error: Content-Type Error'),400
+    
 
 
 #update prescription by prescription id 
-@prescription_route.route("/updateprescription/<id>",methods = ["PUT"])
+@prescription_route.route("/prescription/<id>",methods = ["PUT"])
 def updatePrescriptionById(id):
     from app import session
     req = request.json 
@@ -162,7 +153,7 @@ def updatePrescriptionById(id):
         }),400
 
 #delete prescriptions api
-@prescription_route.route("/deleteprescription/<id>",methods = ["DELETE"])
+@prescription_route.route("/prescription/<id>",methods = ["DELETE"])
 def deletePrescription(id):
     from app import session
     try:
@@ -186,4 +177,4 @@ def deletePrescription(id):
         }),200
         
     except Exception as e:
-        return ("Error: Could not delete prescriptino: %s",e),400
+        return ("Error: Could not delete prescription: %s",e),400

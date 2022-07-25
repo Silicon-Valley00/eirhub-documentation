@@ -20,13 +20,18 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
          
 		- 
 
-
+[HealthDetails](#HealthDetails )    
 [Doctor](#Doctor )           
 [Guardian](#Guardian-Person )             
 [Patient](#Patient )
 [Prescription](#Prescription) 
 [HealthDetails](#HealthDetails)
 [Hospital](#Hospital)
+[Guardian](#Guardian-Person )               
+[Patient](#Patient )           
+[Prescription](#Prescription )      
+[Report](#Report)      
+  
 
 
 
@@ -36,7 +41,7 @@ API EndPoint Routes:
 
 # Prescription
 - **Get Prescription By ID**
-    GET: /prescription/prescription id 
+    GET: /prescription/`idPrescription`
 
     BODY PARAMS: None
 
@@ -53,67 +58,67 @@ API EndPoint Routes:
     },
     "status": true
     ```
--**Get All Prescriptions**
-     GET: /getallprescription 
+- **Get All Prescriptions**
+     GET: /prescription 
 
      BODY PARAMS: None
 
      RESPONSE:
      ```
+    {
+    "msg": [
         {
-        "msg": [
-            {
-                "dosage": "1/day",
-                "drug_name": "lepromax",
-                "end_date": "2023-01-31",
-                "id": 2,
-                "last_taken_date": "2023-01-12",
-                "start_date": "2022-12-31",
-                "time_of_administration": "23:59:40"
-            },
-            {
-                "dosage": "2/day",
-                "drug_name": "ziprofin ",
-                "end_date": "2023-01-31",
-                "id": 3,
-                "last_taken_date": "2023-01-12",
-                "start_date": "2022-12-31",
-                "time_of_administration": "23:59:40"
-            },
-            {
-                "dosage": "1/day",
-                "drug_name": "zipodex",
-                "end_date": "2023-01-31",
-                "id": 4,
-                "last_taken_date": "0000-00-00",
-                "start_date": "2022-12-31",
-                "time_of_administration": "23:59:40"
-            },
-            {
-                "dosage": "2/day",
-                "drug_name": "laravel",
-                "end_date": "2022-12-31",
-                "id": 6,
-                "last_taken_date": "2022-12-31",
-                "start_date": "2022-12-31",
-                "time_of_administration": "23:59:40"
-            },
-            {
-                "dosage": "2/day",
-                "drug_name": "laravelproxin",
-                "end_date": "2022-12-31",
-                "id": 7,
-                "last_taken_date": "2022-12-31",
-                "start_date": "2022-12-31",
-                "time_of_administration": "23:59:40"
-            }
-        ],
-        "status": true
+            "dosage": "1/day",
+            "drug_name": "lepromax",
+            "end_date": "2023-01-31",
+            "id": 2,
+            "last_taken_date": "2023-01-12",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        {
+            "dosage": "2/day",
+            "drug_name": "ziprofin ",
+            "end_date": "2023-01-31",
+            "id": 3,
+            "last_taken_date": "2023-01-12",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        {
+            "dosage": "1/day",
+            "drug_name": "zipodex",
+            "end_date": "2023-01-31",
+            "id": 4,
+            "last_taken_date": "0000-00-00",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        {
+            "dosage": "2/day",
+            "drug_name": "laravel",
+            "end_date": "2022-12-31",
+            "id": 6,
+            "last_taken_date": "2022-12-31",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        {
+            "dosage": "2/day",
+            "drug_name": "laravelproxin",
+            "end_date": "2022-12-31",
+            "id": 7,
+            "last_taken_date": "2022-12-31",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        }
+    ],
+    "status": true
     }
      ```
 
 - **Create A Prescription For A Patient**
-    POST : /createprescription
+    POST : /prescription
 
     BODY PARAMS: 
     ```
@@ -142,8 +147,8 @@ API EndPoint Routes:
     },
     "status": true
     ```
--**Update Prescription By Prescription ID**
-    PUT: /updateprescription/idPrescription
+- **Update Prescription By Prescription ID**
+    PUT: /prescription/`idPrescription`
 
     BODY PARAMS:
     ```
@@ -174,7 +179,7 @@ API EndPoint Routes:
     ```
 - **Delete Prescription by Prescription ID**
     
-    DELETE: /deleteprescription/idPrescription
+    DELETE: /prescription/`idPrescription`
 
     BODY PARAMS: None
 
@@ -199,14 +204,14 @@ API EndPoint Routes:
 # Doctor 
 - **Doctor Login**			
 
-	POST : /login		
+	POST : doctor/login		
 
 	BODY PARAMS: 	
 
 	```
 	{
-    "hospital_code":"OAa3456",
-    "license_number":"80034903"
+    "user_email":"baddest70@st.knust.edu.gh",
+    "user_password":"WhatTheF@ckThough54321"
     }
 	```
 
@@ -214,43 +219,39 @@ API EndPoint Routes:
 	```
 	{
     "msg": {
-        "date_of_birth": "https://img.com/G.O.A.T",
-        "doctor_id": 20,
-        "doctor_ratings": 3,
-        "doctor_specialties": "Gynaecology, Paediatric",
+        "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+        "email": "baddest70@st.knust.edu.gh",
         "first_name": "Rexford",
         "gender": "Male",
-        "hospital_code": "OAa3456",
-        "house_address": "House-4",
         "last_name": "Machu",
-        "license_number": "80034903",
-        "middle_name": "G.O.A.T",
-        "person_image": "https://img.com/G.O.A.T",
-        "user_email": "baddest69@st.knust.edu.gh"
+        "license_number": "8003490390",
+        "middle_name": "G.O.A.T.II"
     },
     "status": true
     }
 	```
 - **Doctor Registration**		
 
-	POST : /signup      
+	POST : doctor/signup      
 
     BODY PARAMS: 	
 
 	```
 	{
     "first_name": "Rexford",
-    "middle_name":"G.O.A.T",
+    "middle_name":"G.O.A.T.II",
     "last_name": "Machu",
-    "person_image":"https://img.com/G.O.A.T",
-    "user_email":"baddest69@st.knust.edu.gh",
+    "person_image":"https://img.com/G.O.A.T.II",
+    "user_email":"baddest70@st.knust.edu.gh",
+    "user_password":"WhatTheF@ckThough54321",
     "date_of_birth":"2009-12-01",
     "house_address": "House-4",
     "doctor_ratings":3,
-    "hospital_code":"OAa3456",
-    "license_number":"80034903",
-    "doctor_specialties":"Gynaecology, Paediatric",
+    "hospital_code":"OAa345609",
+    "license_number":"8003490390",
+    "doctor_specialties":"Gynaecology, Paediatric, General",
     "gender":"Male"
+
     }
 	```
 
@@ -483,14 +484,14 @@ RESPONSE:
 # Patient 
 - **Patient Login**:			
 
-	POST : /patientlogin		
+	POST : /patient/login		
 
 	BODY PARAMS: 	
 
 	```
 	{
-    "email":"baddest69@st.knust.edu.gh",
-    "password": "baddestGO@8"
+    "user_email":"baddest69@st.knust.edu.gh",
+    "user_password": "baddestGO@8"
     }
 	```
 
@@ -514,7 +515,7 @@ RESPONSE:
 	```
 - **Patient Registration**		
 
-	POST : /patientsignup      
+	POST : /patient/signup      
 
     BODY PARAMS: 	
 
@@ -524,8 +525,8 @@ RESPONSE:
     "middle_name":"Patient",
     "last_name": "Machu",
     "person_image":"https://img.com/G.O.A.T",
-    "email":"baddest69@st.knust.edu.gh",
-    "password": "baddestGO@8",
+    "user_email":"baddest69@st.knust.edu.gh",
+    "user_password": "baddestGO@8",
     "date_of_birth":"2009-12-01",
     "house_address": "House-4",
     "gender":"Male",
@@ -557,145 +558,194 @@ RESPONSE:
 	```          
 - **Get All Patients**
 
-GET : /patient
+    GET : /patient
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
-RESPONSE:
-```
-{
-    "msg": {
-        "email": "Lackman@gmail.com",
-        "first_name": "Terry",
-        "house_address": "12 molly street",
-        "id": 27,
-        "idDoctor": null,
-        "idGuardian": null,
-        "id_number": "57849003",
-        "last_name": "Lackman",
-        "middle_name": "Meo",
-        "nationality": "Ghanaian",
-        "person_image": "https:/myImage.com"
-    },
-    "status": true
-}
-```    
-**Get Patient by ID**
+    RESPONSE:
+    ```
+    {
+        "msg": {
+            "email": "Lackman@gmail.com",
+            "first_name": "Terry",
+            "house_address": "12 molly street",
+            "id": 27,
+            "idDoctor": null,
+            "idGuardian": null,
+            "id_number": "57849003",
+            "last_name": "Lackman",
+            "middle_name": "Meo",
+            "nationality": "Ghanaian",
+            "person_image": "https:/myImage.com"
+        },
+        "status": true
+    }
+    ```    
+- **Get Patient by ID**
 
-GET : /patient/`patientID`
+    GET : /patient/`patientID`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
-RESPONSE:
-```
-{
-    "msg": {
-        "email": "baddest69@st.knust.edu.gh",
-        "first_name": "Rexford",
-        "house_address": "House-4",
-        "id": 28,
-        "idDoctor": 20,
-        "idGuardian": 20,
-        "id_number": "GHA-08008238HJJ",
-        "last_name": "Machu",
-        "middle_name": "Patient",
-        "nationality": "Ghanaian",
-        "person_image": "https://img.com/G.O.A.T"
-    },
-    "status": true
-}
+    RESPONSE:
+    ```
+    {
+        "msg": {
+            "email": "baddest69@st.knust.edu.gh",
+            "first_name": "Rexford",
+            "house_address": "House-4",
+            "id": 28,
+            "idDoctor": 20,
+            "idGuardian": 20,
+            "id_number": "GHA-08008238HJJ",
+            "last_name": "Machu",
+            "middle_name": "Patient",
+            "nationality": "Ghanaian",
+            "person_image": "https://img.com/G.O.A.T"
+        },
+        "status": true
+    }
 
-```
-**Delete patient**
+    ```
+- **Delete patient**
 
-DELETE: /patient/`patientID`
+    DELETE: /patient/`patientID`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
-RESPONSE:
+    RESPONSE:
 
-```
-{
-    "msg": {
-        "email": "Jackman@gmail.com",
-        "first_name": "Jerry",
-        "house_address": "12 molly street",
-        "id": 24,
-        "idDoctor": null,
-        "idGuardian": null,
-        "id_number": "57849003",
-        "last_name": "Jackman",
-        "middle_name": "Leo",
-        "nationality": "Ghanaian",
-        "person_image": "https:/myImage.com"
-    },
-    "status": true
-}
-```
+    ```
+    {
+        "msg": {
+            "email": "Jackman@gmail.com",
+            "first_name": "Jerry",
+            "house_address": "12 molly street",
+            "id": 24,
+            "idDoctor": null,
+            "idGuardian": null,
+            "id_number": "57849003",
+            "last_name": "Jackman",
+            "middle_name": "Leo",
+            "nationality": "Ghanaian",
+            "person_image": "https:/myImage.com"
+        },
+        "status": true
+    }
+    ```
 
-**Update patient details by ID**
+- **Update patient details by ID**
 
-PUT: /patient/`patientID`
+    PUT: /patient/`patientID`
 
-BODY PARAMS:
+    BODY PARAMS:
 
-```
-{
-    "first_name": "Janine",
-    "middle_name":"Leta",
-    "last_name": "Mucha",
-    "person_image":"https://img.com/F.G.O.A.T",
-    "email":"Leta@st.knust.edu.gh",
-    "date_of_birth":"2007-12-03",
-    "house_address": "8 health street",
-    "gender":"female",
-    "phone_number" : "+233208936575",
-    "id_number": "GHA-08006328HJJ",
-    "nationality":"Ghanaian",
-    "doctor_id": 20,
-    "guardian_id": 20
-}
-```
-
-RESPONSE:
-```
-{
-    "msg": {
-        "email": "Leta@st.knust.edu.gh",
+    ```
+    {
         "first_name": "Janine",
-        "house_address": "8 health street",
-        "id": 27,
-        "idDoctor": 20,
-        "idGuardian": 20,
-        "id_number": "GHA-08006328HJJ",
+        "middle_name":"Leta",
         "last_name": "Mucha",
-        "middle_name": "Leta",
-        "nationality": "Ghanaian",
-        "person_image": "https://img.com/F.G.O.A.T"
-    },
-    "status": true
-}
-```
+        "person_image":"https://img.com/F.G.O.A.T",
+        "email":"Leta@st.knust.edu.gh",
+        "date_of_birth":"2007-12-03",
+        "house_address": "8 health street",
+        "gender":"female",
+        "phone_number" : "+233208936575",
+        "id_number": "GHA-08006328HJJ",
+        "nationality":"Ghanaian",
+        "doctor_id": 20,
+        "guardian_id": 20
+    }
+    ```
+
+    RESPONSE:
+    ```
+    {
+        "msg": {
+            "email": "Leta@st.knust.edu.gh",
+            "first_name": "Janine",
+            "house_address": "8 health street",
+            "id": 27,
+            "idDoctor": 20,
+            "idGuardian": 20,
+            "id_number": "GHA-08006328HJJ",
+            "last_name": "Mucha",
+            "middle_name": "Leta",
+            "nationality": "Ghanaian",
+            "person_image": "https://img.com/F.G.O.A.T"
+        },
+        "status": true
+    }
+    ```
 
 # HealthDetails
 
-**Get health details by patient ID**
+- **Get health details by patient ID**
 
-GET: /healthdetails/`patientID`
+    GET: /healthdetails/`patientID`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
-RESPONSE:
-```
-{
+    RESPONSE:
+    ```
+    {
+        "msg": {
+            "blood_group": "A",
+            "blood_pressure": 56.0,
+            "blood_sugar": "23",
+            "bmi": 45.0,
+            "height": 1.79,
+            "last_visit": "Sat, 09 Jul 2022 00:00:00 GMT",
+            "patient_id": 28,
+            "pulse": 79.0,
+            "respiratory_rate": "75",
+            "weight": 25.0
+        },
+        "status": true
+    }
+    ```
+
+- **Get All Health Details**    
+    GET: /healthdetails
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    {
+    "msg": [
+        {
+            "blood_group": "A",
+            "blood_pressure": 56.0,
+            "blood_sugar": "23",
+            "bmi": 43.0,
+            "height": 1.79,
+            "last_visit": "Thu, 12 Jan 2023 00:00:00 GMT",
+            "patient_id": 31,
+            "pulse": 79.0,
+            "respiratory_rate": "75",
+            "weight": 25.0
+        }
+    ],
+    "status": true
+        }
+    ```
+- **Delete Healh Details On ID**   
+    DELETE: /healthdetails/`idHealthDetails`  
+
+    BODY PARAMS: None   
+
+    RESPONSE:
+    ```
+    {
     "msg": {
         "blood_group": "A",
         "blood_pressure": 56.0,
         "blood_sugar": "23",
-        "bmi": 45.0,
-        "height": 1.79,
-        "last_visit": "Sat, 09 Jul 2022 00:00:00 GMT",
-        "patient_id": 28,
+        "bmi": 43.0,
+        "height": 1.8,
+        "last_visit": "Thu, 12 Jan 2023 00:00:00 GMT",
+        "patient_id": 30,
         "pulse": 79.0,
         "respiratory_rate": "75",
         "weight": 25.0
@@ -858,3 +908,39 @@ RESPONSE:
     "status": true
 }
 ```
+        "weight": 33.0
+    }
+    }
+    ```
+
+
+
+
+# Report
+
+- **Create report**
+
+    POST: /report
+
+    BODY PARAMS:
+    ```
+    {
+    "report_type":"Lab report",
+    "description":"Lab report ordered by Dr.Raymond Brown",
+    "idPatient": 31
+     }
+    ```
+
+    RESPONSE:
+    ```
+     {
+        "msg": {
+            "description": "Lab report ordered by Dr.Raymond Brown",
+            "idPatient": 31,
+            "idReport": 12,
+            "report_type": "Lab report"
+        },
+        "status": true
+    }
+    ```
+    

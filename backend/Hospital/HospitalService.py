@@ -1,12 +1,16 @@
 from unicodedata import name
 from flask import Blueprint,request
 from Hospital.HospitalModel import Hospital
+from flask_cors import CORS
 
 
 hospital_route = Blueprint("hospital_route",__name__)
 
 
 #Hospital Creation
+CORS(hospital_route)
+# Will move signup into a service function later. Currently cleaning
+#Hospital Sign Up
 @hospital_route.route("/hospital",methods = ['POST'])
 def createHospital():
     from app import session
