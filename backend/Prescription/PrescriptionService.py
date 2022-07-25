@@ -39,7 +39,7 @@ def getPrescriptions():
         prescriptions = session.query(Prescription).all()
         prescriptionInfo = []
         for prescription in prescriptions:
-            prescriptionInfo.append((
+            prescriptionInfo.append((# put all the prescriptions into the list prescriptionInfor
                 {
                     'id': prescription.idPrescription,
                     'drug_name':prescription.drug_name,
@@ -57,7 +57,7 @@ def getPrescriptions():
     except Exception as e:
         return("Connection Error: %s",e),400
     
-
+#works but there is still a problem with the return type 
 @prescription_route.route("/prescription",methods = ["POST"])
 def createPrescription():
     from app import session
@@ -80,33 +80,28 @@ def createPrescription():
                 "status": False,
                 "msg":"Prescription already exists for this patient. Enter another"
             }),200
-        #create prescription if it doesn't exist
+        #create prescription because it doesn't exist
         newPrescription = Prescription(drug_name,dosage,time_of_administration,start_date,end_date,last_taken_date,idPatient)
-        #return jsonify(newPrescription.drug_name)
         try:# addd it to the database
             session.add(newPrescription)
             session.commit()
         except Exception as e:
             return ('Error: %s',e),400
-        prescription_id = session.query(Prescription.idPrescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient)
-        # session.commit()
-        prescription_info = session.query(Prescription).get(prescription_id)
-        session.commit()
         return({#return it as proof that it was indeed added to the database
                 'status': True,
                 'msg':{
-                    'idPrescrition':prescription_info.idPrescrition,
-                    'drug_name': prescription_info.drug_name,
-                    'start_date': prescription_info.start_date,
-                    'end_date': prescription_info.end_date,
-                    'idPatient':prescription_info.idPatient,
-                    'last_taken_date': prescription_info.last_taken_date,
-                    'dosage': prescription_info.dosage,
-                    'time_of_administration':prescription_info.time_of_administration
+                    'idPrescrition':newPrescription.idPrescription,
+                    'drug_name': newPrescription.drug_name,
+                    'start_date': str(newPrescription.start_date),
+                    'end_date': str(newPrescription.end_date),
+                    'idPatient':newPrescription.idPatient,
+                    'last_taken_date': str(newPrescription.last_taken_date),
+                    'dosage': newPrescription.dosage,
+                    'time_of_administration':str(newPrescription.time_of_administration)
                     
                     }
                 }),200
-#look for the particular id that it was assigned to 
+
     else:
         return ('Error: Content-Type Error'),400
     
