@@ -23,7 +23,6 @@ def createHospital():
                 }),200
             hospital_name = req["hospital_name"]
             location = req["location"]
-            idHospital =req["idHospital"]
             hospital_specialities = req["hospital_specialities"]
             number_of_doctors = req["number_of_doctors"]
             hospital_code = req["hospital_code"]

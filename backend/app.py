@@ -80,16 +80,16 @@ def getPersonById(id):
 # This was Jerry's
 
 #Test Route for hospital model
-@app.route("/hospital",methods = ['GET']) 
-def hospitals():
-    lhopital = Hospital("KATH","Kumasi","Pediatrics,Osteopathy,Cardiology",1097,'hhfhffuu','+23323233223') 
-    session = Session()
-    session.add(lhopital)
-    session.commit()
-    session.close()
-    hospital = session.query(Hospital).all()
+# @app.route("/hospital",methods = ['GET']) 
+# def hospitals():
+#     lhopital = Hospital("KATH","Kumasi","Pediatrics,Osteopathy,Cardiology",1097,'hhfhffuu','+23323233223') 
+#     session = Session()
+#     session.add(lhopital)
+#     session.commit()
+#     session.close()
+#     hospital = session.query(Hospital).all()
 
-    return  (f'{hospital[1].location}')
+#     return  (f'{hospital[1].location}')
 
 #Test Route for hospital model
 @app.route("/patient",methods = ['GET']) 
