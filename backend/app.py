@@ -13,6 +13,9 @@ from Guardian.GuardianPersonService import guardian_route
 from Doctor.DoctorService import doctor_route
 from Prescription.PrescriptionService import prescription_route
 from HealthDetails.HealthDetailsService import health_details_route
+from Hospital.HospitalService import hospital_route
+# from Report.ReportService import reports_route
+
 from Report.ReportService import reports_route
 from HealthDetails.HealthDetailsModel import HealthDetails
 
@@ -33,6 +36,10 @@ app.register_blueprint(doctor_route)
 app.register_blueprint(prescription_route)
 app.register_blueprint(reports_route)
 app.register_blueprint(health_details_route)
+app.register_blueprint(hospital_route)
+# app.register_blueprint(reports_route)
+
+# Database Connection not needed right now. Commented out for now
 try:
     engine.connect()
     Base.metadata.create_all(engine)

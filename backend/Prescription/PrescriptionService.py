@@ -1,4 +1,4 @@
-from email.errors import InvalidMultipartContentTransferEncodingDefect
+from hashlib import new
 from flask import Blueprint,request,jsonify
 from flask_cors import CORS
 from Prescription.PrescriptionModel import Prescription 
@@ -58,54 +58,57 @@ def getPrescriptions():
         return("Connection Error: %s",e),400
     
 
-# @prescription_route.route("/prescription",methods = ["POST"])
-# def createPrescription():
-#     from app import session
+@prescription_route.route("/prescription",methods = ["POST"])
+def createPrescription():
+    from app import session
     
-#     content_type = request.headers.get('Content-Type')
-#     if (content_type == 'application/json'):#check if content is in json format
-#         req = request.json
-#         drug_name = req["drug_name"]
-#         start_date = req["start_date"]
-#         end_date = req["end_date"]
-#         idPatient = req["idPatient"]
-#         last_taken_date = req["last_taken_date"]
-#         dosage = req["dosage"]
-#         time_of_administration = req["time_of_administration"]
-#             #verify that prescription doesn't already exist
-#         prescriptionExists = session.query(Prescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient).first()
+    content_type = request.headers.get('Content-Type')
+    if (content_type == 'application/json' and request.method == 'POST'):#check if content is in json format
+        req = request.json
+        drug_name = req["drug_name"]
+        start_date = req["start_date"]
+        end_date = req["end_date"]
+        idPatient = req["idPatient"]
+        last_taken_date = req["last_taken_date"]
+        dosage = req["dosage"]
+        time_of_administration = req["time_of_administration"]
+            #verify that prescription doesn't already exist
+        prescriptionExists = session.query(Prescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient).first()
         
-#         if(prescriptionExists):
-#             return ({
-#                 "status": False,
-#                 "msg":"Prescription already exists for this patient. Enter another"
-#             }),200
-#         #create prescription if it doesn't exist
-#         newPrescription = Prescription(drug_name=drug_name,idPatient = idPatient,dosage=dosage,time_of_administration=time_of_administration,start_date=start_date,end_date=end_date,last_taken_date=last_taken_date)
-#         try:# addd it to the database
-#             session.add(newPrescription)
-#             session.commit()
-#             prescription_id = session.query(Prescription.idPrescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient)
-#             prescription_info = session.query(Prescription).get(prescription_id)
-#             return({#return it as proof that it was indeed added to the database
-#                 'status': True,
-#                 'msg':{
-#                     #'idPrescrition':prescription_info.idPrescrition,
-#                     'drug_name': prescription_info.drug_name,
-#                     'start_date': prescription_info.start_date,
-#                     'end_date': prescription_info.end_date,
-#                     'idPatient':prescription_info.idPatient,
-#                     'last_taken_date': prescription_info.last_taken_date,
-#                     'dosage': prescription_info.dosage,
-#                     'time_of_administration':prescription_info.time_of_administration
+        if (prescriptionExists):
+            return ({
+                "status": False,
+                "msg":"Prescription already exists for this patient. Enter another"
+            }),200
+        #create prescription if it doesn't exist
+        newPrescription = Prescription(drug_name,dosage,time_of_administration,start_date,end_date,last_taken_date,idPatient)
+        #return jsonify(newPrescription.drug_name)
+        try:# addd it to the database
+            session.add(newPrescription)
+            session.commit()
+        except Exception as e:
+            return ('Error: %s',e),400
+        prescription_id = session.query(Prescription.idPrescription).filter(Prescription.time_of_administration == time_of_administration,Prescription.dosage == dosage,Prescription.last_taken_date == last_taken_date,Prescription.drug_name ==drug_name,Prescription.start_date == start_date,Prescription.end_date == end_date,Prescription.idPatient == idPatient)
+        # session.commit()
+        prescription_info = session.query(Prescription).get(prescription_id)
+        session.commit()
+        return({#return it as proof that it was indeed added to the database
+                'status': True,
+                'msg':{
+                    'idPrescrition':prescription_info.idPrescrition,
+                    'drug_name': prescription_info.drug_name,
+                    'start_date': prescription_info.start_date,
+                    'end_date': prescription_info.end_date,
+                    'idPatient':prescription_info.idPatient,
+                    'last_taken_date': prescription_info.last_taken_date,
+                    'dosage': prescription_info.dosage,
+                    'time_of_administration':prescription_info.time_of_administration
                     
-#                 }
-#             }),200
-#         except Exception as e:
-#             return ('Error: %s',e),400
-#             # look for the particular id that it was assigned to 
-#     else:
-#         return ('Error: Content-Type Error'),400
+                    }
+                }),200
+#look for the particular id that it was assigned to 
+    else:
+        return ('Error: Content-Type Error'),400
     
 
 
