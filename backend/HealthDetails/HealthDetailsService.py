@@ -58,12 +58,19 @@ def updateHealthDetailsById(patientId):
              , synchronize_session = False
              )
         session.commit()
-        healthDetailsInfo = session.query(HealthDetails).get(int(patientId))
+        print('pass')
+        healthDetailsIn = session.query(HealthDetails).filter_by(patient_id = int(patientId)).first()
         healthDetailsInfo = {
-            'last_visit': str(healthDetailsInfo.last_visit),'blood_group': healthDetailsInfo.blood_group,'bmi': healthDetailsInfo.bmi,
-             'blood_pressure': healthDetailsInfo.blood_pressure,'respiratory_rate': healthDetailsInfo.respiratory_rate,
-             'pulse': healthDetailsInfo.pulse,'blood_sugar': healthDetailsInfo.blood_sugar, 'weight': healthDetailsInfo.weight, 'height' : healthDetailsInfo.height,
-             'idPatient':healthDetailsInfo.patient.id
+                    "patient_id": healthDetailsIn.patient_id,
+                    "last_visit": healthDetailsIn.last_visit,
+                    "blood_group": healthDetailsIn.blood_group,
+                    "bmi": healthDetailsIn.bmi,
+                    "blood_pressure": healthDetailsIn.blood_pressure,
+                    "respiratory_rate": healthDetailsIn.respiratory_rate,
+                    "pulse": healthDetailsIn.pulse,
+                    "blood_sugar":healthDetailsIn.blood_sugar,
+                    "weight": healthDetailsIn.weight,
+                    "height": healthDetailsIn.height
             }
         return ({
             'status': True,
