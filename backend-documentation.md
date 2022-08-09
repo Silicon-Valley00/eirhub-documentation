@@ -990,7 +990,7 @@ RESPONSE:
 
 - **Get All report**
 
-    POST: /reports
+    GET: /reports
 
     BODY PARAMS: None
 
