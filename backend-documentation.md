@@ -986,3 +986,35 @@ RESPONSE:
     
 
 
+
+
+- **Get All report**
+
+    POST: /reports
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    [
+	{
+		"msg": {
+			"description": "This report is for medication",
+			"idPatient": 30,
+			"idReport": 3,
+			"report_type": "Medication"
+		},
+		"status": true
+	},
+	{
+		"msg": {
+			"description": "This report is for medication",
+			"idPatient": 30,
+			"idReport": 4,
+			"report_type": "Medication"
+		},
+		"status": true
+	}
+    ]
+    ```
+    
