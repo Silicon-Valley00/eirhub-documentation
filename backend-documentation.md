@@ -1017,4 +1017,59 @@ RESPONSE:
 	}
     ]
     ```
+
+    **Get Report By ID**
+    GET: /report/`idReport`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    "msg": {
+        "description": "This report is for medication ",
+        "idPatient": 30,
+        "idReport": 3,
+        "report_type": "Medication"
+    },
+    "status": true
+    ```
+
+    - **Delete Report by Report ID**
+    
+    DELETE: /report/`idReport`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    "msg": {
+        "description": "This report is for medication ",
+        "idPateint": 30,
+        "idReport": 3,
+        "report_type": "Medication"
+    },
+    "status": true
+
+**Update Report By Report ID**
+    PUT: /report/`idReport`
+
+    BODY PARAMS:
+    ```
+	{
+        "description": "This report is for medication ",
+        "idPateint": 30,
+        "idReport": 3,
+        "report_type": "Medication"
+    }
+	```
+    RESPONSE:
+    ```
+    {
+    "msg": {
+       "description": "This report is for medication ",
+        "idPateint": 30,
+        "idReport": 3,
+        "report_type": "Medication"
+    },
+    "status": true
     
