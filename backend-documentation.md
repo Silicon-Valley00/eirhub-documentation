@@ -20,21 +20,13 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
          
 		- 
 
-[HealthDetails](#HealthDetails )
-
-[Doctor](#Doctor )		
-
-[Guardian](#Guardian-Person ) 		
-
-[Patient](#Patient )		
-
-[Prescription](#Prescription) 	
-
-[HealthDetails](#HealthDetails)		
-
-[Hospital](#Hospital)	
-
-[Report](#Report)      		
+[HealthDetails](#HealthDetails )  
+[Doctor](#Doctor )  
+[Guardian](#Guardian-Person )  
+[Patient](#Patient )  
+[Prescription](#Prescription )  
+[Hospital](#Hospital)  
+[Report](#Report)   		
   
 
 
@@ -45,22 +37,53 @@ API EndPoint Routes:
 
 # Prescription
 - **Get Prescription By ID**
-    GET: /prescription/`idPrescription`
+    GET: /prescription/`idPatient`
 
     BODY PARAMS: None
 
     RESPONSE:
     ```
-    "msg": {
-        "dosage": "1/day",
-        "drug_name": "lepromax",
-        "end_date": "2023-01-31",
-        "id": 2,
-        "last_taken_date": "2023-01-12",
+    {
+    "msg": [
+        {
+        "dosage": "1/x3",
+        "drug_name": "Ibuprofen",
+        "end_date": "2023-12-31",
+        "id": 12,
+        "last_taken_date": "2022-12-31",
+        "start_date": "2022-12-19",
+        "time_of_administration": "12:23:45"
+        },
+        {
+        "dosage": "1/x2",
+        "drug_name": "trimetazol",
+        "end_date": "2022-12-31",
+        "id": 27,
+        "last_taken_date": "2022-12-31",
         "start_date": "2022-12-31",
         "time_of_administration": "23:59:40"
-    },
+        },
+        {
+        "dosage": "1/x2",
+        "drug_name": "paracetamol",
+        "end_date": "2022-12-31",
+        "id": 28,
+        "last_taken_date": "2022-12-31",
+        "start_date": "2022-12-31",
+        "time_of_administration": "23:59:40"
+        },
+        {
+        "dosage": "1/x2",
+        "drug_name": "contanitpol",
+        "end_date": "2022-12-31",
+        "id": 29,
+        "last_taken_date": "2022-12-31",
+        "start_date": "2022-12-31",
+        "time_of_administration": "23:59:40"
+        }
+    ],
     "status": true
+    }
     ```
 - **Get All Prescriptions**
      GET: /prescription 
@@ -441,7 +464,29 @@ RESPONSE:
 ],
 "status": true
 }
-```     
+``` 
+- **Get Guardian Person By Id**
+
+GET: /guardian/`guardianId`
+
+BODY PARAMS:None
+
+RESPONSE: 
+```
+{
+    "msg": {
+        "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
+        "email": "guardianofgalaxy@gmail.com",
+        "first_name": "Redford ",
+        "gender": "Male",
+        "id_number": "GHA-009494-233",
+        "last_name": "Tahu",
+        "middle_name": "Guardian",
+        "phone_number": "0206436575"
+    },
+    "status": true
+}
+```    
 
 
 **Update Guardian Person By Id**		
