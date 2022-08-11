@@ -327,7 +327,7 @@ API EndPoint Routes:
     }
 	```    
 
-- **Update Doctor By Id Method**
+- **Update Doctor By Id**
 
     PUT : /updoctor/doctorId
 
@@ -408,14 +408,13 @@ POST : /guardian
 BODY PARAMS: 	
 ```
 {
-"first_name" : "Rexford ",
-"middle_name": "Guardian",
-"last_name" : "Machu",
-"person_image" : "https://img.com/7879",
-"user_email" : "guardianofgalaxy@gmail.com",
-"date_of_birth" : "2000-12-21",
-"house_address" : "House - 4",
-"phone_number" : "0206436575",
+"first_name" : "Agbo",
+"middle_name": "Turna",
+"last_name" : "Collins",
+"user_email" : "turna@gmail.com",
+"date_of_birth" : "1999-12-21",
+"house_address" : "12 molly street",
+"phone_number" : "0244578953",
 "id_number" : "GHA-009494-233",
 "gender" : "Male"
 }
@@ -424,18 +423,18 @@ BODY PARAMS:
 RESPONSE:
 ```
 {
-    'status': true,
-    'msg':{
-        "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
-        "first_name": "Rexford ",
+    "msg": {
+        "date_of_birth": "Tue, 21 Dec 1999 00:00:00 GMT",
+        "email": "turna@gmail.com",
+        "first_name": "Agbo",
         "gender": "Male",
+        "house_address": "12 molly street",
         "id_number": "GHA-009494-233",
-        "last_name": "Machu",
-        "middle_name": "Guardian",
-        "person_image": "https://img.com/7879",
-        "phone_number": "0206436575",
-        "user_email": "guardianofgalaxy@gmail.com"
-    }
+        "last_name": "Collins",
+        "middle_name": "Turna",
+        "phone_number": "0244578953"
+    },
+    "status": true
 }
 ```     
 
@@ -457,7 +456,6 @@ RESPONSE:
         "id_number": "GHA-009494-233",
         "last_name": "Machu",
         "middle_name": "Guardian",
-        "person_image": "https://img.com/7879",
         "phone_number": "0206436575",
         "user_email": "guardianofgalaxy@gmail.com"
     }
@@ -496,11 +494,10 @@ PUT : /guardian/`guardianId`
 BODY PARAMS: 	
 ```
 {
-    "first_name" : "Rexford ",
-    "middle_name": "Guardian",
-    "last_name" : "Machu",
-    "person_image" : "https://img.com/7879",
-    "user_email" : "guardianofthegalaxy@gmail.com",
+    "first_name" : "Maxford",
+    "middle_name": "Daug",
+    "last_name" : "Rechu",
+    "user_email" : "Daug@gmail.com",
     "date_of_birth" : "2000-12-21",
     "house_address" : "House - 6",
     "phone_number" : "0206436575",
@@ -514,15 +511,14 @@ RESPONSE:
 {
     "msg": {
         "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
-        "first_name": "Rexford ",
+        "first_name": "Maxford",
         "gender": "Male",
         "house_address": "House - 6",
         "id_number": "GHA-009494-233",
-        "last_name": "Machu",
-        "middle_name": "Guardian",
-        "person_image": "https://img.com/7879",
+        "last_name": "Rechu",
+        "middle_name": "Daug",
         "phone_number": "0206436575",
-        "user_email": "guardianofthegalaxy@gmail.com"
+        "user_email": "Daug@gmail.com"
     },
     "status": true
 }
@@ -549,7 +545,7 @@ RESPONSE:
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-        "doctor_id": 20,
+        "idDoctor": 20,
         "email": "baddest69@st.knust.edu.gh",
         "first_name": "Rexford",
         "gender": "Male",
@@ -570,18 +566,11 @@ RESPONSE:
 
 	```
 	{
-    "first_name": "Rexford",
-    "middle_name":"Patient",
-    "last_name": "Machu",
-    "person_image":"https://img.com/G.O.A.T",
-    "user_email":"baddest69@st.knust.edu.gh",
-    "user_password": "baddestGO@8",
+    "first_name": "Peter",
+    "last_name": "Gregory",
+    "user_email":"greg@st.knust.edu.gh",
+    "user_password": "gregy",
     "date_of_birth":"2009-12-01",
-    "house_address": "House-4",
-    "gender":"Male",
-    "phone_number" : "+233206436575",
-    "id_number": "GHA-08008238HJJ",
-    "nationality":"Ghanaian",
     "doctor_id": 20,
     "guardian_id": 20
     }
@@ -593,18 +582,19 @@ RESPONSE:
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
         "doctor_id": 20,
-        "email": "baddest69@st.knust.edu.gh",
-        "first_name": "Rexford",
-        "gender": "Male",
+        "first_name": "Peter",
+        "gender": null,
         "guardian_id": 20,
-        "id_number": "GHA-08008238HJJ",
-        "last_name": "Machu",
-        "middle_name": "Patient",
-        "phone_number": "+233206436575"
+        "id_number": null,
+        "last_name": "Gregory",
+        "middle_name": null,
+        "phone_number": null,
+        "user_email": "greg@st.knust.edu.gh"
     },
     "status": true
-    }
-	```          
+}
+	```   
+
 - **Get All Patients**
 
     GET : /patient
@@ -615,17 +605,20 @@ RESPONSE:
     ```
     {
         "msg": {
-            "email": "Lackman@gmail.com",
-            "first_name": "Terry",
-            "house_address": "12 molly street",
-            "id": 27,
-            "idDoctor": null,
-            "idGuardian": null,
-            "id_number": "57849003",
-            "last_name": "Lackman",
-            "middle_name": "Meo",
+            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+            "email": "molly@st.knust.edu.gh",
+            "first_name": "Molly",
+            "gender": "Male",
+            "house_address": "House-4",
+            "idDoctor": 20,
+            "idGuardian": 20,
+            "idPatient": 30,
+            "id_number": "GHA-00809238HJJ",
+            "last_name": "Malloy",
+            "middle_name": "Patient",
             "nationality": "Ghanaian",
-            "person_image": "https:/myImage.com"
+            "person_image": "https://img.com/G.O.A.T",
+            "phone_number": "+233206436575"
         },
         "status": true
     }
@@ -638,19 +631,22 @@ RESPONSE:
 
     RESPONSE:
     ```
-    {
+  {
         "msg": {
-            "email": "baddest69@st.knust.edu.gh",
-            "first_name": "Rexford",
+            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+            "email": "molly@st.knust.edu.gh",
+            "first_name": "Molly",
+            "gender": "Male",
             "house_address": "House-4",
-            "id": 28,
             "idDoctor": 20,
             "idGuardian": 20,
-            "id_number": "GHA-08008238HJJ",
-            "last_name": "Machu",
+            "idPatient": 30,
+            "id_number": "GHA-00809238HJJ",
+            "last_name": "Malloy",
             "middle_name": "Patient",
             "nationality": "Ghanaian",
-            "person_image": "https://img.com/G.O.A.T"
+            "person_image": "https://img.com/G.O.A.T",
+            "phone_number": "+233206436575"
         },
         "status": true
     }
@@ -690,17 +686,17 @@ RESPONSE:
     BODY PARAMS:
 
     ```
-    {
-        "first_name": "Janine",
+   {
+        "first_name": "Pete",
         "middle_name":"Leta",
-        "last_name": "Mucha",
-        "person_image":"https://img.com/F.G.O.A.T",
-        "email":"Leta@st.knust.edu.gh",
-        "date_of_birth":"2007-12-03",
-        "house_address": "8 health street",
-        "gender":"female",
-        "phone_number" : "+233208936575",
-        "id_number": "GHA-08006328HJJ",
+        "last_name": "Greg",
+        "person_image":"https://img.com/profilePicture",
+        "email":"Gregy@st.knust.edu.gh",
+        "date_of_birth":"2001-07-03",
+        "house_address": "12 sesame street",
+        "gender":"male",
+        "phone_number" : "+233265936575",
+        "id_number": "GHA-08006335HJJ",
         "nationality":"Ghanaian",
         "doctor_id": 20,
         "guardian_id": 20
@@ -710,21 +706,21 @@ RESPONSE:
     RESPONSE:
     ```
     {
-        "msg": {
-            "email": "Leta@st.knust.edu.gh",
-            "first_name": "Janine",
-            "house_address": "8 health street",
-            "id": 27,
-            "idDoctor": 20,
-            "idGuardian": 20,
-            "id_number": "GHA-08006328HJJ",
-            "last_name": "Mucha",
-            "middle_name": "Leta",
-            "nationality": "Ghanaian",
-            "person_image": "https://img.com/F.G.O.A.T"
-        },
-        "status": true
-    }
+    "msg": {
+        "email": "Gregy@st.knust.edu.gh",
+        "first_name": "Pete",
+        "house_address": "12 sesame street",
+        "id": 34,
+        "idDoctor": 20,
+        "idGuardian": 20,
+        "id_number": "GHA-08006335HJJ",
+        "last_name": "Greg",
+        "middle_name": "Leta",
+        "nationality": "Ghanaian",
+        "person_image": "https://img.com/profilePicture"
+    },
+    "status": true
+    } 
     ```
 
 # HealthDetails
@@ -761,18 +757,18 @@ RESPONSE:
 
     BODY PARAMS:
     ```
-    {
+     {
         "last_visit": "2002-09-08",
         "blood_group": "B",
         "bmi": "34.3",
         "blood_pressure": "34.6",
-        "respiratory_rate": "Good",
-        "temperature": "40.0",
+        "respiratory_rate": "116",
+        "temperature":"37",
         "pulse": "98.9",
-        "blood_sugar": "Plenty",
+        "blood_sugar": "116",
         "weight": "87.9",
         "height": "99.3"
-    }
+    } 	 
     ```
 
     RESPONSE:
@@ -860,7 +856,7 @@ RESPONSE:
     "status": true
         }
     ```
-- **Delete Healh Details On ID**   
+- **Delete Health Details by ID**   
     DELETE: /healthdetails/`idHealthDetails`  
 
     BODY PARAMS: None   
