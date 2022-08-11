@@ -1094,7 +1094,7 @@ BODY PARAMS:
     {
     "report_type":"Lab report",
     "description":"Lab report ordered by Dr.Raymond Brown",
-    "idPatient": 31
+    "uploaddate": 10/08/22
      }
     ```
 
@@ -1104,9 +1104,9 @@ RESPONSE:
      {
         "msg": {
             "description": "Lab report ordered by Dr.Raymond Brown",
-            "idPatient": 31,
             "idReport": 12,
             "report_type": "Lab report"
+	    "uploaddate": 10/08/22
         },
         "status": true
     }
@@ -1124,24 +1124,33 @@ RESPONSE:
 
     ```
     [
-	{
-		"msg": {
-			"description": "This report is for medication",
-			"idPatient": 30,
-			"idReport": 3,
-			"report_type": "Medication"
-		},
-		"status": true
-	},
-	{
-		"msg": {
-			"description": "This report is for medication",
-			"idPatient": 30,
-			"idReport": 4,
-			"report_type": "Medication"
-		},
-		"status": true
-	}
+    {
+        "msg": {
+            "description": "This report is for medication",
+            "idReport": 3,
+            "report_type": "Medication",
+            "upload_date": "Thu, 21 Jul 2022 19:01:21 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "This report is for medication",
+            "idReport": 4,
+            "report_type": "Medication",
+            "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "This report is for medication",
+            "idReport": 5,
+            "report_type": "Medication",
+            "upload_date": "Thu, 21 Jul 2022 19:04:12 GMT"
+        },
+        "status": true
+    }
     ]
     
     ```
@@ -1160,9 +1169,9 @@ RESPONSE:
 ```
     "msg": {
         "description": "This report is for medication ",
-        "idPateint": 30,
         "idReport": 3,
         "report_type": "Medication"
+	"uploaddate": 10/08/22
     },
     "status": true
 ```	
@@ -1177,9 +1186,9 @@ BODY PARAMS:
     ```
 	{
         "description": "This report is for medication ",
-        "idPateint": 30,
         "idReport": 3,
         "report_type": "Medication"
+	"uploaddate": 10/08/22
     }
 	```
 
@@ -1190,9 +1199,9 @@ RESPONSE:
     {
     "msg": {
        "description": "This report is for medication ",
-        "idPateint": 30,
-        "idReport": 3,
-        "report_type": "Medication"
+       "idReport": 3,
+       "report_type": "Medication"
+       "uploaddate": 10/08/22
     },
     "status": true 
     ```
@@ -1210,9 +1219,9 @@ RESPONSE:
     ```
     "msg": {
         "description": "This report is for medication ",
-        "idPatient": 30,
         "idReport": 3,
         "report_type": "Medication"
+	"uploaddate": 10/08/22
     },
     "status": true
     ```
