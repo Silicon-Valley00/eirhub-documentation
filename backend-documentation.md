@@ -18,7 +18,7 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
 
 		- 	Models: 	UsePascalCase to name Models ending with Model for all DB ORM Models.       
          
-		- 
+		-   Routes: API routes should be in the format "resource/id" or "resource/"
 
 [HealthDetails](#HealthDetails )  
 [Doctor](#Doctor )  
@@ -26,7 +26,8 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
 [Patient](#Patient )  
 [Prescription](#Prescription )  
 [Hospital](#Hospital)  
-[Report](#Report)   		
+[Report](#Report)
+[Appoinment](#Appointment)   		
   
 
 
@@ -529,7 +530,7 @@ RESPONSE:
 # Patient 
 - **Patient Login**:			
 
-	POST : /patient/login		
+	POST : /patients/login		
 
 	BODY PARAMS: 	
 
@@ -560,7 +561,7 @@ RESPONSE:
 	```
 - **Patient Registration**		
 
-	POST : /patient/signup      
+	POST : /patients/signup      
 
     BODY PARAMS: 	
 
@@ -592,7 +593,7 @@ RESPONSE:
         "user_email": "greg@st.knust.edu.gh"
     },
     "status": true
-}
+    }
 	```   
 
 - **Get All Patients**
@@ -625,7 +626,7 @@ RESPONSE:
     ```    
 - **Get Patient by ID**
 
-    GET : /patient/`patientID`
+    GET : /patients/`patientID`
 
     BODY PARAMS: None
 
@@ -654,7 +655,7 @@ RESPONSE:
     ```
 - **Delete patient**
 
-    DELETE: /patient/`patientID`
+    DELETE: /patients/`patientID`
 
     BODY PARAMS: None
 
@@ -681,7 +682,7 @@ RESPONSE:
 
 - **Update patient details by ID**
 
-    PUT: /patient/`patientID`
+    PUT: /patients/`patientID`
 
     BODY PARAMS:
 
@@ -831,7 +832,8 @@ RESPONSE:
         "status": true
     }
     ```
--**Get all health details
+- **Get all health details**
+
     GET: /healthdetails
 
     BODY PARAMS: None
@@ -881,7 +883,7 @@ RESPONSE:
   ```
 # Hospital
 
-**Create hospital**
+- **Create hospital**
 
 POST: /hospital
 
@@ -913,7 +915,7 @@ RESPONSE:
 ```
 
 
-**Delete hospital by id**
+- **Delete hospital by id**
 
 DELETE: /deletehospital/`idHospital`
 
@@ -935,7 +937,7 @@ RESPONSE:
 }
 ```
 
-**Update hospital by id**
+- **Update hospital by id**
 
 
 PUT: /updatehospital/`idHospital`
@@ -961,7 +963,7 @@ RESPONSE:
 
 
 
-**Get all hospitals**
+- **Get all hospitals**
 GET: /getallhospital
 
 
@@ -1012,7 +1014,7 @@ RESPONSE:
 ```
 
 
-**Get hospital based on id**
+- **Get hospital based on id**
 GET:/hospital/`idHospital`
 
 
@@ -1080,7 +1082,7 @@ RESPONSE:
 
 # Report
 
-**Create report**
+- **Create report**
 
 POST: /report
 
@@ -1110,7 +1112,7 @@ RESPONSE:
     ```
 
 
-**Get All reports**
+- **Get All reports**
 
 GET: /reports
 
@@ -1153,7 +1155,7 @@ RESPONSE:
 
 
 
-**Delete Report by Report ID**
+- **Delete Report by Report ID**
     
 DELETE: /report/`idReport`
 
@@ -1173,7 +1175,7 @@ RESPONSE:
 ```	
 
 
-**Update Report By Report ID**
+- **Update Report By Report ID**
 PUT: /report/`idReport`
 
 BODY PARAMS:
@@ -1204,7 +1206,7 @@ RESPONSE:
 
 
 
-**Get Report By ID**
+- **Get Report By ID**
 
 GET: /report/`idReport`
 
@@ -1221,3 +1223,54 @@ RESPONSE:
     },
     "status": true
     ```
+
+
+# Appointment
+
+- **Get apppointment by patient ID**
+    
+   GET:/appointments/patients/`patientId`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+    {
+    "msg": {
+        "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+        "appointment_end_time": "09:00:00",
+        "appointment_reason": "Severe abdominal pains",
+        "appointment_start_time": "08:00:00",
+        "appointment_status": "Pending",
+        "idAppointment": 1,
+        "idDoctor": 21,
+        "idPatient": 31
+    },
+      "status": true
+    }
+    ```
+
+- **Get appointment by doctor ID**
+    
+    GET:/appointments/doctors/`doctorId`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```
+     {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Pending",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    },
+    ```
+
+
