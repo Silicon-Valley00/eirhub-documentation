@@ -810,7 +810,7 @@ RESPONSE:
         "blood_sugar": "Plenty",
         "weight": "78.9",
         "height": "99.9"
-}
+    }
     ```
 
     RESPONSE:
@@ -1084,19 +1084,19 @@ RESPONSE:
 
 - **Create report**
 
-POST: /report
+    POST: /report
 
-BODY PARAMS:
-    
+    BODY PARAMS:
+        
     ```json
     {
     "report_type":"Lab report",
     "description":"Lab report ordered by Dr.Raymond Brown",
     "uploaddate": 10/08/22
-     }
+    }
     ```
 
-RESPONSE:
+    RESPONSE:
 
     ```json
      {
@@ -1157,22 +1157,22 @@ RESPONSE:
 
 - **Delete Report by Report ID**
     
-DELETE: /report/`idReport`
+    DELETE: /report/`idReport`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
 
 
-RESPONSE:
-```json
-    "msg": {
-        "description": "This report is for medication ",
-        "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
-    },
-    "status": true
-```	
+    RESPONSE:
+    ```json
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication"
+        "uploaddate": 10/08/22
+        },
+        "status": true
+    ```	
 
 
 - **Update Report By Report ID**
@@ -1185,51 +1185,136 @@ BODY PARAMS:
 	{
         "description": "This report is for medication ",
         "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
+        "report_type": "Medication",
+	    "upload_date": "10/08/22"
     }
 	```
 
-RESPONSE:
+    RESPONSE:
 
 
     ```json
     {
-    "msg": {
-       "description": "This report is for medication ",
-       "idReport": 3,
-       "report_type": "Medication"
-       "uploaddate": 10/08/22
-    },
-    "status": true 
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication",
+            "uploaddate": "10/08/22"
+        },
+        "status": true
+    }
     ```
 
 
 
 - **Get Report By ID**
 
-GET: /report/`idReport`
+    GET: /report/`idReport`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
-RESPONSE:
+    RESPONSE:
 
-    ```json
-    "msg": {
-        "description": "This report is for medication ",
-        "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
-    },
-    "status": true
-    ```
+        ```json
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication",
+            "upload_date": "10/08/22"
+        },
+        "status": true
+        ```
 
 
 # Appointment
 
+- **Add new appointment**
+    POST: /appointment
+
+    BODY PARAMS:
+    ```json
+    {
+        "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+        "appointment_end_time": "09:00:00",
+        "appointment_reason": "Severe abdominal pains",
+        "appointment_start_time": "08:00:00",
+        "appointment_status": "Pending",
+        "idAppointment": 1,
+        "idDoctor": 21,
+        "idPatient": 31
+    }
+    ```
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Pending",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
+
+- **Get all appointments**
+    GET: /appointments
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    [
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "09:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "08:00:00",
+                "appointment_status": "Pending",
+                "idAppointment": 1,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        },
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "09:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "08:00:00",
+                "appointment_status": "Pending",
+                "idAppointment": 2,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        },
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "14:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "12:00:00",
+                "appointment_status": "Accepted",
+                "idAppointment": 2,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        }
+    ]
+    ```
+
 - **Get apppointment by patient ID**
     
-   GET:/appointments/patients/`patientId`
+   GET: /appointments/patients/`patientId`
 
     BODY PARAMS: None
 
@@ -1273,4 +1358,46 @@ RESPONSE:
     },
     ```
 
+- **Update appointment status by its ID**
+    PUT: /appointment/status/`id`/`status_ref_number`
 
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Accepted",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
+
+- **Delete appointment by ID**
+    DELETE: /appointment/`id`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Accepted",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
