@@ -43,7 +43,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": [
         {
@@ -92,7 +92,7 @@ API EndPoint Routes:
      BODY PARAMS: None
 
      RESPONSE:
-     ```
+     ```json
     {
     "msg": [
         {
@@ -149,7 +149,7 @@ API EndPoint Routes:
     POST : /prescription
 
     BODY PARAMS: 
-    ```
+    ```json
         {
         "drug_name":"laravelS",
         "dosage":"2/day",
@@ -161,7 +161,7 @@ API EndPoint Routes:
     }
     ```
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "dosage": "2/day",
@@ -179,7 +179,7 @@ API EndPoint Routes:
     PUT: /prescription/`idPrescription`
 
     BODY PARAMS:
-    ```
+    ```json
 	{
     "drug_name":"laravelS",
     "dosage":"3/day",
@@ -191,7 +191,7 @@ API EndPoint Routes:
     }
 	```
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "dosage": "3/day",
@@ -212,7 +212,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     "msg": {
         "dosage": "2/day",
         "drug_name": "laravel",
@@ -236,7 +236,7 @@ API EndPoint Routes:
 
 	BODY PARAMS: 	
 
-	```
+	```json
 	{
     "user_email":"baddest70@st.knust.edu.gh",
     "user_password":"WhatTheF@ckThough54321"
@@ -244,7 +244,7 @@ API EndPoint Routes:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -264,7 +264,7 @@ API EndPoint Routes:
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Rexford",
     "middle_name":"G.O.A.T.II",
@@ -284,7 +284,7 @@ API EndPoint Routes:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "first_name": "Rexford",
@@ -305,7 +305,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": [
         {
@@ -334,7 +334,7 @@ API EndPoint Routes:
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Rexford",
     "middle_name":"G.O.A.T",
@@ -351,7 +351,7 @@ API EndPoint Routes:
     }
 	```
     RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "https://img.com/G.O.A.T",
@@ -380,7 +380,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "https://img.com/G.O.A.T",
@@ -407,7 +407,7 @@ API EndPoint Routes:
 POST : /guardian      
 
 BODY PARAMS: 	
-```
+```json
 {
 "first_name" : "Agbo",
 "middle_name": "Turna",
@@ -422,7 +422,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "date_of_birth": "Tue, 21 Dec 1999 00:00:00 GMT",
@@ -447,7 +447,7 @@ GET : /guardian
 BODY PARAMS: None       
 
 RESPONSE:
-```
+```json
 {
 "msg": [
     {
@@ -471,7 +471,7 @@ GET: /guardian/`guardianId`
 BODY PARAMS:None
 
 RESPONSE: 
-```
+```json
 {
     "msg": {
         "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
@@ -493,7 +493,7 @@ RESPONSE:
 PUT : /guardian/`guardianId`        
 
 BODY PARAMS: 	
-```
+```json
 {
     "first_name" : "Maxford",
     "middle_name": "Daug",
@@ -508,7 +508,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
@@ -534,7 +534,7 @@ RESPONSE:
 
 	BODY PARAMS: 	
 
-	```
+	```json
 	{
     "user_email":"baddest69@st.knust.edu.gh",
     "user_password": "baddestGO@8"
@@ -542,7 +542,7 @@ RESPONSE:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -565,7 +565,7 @@ RESPONSE:
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Peter",
     "last_name": "Gregory",
@@ -578,7 +578,7 @@ RESPONSE:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -603,7 +603,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -631,7 +631,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
   {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -661,7 +661,7 @@ RESPONSE:
 
     RESPONSE:
 
-    ```
+    ```json
     {
         "msg": {
             "email": "Jackman@gmail.com",
@@ -686,7 +686,7 @@ RESPONSE:
 
     BODY PARAMS:
 
-    ```
+    ```json
    {
         "first_name": "Pete",
         "middle_name":"Leta",
@@ -705,7 +705,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "email": "Gregy@st.knust.edu.gh",
@@ -733,7 +733,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "blood_group": "B",
@@ -757,7 +757,7 @@ RESPONSE:
     PUT: /uphealthdetails/`patientId`
 
     BODY PARAMS:
-    ```
+    ```json
      {
         "last_visit": "2002-09-08",
         "blood_group": "B",
@@ -773,7 +773,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
         {
             "msg": {
                 "blood_group": "B",
@@ -797,7 +797,7 @@ RESPONSE:
     POST: /createhealthdetails
 
     BODY PARAMS:
-    ```
+    ```json
     {
         "patient_id": "38",
         "last_visit": "2009-09-08",
@@ -814,7 +814,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "blood_group": "O",
@@ -839,7 +839,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": [
         {
@@ -864,7 +864,7 @@ RESPONSE:
     BODY PARAMS: None   
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "blood_group": "A",
@@ -888,7 +888,7 @@ RESPONSE:
 POST: /hospital
 
 BODY PARAMS: 
-```
+```json
 {
     "hospital_name": "Tech Hospital",
     "location": "knust",
@@ -900,7 +900,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -922,7 +922,7 @@ DELETE: /deletehospital/`idHospital`
 BODY PARAMS: None
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "ed1",
@@ -945,7 +945,7 @@ PUT: /updatehospital/`idHospital`
 BODY PARAMS:None
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -970,7 +970,7 @@ GET: /getallhospital
 BODY PARAMS:None
 
 RESPONSE:
-```
+```json
 {
      "msg": [
         {
@@ -1022,7 +1022,7 @@ BODY PARAMS: None
 
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "ede1",
@@ -1046,7 +1046,7 @@ RESPONSE:
 
     BODY PARAMS:
 
-    ```
+    ```json
     {
         "last_visit":"2002-09-08",
         "blood_group": "O",
@@ -1061,7 +1061,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
                 "blood_group": "O",
@@ -1088,7 +1088,7 @@ POST: /report
 
 BODY PARAMS:
     
-    ```
+    ```json
     {
     "report_type":"Lab report",
     "description":"Lab report ordered by Dr.Raymond Brown",
@@ -1098,7 +1098,7 @@ BODY PARAMS:
 
 RESPONSE:
 
-    ```
+    ```json
      {
         "msg": {
             "description": "Lab report ordered by Dr.Raymond Brown",
@@ -1120,7 +1120,7 @@ BODY PARAMS: None
 
 RESPONSE:
 
-    ```
+    ```json
     [
     {
         "msg": {
@@ -1164,7 +1164,7 @@ BODY PARAMS: None
 
 
 RESPONSE:
-```
+```json
     "msg": {
         "description": "This report is for medication ",
         "idReport": 3,
@@ -1181,7 +1181,7 @@ PUT: /report/`idReport`
 BODY PARAMS:
 
 
-    ```
+    ```json
 	{
         "description": "This report is for medication ",
         "idReport": 3,
@@ -1193,7 +1193,7 @@ BODY PARAMS:
 RESPONSE:
 
 
-    ```
+    ```json
     {
     "msg": {
        "description": "This report is for medication ",
@@ -1214,7 +1214,7 @@ BODY PARAMS: None
 
 RESPONSE:
 
-    ```
+    ```json
     "msg": {
         "description": "This report is for medication ",
         "idReport": 3,
@@ -1234,7 +1234,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
@@ -1257,7 +1257,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
      {
         "msg": {
             "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
