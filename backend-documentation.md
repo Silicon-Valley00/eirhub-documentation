@@ -193,17 +193,18 @@ API EndPoint Routes:
     RESPONSE:
     ```json
     {
-    "msg": {
-        "dosage": "3/day",
-        "drug_name": "laravelS",
-        "end_date": "2022-12-31",
-        "id": 8,
-        "idPatient": 28,
-        "last_taken_date": "2022-12-31",
-        "start_date": "2022-12-31",
-        "time_of_administration": "23:59:40"
-    },
-    "status": true
+        "msg": {
+            "dosage": "3/day",
+            "drug_name": "laravelS",
+            "end_date": "2022-12-31",
+            "id": 8,
+            "idPatient": 28,
+            "last_taken_date": "2022-12-31",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        "status": true
+    }
     ```
 - **Delete Prescription by Prescription ID**
     
@@ -598,7 +599,7 @@ RESPONSE:
 
 - **Get All Patients**
 
-    GET : /patient
+    GET : /patients
 
     BODY PARAMS: None
 
@@ -885,7 +886,7 @@ RESPONSE:
 
 - **Create hospital**
 
-POST: /hospital
+POST: /hospitals
 
 BODY PARAMS: 
 ```json
@@ -917,7 +918,7 @@ RESPONSE:
 
 - **Delete hospital by id**
 
-DELETE: /deletehospital/`idHospital`
+DELETE: /hospitals/`idHospital`
 
 BODY PARAMS: None
 
@@ -940,7 +941,7 @@ RESPONSE:
 - **Update hospital by id**
 
 
-PUT: /updatehospital/`idHospital`
+PUT: /hospitals/`idHospital`
 
 BODY PARAMS:None
 
@@ -964,8 +965,7 @@ RESPONSE:
 
 
 - **Get all hospitals**
-GET: /getallhospital
-
+GET: /hospitals
 
 BODY PARAMS:None
 
@@ -1015,7 +1015,7 @@ RESPONSE:
 
 
 - **Get hospital based on id**
-GET:/hospital/`idHospital`
+GET:/hospitals/`idHospital`
 
 
 BODY PARAMS: None
