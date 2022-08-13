@@ -43,7 +43,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": [
         {
@@ -92,7 +92,7 @@ API EndPoint Routes:
      BODY PARAMS: None
 
      RESPONSE:
-     ```
+     ```json
     {
     "msg": [
         {
@@ -149,7 +149,7 @@ API EndPoint Routes:
     POST : /prescription
 
     BODY PARAMS: 
-    ```
+    ```json
         {
         "drug_name":"laravelS",
         "dosage":"2/day",
@@ -161,7 +161,7 @@ API EndPoint Routes:
     }
     ```
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "dosage": "2/day",
@@ -179,7 +179,7 @@ API EndPoint Routes:
     PUT: /prescription/`idPrescription`
 
     BODY PARAMS:
-    ```
+    ```json
 	{
     "drug_name":"laravelS",
     "dosage":"3/day",
@@ -191,19 +191,20 @@ API EndPoint Routes:
     }
 	```
     RESPONSE:
-    ```
+    ```json
     {
-    "msg": {
-        "dosage": "3/day",
-        "drug_name": "laravelS",
-        "end_date": "2022-12-31",
-        "id": 8,
-        "idPatient": 28,
-        "last_taken_date": "2022-12-31",
-        "start_date": "2022-12-31",
-        "time_of_administration": "23:59:40"
-    },
-    "status": true
+        "msg": {
+            "dosage": "3/day",
+            "drug_name": "laravelS",
+            "end_date": "2022-12-31",
+            "id": 8,
+            "idPatient": 28,
+            "last_taken_date": "2022-12-31",
+            "start_date": "2022-12-31",
+            "time_of_administration": "23:59:40"
+        },
+        "status": true
+    }
     ```
 - **Delete Prescription by Prescription ID**
     
@@ -212,7 +213,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     "msg": {
         "dosage": "2/day",
         "drug_name": "laravel",
@@ -236,7 +237,7 @@ API EndPoint Routes:
 
 	BODY PARAMS: 	
 
-	```
+	```json
 	{
     "user_email":"baddest70@st.knust.edu.gh",
     "user_password":"WhatTheF@ckThough54321"
@@ -244,7 +245,7 @@ API EndPoint Routes:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -264,7 +265,7 @@ API EndPoint Routes:
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Rexford",
     "middle_name":"G.O.A.T.II",
@@ -284,7 +285,7 @@ API EndPoint Routes:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "first_name": "Rexford",
@@ -305,7 +306,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": [
         {
@@ -330,11 +331,11 @@ API EndPoint Routes:
 
 - **Update Doctor By Id**
 
-    PUT : /updoctor/doctorId
+    PUT : /doctor/doctorId
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Rexford",
     "middle_name":"G.O.A.T",
@@ -351,7 +352,7 @@ API EndPoint Routes:
     }
 	```
     RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "https://img.com/G.O.A.T",
@@ -380,7 +381,7 @@ API EndPoint Routes:
     BODY PARAMS: None
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "https://img.com/G.O.A.T",
@@ -407,7 +408,7 @@ API EndPoint Routes:
 POST : /guardian      
 
 BODY PARAMS: 	
-```
+```json
 {
 "first_name" : "Agbo",
 "middle_name": "Turna",
@@ -422,7 +423,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "date_of_birth": "Tue, 21 Dec 1999 00:00:00 GMT",
@@ -447,7 +448,7 @@ GET : /guardian
 BODY PARAMS: None       
 
 RESPONSE:
-```
+```json
 {
 "msg": [
     {
@@ -471,7 +472,7 @@ GET: /guardian/`guardianId`
 BODY PARAMS:None
 
 RESPONSE: 
-```
+```json
 {
     "msg": {
         "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
@@ -493,7 +494,7 @@ RESPONSE:
 PUT : /guardian/`guardianId`        
 
 BODY PARAMS: 	
-```
+```json
 {
     "first_name" : "Maxford",
     "middle_name": "Daug",
@@ -508,7 +509,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
@@ -534,7 +535,7 @@ RESPONSE:
 
 	BODY PARAMS: 	
 
-	```
+	```json
 	{
     "user_email":"baddest69@st.knust.edu.gh",
     "user_password": "baddestGO@8"
@@ -542,7 +543,7 @@ RESPONSE:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -565,7 +566,7 @@ RESPONSE:
 
     BODY PARAMS: 	
 
-	```
+	```json
 	{
     "first_name": "Peter",
     "last_name": "Gregory",
@@ -578,7 +579,7 @@ RESPONSE:
 	```
 
 	RESPONSE:
-	```
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -598,12 +599,12 @@ RESPONSE:
 
 - **Get All Patients**
 
-    GET : /patient
+    GET : /patients
 
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -631,7 +632,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
   {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -661,7 +662,7 @@ RESPONSE:
 
     RESPONSE:
 
-    ```
+    ```json
     {
         "msg": {
             "email": "Jackman@gmail.com",
@@ -686,7 +687,7 @@ RESPONSE:
 
     BODY PARAMS:
 
-    ```
+    ```json
    {
         "first_name": "Pete",
         "middle_name":"Leta",
@@ -705,7 +706,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "email": "Gregy@st.knust.edu.gh",
@@ -733,7 +734,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "blood_group": "B",
@@ -754,10 +755,10 @@ RESPONSE:
 
 - **Update Health details**
 
-    PUT: /uphealthdetails/`patientId`
+    PUT: /healthdetails/`patientId`
 
     BODY PARAMS:
-    ```
+    ```json
      {
         "last_visit": "2002-09-08",
         "blood_group": "B",
@@ -773,7 +774,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
         {
     "msg": {
         "blood_group": "B",
@@ -794,10 +795,10 @@ RESPONSE:
 
 - **Create Health Details**   
 
-    POST: /createhealthdetails
+    POST: /healthdetails
 
     BODY PARAMS:
-    ```
+    ```json
     {
         "patient_id": "38",
         "last_visit": "2009-09-08",
@@ -810,11 +811,11 @@ RESPONSE:
         "blood_sugar": "Plenty",
         "weight": "78.9",
         "height": "99.9"
-}
+    }
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
             "blood_group": "O",
@@ -839,7 +840,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": [
         {
@@ -864,7 +865,7 @@ RESPONSE:
     BODY PARAMS: None   
 
     RESPONSE:
-    ```
+    ```json
     {
     "msg": {
         "blood_group": "A",
@@ -885,10 +886,10 @@ RESPONSE:
 
 - **Create hospital**
 
-POST: /hospital
+POST: /hospitals
 
 BODY PARAMS: 
-```
+```json
 {
     "hospital_name": "Tech Hospital",
     "location": "knust",
@@ -900,7 +901,7 @@ BODY PARAMS:
 ```
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -917,12 +918,12 @@ RESPONSE:
 
 - **Delete hospital by id**
 
-DELETE: /deletehospital/`idHospital`
+DELETE: /hospitals/`idHospital`
 
 BODY PARAMS: None
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "ed1",
@@ -940,12 +941,12 @@ RESPONSE:
 - **Update hospital by id**
 
 
-PUT: /updatehospital/`idHospital`
+PUT: /hospitals/`idHospital`
 
 BODY PARAMS:None
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -964,13 +965,12 @@ RESPONSE:
 
 
 - **Get all hospitals**
-GET: /getallhospital
-
+GET: /hospitals
 
 BODY PARAMS:None
 
 RESPONSE:
-```
+```json
 {
      "msg": [
         {
@@ -1015,14 +1015,14 @@ RESPONSE:
 
 
 - **Get hospital based on id**
-GET:/hospital/`idHospital`
+GET:/hospitals/`idHospital`
 
 
 BODY PARAMS: None
 
 
 RESPONSE:
-```
+```json
 {
     "msg": {
         "hospital_code": "ede1",
@@ -1046,7 +1046,7 @@ RESPONSE:
 
     BODY PARAMS:
 
-    ```
+    ```json
     {
         "last_visit":"2002-09-08",
         "blood_group": "O",
@@ -1061,7 +1061,7 @@ RESPONSE:
     ```
 
     RESPONSE:
-    ```
+    ```json
     {
         "msg": {
                 "blood_group": "O",
@@ -1084,21 +1084,21 @@ RESPONSE:
 
 - **Create report**
 
-POST: /report
+    POST: /report
 
-BODY PARAMS:
-    
-    ```
+    BODY PARAMS:
+        
+    ```json
     {
     "report_type":"Lab report",
     "description":"Lab report ordered by Dr.Raymond Brown",
     "uploaddate": 10/08/22
-     }
+    }
     ```
 
-RESPONSE:
+    RESPONSE:
 
-    ```
+    ```json
      {
         "msg": {
             "description": "Lab report ordered by Dr.Raymond Brown",
@@ -1120,7 +1120,7 @@ BODY PARAMS: None
 
 RESPONSE:
 
-    ```
+    ```json
     [
     {
         "msg": {
@@ -1157,22 +1157,22 @@ RESPONSE:
 
 - **Delete Report by Report ID**
     
-DELETE: /report/`idReport`
+    DELETE: /report/`idReport`
 
-BODY PARAMS: None
+    BODY PARAMS: None
 
 
 
-RESPONSE:
-```
-    "msg": {
-        "description": "This report is for medication ",
-        "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
-    },
-    "status": true
-```	
+    RESPONSE:
+    ```json
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication"
+        "uploaddate": 10/08/22
+        },
+        "status": true
+    ```	
 
 
 - **Update Report By Report ID**
@@ -1181,60 +1181,144 @@ PUT: /report/`idReport`
 BODY PARAMS:
 
 
-    ```
+    ```json
 	{
         "description": "This report is for medication ",
         "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
+        "report_type": "Medication",
+	    "upload_date": "10/08/22"
     }
 	```
 
-RESPONSE:
+    RESPONSE:
 
 
-    ```
+    ```json
     {
-    "msg": {
-       "description": "This report is for medication ",
-       "idReport": 3,
-       "report_type": "Medication"
-       "uploaddate": 10/08/22
-    },
-    "status": true 
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication",
+            "uploaddate": "10/08/22"
+        },
+        "status": true
+    }
     ```
 
 
 
 - **Get Report By ID**
 
-GET: /report/`idReport`
-
-BODY PARAMS: None
-
-RESPONSE:
-
-    ```
-    "msg": {
-        "description": "This report is for medication ",
-        "idReport": 3,
-        "report_type": "Medication"
-	"uploaddate": 10/08/22
-    },
-    "status": true
-    ```
-
-
-# Appointment
-
-- **Get apppointment by patient ID**
-    
-   GET:/appointments/patients/`patientId`
+    GET: /report/`idReport`
 
     BODY PARAMS: None
 
     RESPONSE:
+
+        ```json
+        "msg": {
+            "description": "This report is for medication ",
+            "idReport": 3,
+            "report_type": "Medication",
+            "upload_date": "10/08/22"
+        },
+        "status": true
+        ```
+
+
+# Appointment
+
+- **Add new appointment**
+    POST: /appointment
+
+    BODY PARAMS:
+    ```json
+    {
+        "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+        "appointment_end_time": "09:00:00",
+        "appointment_reason": "Severe abdominal pains",
+        "appointment_start_time": "08:00:00",
+        "appointment_status": "Pending",
+        "idDoctor": 21,
+        "idPatient": 31
+    }
     ```
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Pending",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
+
+- **Get all appointments**
+    GET: /appointments
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    [
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "09:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "08:00:00",
+                "appointment_status": "Pending",
+                "idAppointment": 1,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        },
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "09:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "08:00:00",
+                "appointment_status": "Pending",
+                "idAppointment": 2,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        },
+        {
+            "msg": {
+                "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+                "appointment_end_time": "14:00:00",
+                "appointment_reason": "Severe abdominal pains",
+                "appointment_start_time": "12:00:00",
+                "appointment_status": "Accepted",
+                "idAppointment": 2,
+                "idDoctor": 21,
+                "idPatient": 31
+            },
+            "status": true
+        }
+    ]
+    ```
+
+- **Get apppointment by patient ID**
+    
+   GET: /appointments/patients/`patientId`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
     {
     "msg": {
         "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
@@ -1257,7 +1341,7 @@ RESPONSE:
     BODY PARAMS: None
 
     RESPONSE:
-    ```
+    ```json
      {
         "msg": {
             "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
@@ -1273,4 +1357,46 @@ RESPONSE:
     },
     ```
 
+- **Update appointment status by its ID**
+    PUT: /appointment/status/`id`/`status_ref_number`
 
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Accepted",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
+
+- **Delete appointment by ID**
+    DELETE: /appointment/`id`
+
+    BODY PARAMS: None
+
+    RESPONSE:
+    ```json
+    {
+        "msg": {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "08:00:00",
+            "appointment_status": "Accepted",
+            "idAppointment": 1,
+            "idDoctor": 21,
+            "idPatient": 31
+        },
+        "status": true
+    }
+    ```
