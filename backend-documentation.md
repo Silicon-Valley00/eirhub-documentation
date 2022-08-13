@@ -267,20 +267,12 @@ API EndPoint Routes:
 
 	```json
 	{
-    "first_name": "Rexford",
-    "middle_name":"G.O.A.T.II",
-    "last_name": "Machu",
-    "person_image":"https://img.com/G.O.A.T.II",
-    "user_email":"baddest70@st.knust.edu.gh",
-    "user_password":"WhatTheF@ckThough54321",
-    "date_of_birth":"2009-12-01",
-    "house_address": "House-4",
-    "doctor_ratings":3,
-    "hospital_code":"OAa345609",
-    "license_number":"8003490390",
-    "doctor_specialties":"Gynaecology, Paediatric, General",
-    "gender":"Male"
-
+    "first_name": "Gaglo",
+    "last_name": "Nathaniel",
+    "user_email":"Nathaniel@gmail.com",
+    "user_password":"Elormpassword",
+    "date_of_birth":"1988-10-04",
+    "hospital_code":"hoc01"
     }
 	```
 
@@ -762,7 +754,6 @@ RESPONSE:
      {
         "last_visit": "2002-09-08",
         "blood_group": "B",
-        "bmi": "34.3",
         "blood_pressure": "34.6",
         "respiratory_rate": "116",
         "temperature":"36",
