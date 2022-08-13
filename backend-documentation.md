@@ -42,6 +42,7 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
                 "status": false,
                 "detail": {
                     "message": "Unable to update patient",
+                    "dev_messgae": "Invalid query parameters",
                     "description": "{exception}"
                 }
             }
