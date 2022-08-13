@@ -754,7 +754,7 @@ RESPONSE:
 
 - **Update Health details**
 
-    PUT: /uphealthdetails/`patientId`
+    PUT: /healthdetails/`patientId`
 
     BODY PARAMS:
     ```json
@@ -794,7 +794,7 @@ RESPONSE:
 
 - **Create Health Details**   
 
-    POST: /createhealthdetails
+    POST: /healthdetails
 
     BODY PARAMS:
     ```json
@@ -1239,7 +1239,6 @@ BODY PARAMS:
         "appointment_reason": "Severe abdominal pains",
         "appointment_start_time": "08:00:00",
         "appointment_status": "Pending",
-        "idAppointment": 1,
         "idDoctor": 21,
         "idPatient": 31
     }
