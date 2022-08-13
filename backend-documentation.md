@@ -329,7 +329,7 @@ API EndPoint Routes:
 
 - **Update Doctor By Id Method**
 
-    PUT : /updoctor/doctorId
+    PUT : /doctor/doctorId
 
     BODY PARAMS: 	
 
