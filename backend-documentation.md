@@ -20,6 +20,34 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
          
 		-   Routes: API routes should be in the format "resource/id" or "resource/"
 
+### Defined Response Statuses:
+        - 200 OK (success)
+        - 400 Error (general failure)
+        - 455 Error (received data invalid)
+        - 404 Error (does not exist)
+
+### Response Format:
+        - Response is always JSON
+
+        - Success:
+            {
+                "status": true,
+                "detail": {
+                    ...
+                } 
+            }
+
+        - Error:
+            {
+                "status": false,
+                "detail": {
+                    "message": "Unable to update patient",
+                    "description": "{exception}"
+                }
+            }
+        
+        - All forms of failure will have a status of 'false'
+
 [HealthDetails](#HealthDetails )  
 [Doctor](#Doctor )  
 [Guardian](#Guardian-Person )  
