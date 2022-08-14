@@ -31,20 +31,20 @@ check_password_hash(a,'1234') #confirms if the hash and the word are equal and r
 
         - Success:
             {
-                "status": true,
-                "detail": {
+                "msg": {
                     ...
-                } 
+                }, 
+                "status": true
             }
 
         - Error:
             {
-                "status": false,
-                "detail": {
+                "msg": {
                     "message": "Unable to update patient",
                     "dev_messgae": "Invalid query parameters",
                     "description": "{exception}"
-                }
+                },
+                "status": false
             }
         
         - All forms of failure will have a status of 'false'
