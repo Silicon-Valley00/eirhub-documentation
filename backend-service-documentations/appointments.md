@@ -223,7 +223,7 @@ All erros are of the form shown below:
     ```
 
 ## Updating an appointment by its ID
-- POST: /appointments/
+- PUT: /appointments/
 - BODY PARAMETERS: `application/json`
     - Sample:
         ```json
