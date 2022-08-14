@@ -1,4 +1,12 @@
 # Appointment Services
+Jump to...
+- [Errors](#errors)
+- [Getting all appointments](#getting-all-appointments-from-table)
+- [Getting appointments of a specific patient](#getting-all-appointments-related-to-a-particular-patient-given-the-patients-id)
+- [Getting appointments of a specific dotor](#getting-all-appointments-related-to-a-particular-doctor-given-the-doctors-id)
+- [Adding appointment to the table](#adding-an-appointment-to-the-table)
+- [Updating an appointment](#updating-an-appointment-by-its-id)
+- [Deleting an appointment](#deleting-an-appointment-by-providing-its-id)
 ## Errors
 All erros are of the form shown below:
 ```json
@@ -11,6 +19,7 @@ All erros are of the form shown below:
     "status": false
 }
 ```
+[Back to the top...](#appointment-services)
 
 ## Getting all appointments from table
 - GET: /appointments/
@@ -67,6 +76,7 @@ All erros are of the form shown below:
         "status": true
     }
     ```
+[Back to the top...](#appointment-services)
 
 ## Getting all appointments related to a particular patient given the patient's ID
 - GET: /appointments/
@@ -129,6 +139,7 @@ All erros are of the form shown below:
         "status": true
     }
     ```
+[Back to the top...](#appointment-services)
 
 ## Getting all appointments related to a particular doctor given the doctor's ID
 - GET: /appointments/
@@ -175,6 +186,7 @@ All erros are of the form shown below:
         "status": true
     }
     ```
+[Back to the top...](#appointment-services)
 
 ## Adding an appointment to the table
 - POST: /appointments/
@@ -221,6 +233,7 @@ All erros are of the form shown below:
         "status": true
     }
     ```
+[Back to the top...](#appointment-services)
 
 ## Updating an appointment by its ID
 - PUT: /appointments/
@@ -241,6 +254,8 @@ All erros are of the form shown below:
 - QUERY PARAMETERS: Provide the ID of the specific appointment you want to update through query param, `appointment_id`
 - SAMPLE URL: `https://base.com/appointments/?appointment_id=9`
 - Sample response:
+
+[Back to the top...](#appointment-services)
 
 ## Deleting an appointment by providing its ID
 - DELETE: /appointments/
@@ -266,3 +281,4 @@ All erros are of the form shown below:
         "status": true
     }
     ```
+[Back to the top...](#appointment-services)
