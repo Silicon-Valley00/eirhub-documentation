@@ -357,40 +357,42 @@ API EndPoint Routes:
     BODY PARAMS: 	
 
 	```json
-	{
-    "first_name": "Rexford",
-    "middle_name":"G.O.A.T",
-    "last_name": "Machu",
-    "person_image":"https://img.com/G.O.A.T",
-    "user_email":"baddest69@st.knust.edu.gh",
-    "date_of_birth":"2009-12-01",
-    "house_address": "House-4",
-    "doctor_ratings":3,
-    "hospital_code":"OAa3456",
-    "license_number":"80034903",
-    "doctor_specialties":"Gynaecology, Paediatric",
-    "gender":"Male"
+		{
+    "first_name": "Gaglo",
+    "middle_name": "Elorm",
+    "last_name": "Nathaniel",
+    "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
+    "user_email": "nathaniel@gmail.com",
+    "date_of_birth": "1988-10-04",
+    "house_address": "House-5",
+    "license_number": "80043267",
+    "doctor_ratings": "4",
+    "doctor_specialties": "Clinical pharmacy",
+    "gender": "Male",
+    "hospital_code": "hoc01"
+   
     }
 	```
     RESPONSE:
 	```json
 	{
     "msg": {
-        "date_of_birth": "https://img.com/G.O.A.T",
-        "doctor_ratings": 3,
-        "doctor_specialties": "Gynaecology, Paediatric",
-        "first_name": "Rexford",
+        "date_of_birth": "Tue, 04 Oct 1988 00:00:00 GMT",
+        "doctor_ratings": 4,
+        "doctor_specialties": "Clinical pharmacy",
+        "first_name": "Gaglo",
         "gender": "Male",
-        "hospital_code": "OAa3456",
-        "house_address": "House-4",
-        "last_name": "Machu",
-        "license_number": "80034903",
-        "middle_name": "G.O.A.T",
-        "person_image": "https://img.com/G.O.A.T",
-        "user_email": "baddest69@st.knust.edu.gh"
+        "hospital_code": "hoc01",
+        "house_address": "House-5",
+        "idDoctor": 22,
+        "last_name": "Nathaniel",
+        "license_number": "80043267",
+        "middle_name": "Elorm",
+        "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
+        "user_email": "nathaniel@gmail.com"
     },
     "status": true
-    }
+}
 	```    
 
     
