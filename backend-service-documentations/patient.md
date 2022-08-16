@@ -1,5 +1,6 @@
 # Patient services
 Jump to...
+- [Errors](#errors)
 - [Patient Registration](#patient-registration)
 - [Patient Login](#patient-login)
 - [Get all patients](#get-all-patients)
@@ -7,6 +8,19 @@ Jump to...
 - [Delete patient](#delete-patient)
 - [Update patient by ID](#update-patient-details-by-id)
 
+
+## Errors
+All errors are of the form shown below:
+```json
+{
+        "status": false,
+        "msg":{
+                "dev_messsage" : "(Actual Exception generated)",
+                "message":"Connection Error: User not recorded" 
+                        }
+}
+```
+[Back to top](#patient-services)
 
 ## Patient Registration		
 
