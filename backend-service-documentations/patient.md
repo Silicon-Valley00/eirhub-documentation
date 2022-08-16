@@ -10,11 +10,11 @@ Jump to...
 
 ## Patient Registration		
 
-	POST : /patient/signup      
+- POST : /patient/signup      
 
-    BODY PARAMS: 	
-
-	```
+- BODY PARAMETERS:`application/json`
+    - Sample:
+	```json
 	{
     "first_name": "Peter",
     "last_name": "Gregory",
@@ -26,8 +26,8 @@ Jump to...
     }
 	```
 
-	RESPONSE:
-	```
+- RESPONSE:
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -49,19 +49,19 @@ Jump to...
 
 ## Patient Login
 
-	POST : /patient/login		
+- POST : /patient/login		
 
-	BODY PARAMS: 	
+- BODY PARAMETERS:`application/json` 	
 
-	```
+	```json
 	{
     "user_email":"baddest69@st.knust.edu.gh",
     "user_password": "baddestGO@8"
     }
 	```
 
-	RESPONSE:
-	```
+- RESPONSE:
+	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -84,13 +84,13 @@ Jump to...
 
 ## Get All Patients
 
-    GET : /patient
+- GET : /patient
 
-    BODY PARAMS: None
+- BODY PARAMETERS: None
 
-    RESPONSE:
+- RESPONSE:
 
-    ```
+    ```json
     {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -117,13 +117,13 @@ Jump to...
 
 ## Get Patient by ID
 
-    GET : /patient/`patientID`
+- GET : /patient/`patientID`
 
-    BODY PARAMS: None
+- BODY PARAMETERS: None
 
-    RESPONSE:
+- RESPONSE:
 
-    ```
+    ```json
     {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
@@ -151,13 +151,13 @@ Jump to...
 
 ## Delete patient
 
-    DELETE: /patient/`patientID`
+- DELETE: /patient/`patientID`
 
-    BODY PARAMS: None
+- BODY PARAMETERS: None
 
-    RESPONSE:
+- RESPONSE:
 
-    ```
+    ```json
     {
         "msg": {
             "email": "Jackman@gmail.com",
@@ -181,11 +181,11 @@ Jump to...
 
 ## Update patient details by ID
 
-    PUT: /patient/`patientID`
+- PUT: /patient/`patientID`
 
-    BODY PARAMS:
+- BODY PARAMETERS:`application/json`
 
-    ```
+    ```json
    {
         "first_name": "Pete",
         "middle_name":"Leta",
@@ -203,8 +203,8 @@ Jump to...
     }
     ```
 
-    RESPONSE:
-    ```
+- RESPONSE:
+    ```json
     {
     "msg": {
         "email": "Gregy@st.knust.edu.gh",

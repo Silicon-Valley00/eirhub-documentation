@@ -8,10 +8,10 @@ Jump to ...
 
 ## Create hospital
 
-POST: /hospital
+- POST: /hospital
 
-BODY PARAMS: 
-```
+- BODY PARAMETERS: `application/json` 
+```json
 {
     "hospital_name": "Tech Hospital",
     "location": "knust",
@@ -22,8 +22,8 @@ BODY PARAMS:
 }
 ```
 
-RESPONSE:
-```
+- RESPONSE:
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -41,12 +41,12 @@ RESPONSE:
 
 ## Delete hospital by id
 
-DELETE: /deletehospital/`idHospital`
+- DELETE: /deletehospital/`idHospital`
 
-BODY PARAMS: None
+- BODY PARAMETERS: None
 
-RESPONSE:
-```
+- RESPONSE:
+```json
 {
     "msg": {
         "hospital_code": "ed1",
@@ -64,12 +64,12 @@ RESPONSE:
 
 ## Update hospital by id
 
-PUT: /updatehospital/`idHospital`
+- PUT: /updatehospital/`idHospital`
 
-BODY PARAMS:None
+- BODY PARAMETERS:None
 
-RESPONSE:
-```
+- RESPONSE:
+```json
 {
     "msg": {
         "hospital_code": "pa1s",
@@ -89,13 +89,13 @@ RESPONSE:
 
 
 ## Get all hospitals
-GET: /getallhospital
+- GET: /getallhospital
 
 
-BODY PARAMS:None
+- BODY PARAMETERS:None
 
-RESPONSE:
-```
+- RESPONSE:
+```json
 {
      "msg": [
         {
@@ -141,14 +141,14 @@ RESPONSE:
 
 
 ## Get hospital by id
-GET:/hospital/`idHospital`
+- GET:/hospital/`idHospital`
 
 
-BODY PARAMS: None
+- BODY PARAMETERS: None
 
 
-RESPONSE:
-```
+- RESPONSE:
+```json
 {
     "msg": {
         "hospital_code": "ede1",
@@ -162,9 +162,6 @@ RESPONSE:
     "status": true
 }
 ```
-        "weight": 33.0
-    }
-    }
-    ```
+
 
 [Back to top](#hospital-services)
