@@ -144,7 +144,7 @@ Jump to...
             "house_address": "House-5",
             "license_number": "80043267",
             "doctor_ratings": "4",
-            "doctor_specialties": "Clinical pharmacy",
+            "doctor_specialties": "Oncology",
             "gender": "Male",
             "hospital_code": "hoc01"
         

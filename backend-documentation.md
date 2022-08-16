@@ -805,7 +805,7 @@ RESPONSE:
         "bmi": 34.3,
         "height": 132.0,
         "last_visit": "Sun, 08 Sep 2002 00:00:00 GMT",
-        "patient_id": 38,
+        "id_patient": 38,
         "pulse": 98.9,
         "respiratory_rate": "116",
         "temperature": 36.0,
