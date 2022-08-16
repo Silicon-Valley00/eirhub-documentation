@@ -1,12 +1,25 @@
 # Doctor Services
 
 Jump to...
+- [Errors](#errors)
 - [Doctor Signup](#doctor-signup)
 - [Doctor login](#doctor-login)
 - [Get all doctors](#get-all-doctors)
 - [Update Doctor by ID](#update-doctor-by-id)
 - [Get Doctor by ID](#get-doctor-by-id)
 
+## Errors
+All errors are of the form shown below:
+```json
+{
+    "msg": {
+        "dev_message": "(Actual Exception generated)",
+        "message": "Could not update doctor details"
+    },
+    "status": false
+}
+```
+[Back to the top...](#doctor-services)
 
 ## Doctor Signup		
 - POST : /doctor/signup      
