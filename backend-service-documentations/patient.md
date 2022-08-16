@@ -5,9 +5,10 @@ Jump to...
 - [Get all patients](#get-all-patients)
 - [Get patient by ID](#get-patient-by-id)
 - [Delete patient](#delete-patient)
-- [Update patient by ID](#update-patient-by-id)
+- [Update patient by ID](#update-patient-details-by-id)
 
-- **Patient Registration**		
+
+## Patient Registration		
 
 	POST : /patient/signup      
 
@@ -41,11 +42,12 @@ Jump to...
         "user_email": "greg@st.knust.edu.gh"
     },
     "status": true
-}
+    }
 	```   
 
+[Back to top](#patient-services)
 
-- **Patient Login**:			
+## Patient Login
 
 	POST : /patient/login		
 
@@ -77,7 +79,10 @@ Jump to...
     }
 	```
 
-- **Get All Patients**
+[Back to top](#patient-services)
+
+
+## Get All Patients
 
     GET : /patient
 
@@ -106,7 +111,11 @@ Jump to...
         "status": true
     }
     ```    
-- **Get Patient by ID**
+
+[Back to top](#patient-services)
+
+
+## Get Patient by ID
 
     GET : /patient/`patientID`
 
@@ -136,7 +145,11 @@ Jump to...
     }
 
     ```
-- **Delete patient**
+
+[Back to top](#patient-services)
+
+
+## Delete patient
 
     DELETE: /patient/`patientID`
 
@@ -163,7 +176,10 @@ Jump to...
     }
     ```
 
-- **Update patient details by ID**
+[Back to top](#patient-services)
+
+
+## Update patient details by ID
 
     PUT: /patient/`patientID`
 
@@ -207,6 +223,7 @@ Jump to...
     } 
     ```
 
+[Back to top](#patient-services)
 
 
 
