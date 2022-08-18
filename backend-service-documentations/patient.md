@@ -207,20 +207,20 @@ All errors are of the form shown below:
 - BODY PARAMETERS:`application/json`
 
     ```json
-   {
-        "first_name": "Pete",
-        "middle_name":"Leta",
-        "last_name": "Greg",
-        "person_image":"https://img.com/profilePicture",
-        "email":"Gregy@st.knust.edu.gh",
-        "date_of_birth":"2001-07-03",
-        "house_address": "12 sesame street",
+    {
+        "first_name": "Richard",
+        "middle_name":"Sanchez",
+        "last_name": "Smith",
+        "person_image":"https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+        "user_email":"rick@st.knust.edu.gh",
+        "date_of_birth":"2004-06-13",
+        "house_address": "06 Ridge avenue",
         "gender":"male",
-        "phone_number" : "+233265936575",
-        "id_number": "GHA-08006335HJJ",
+        "phone_number" : "+233243725466",
+        "id_number": "GHA-08006635LTF",
         "nationality":"Ghanaian",
-        "doctor_id": 20,
-        "guardian_id": 20
+        "id_doctor": 25,
+        "id_guardian": 23
     }
 
     ```
@@ -230,20 +230,23 @@ All errors are of the form shown below:
     ```json
     {
     "msg": {
-        "email": "Gregy@st.knust.edu.gh",
-        "first_name": "Pete",
-        "house_address": "12 sesame street",
-        "id_patient": 34,
-        "idDoctor": 20,
-        "idGuardian": 20,
-        "id_number": "GHA-08006335HJJ",
-        "last_name": "Greg",
-        "middle_name": "Leta",
+        "date_of_birth": "Sun, 13 Jun 2004 00:00:00 GMT",
+        "first_name": "Richard",
+        "gender": "male",
+        "house_address": "06 Ridge avenue",
+        "id_doctor": 25,
+        "id_guardian": 23,
+        "id_number": "GHA-08006635LTF",
+        "id_patient": 42,
+        "last_name": "Smith",
+        "middle_name": "Sanchez",
         "nationality": "Ghanaian",
-        "person_image": "https://img.com/profilePicture"
+        "person_image": "https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+        "phone_number": "+233243725466",
+        "user_email": "rick@st.knust.edu.gh"
     },
     "status": true
-    } 
+    }
     ```
 
 [Back to top](#patient-services)
