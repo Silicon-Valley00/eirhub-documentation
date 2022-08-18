@@ -196,22 +196,23 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/doctor/21` 
 - RESPONSE:
 	```json
-        {
-        "msg": {
-            "date_of_birth": "https://img.com/G.O.A.T",
-            "doctor_ratings": 3,
-            "doctor_specialties": "Gynaecology, Paediatric",
-            "first_name": "Rexford",
-            "gender": "Male",
-            "hospital_code": "OAa3456",
-            "house_address": "House-4",
-            "last_name": "Machu",
-            "license_number": "80034903",
-            "middle_name": "G.O.A.T",
-            "person_image": "https://img.com/G.O.A.T",
-            "user_email": "baddest69@st.knust.edu.gh"
-        },
-        "status": true
-        }
+       {
+    "msg": {
+        "date_of_birth": "Tue, 04 Oct 1988 00:00:00 GMT",
+        "doctor_ratings": 4,
+        "doctor_specialties": "Clinical pharmacy",
+        "first_name": "Gaglo",
+        "gender": "Male",
+        "hospital_code": "hoc01",
+        "house_address": "House-5",
+        "id_doctor": 22,
+        "last_name": "Nathaniel",
+        "license_number": "80043267",
+        "middle_name": "Elorm",
+        "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+        "user_email": "Nathaniel@gmail.com"
+    },
+    "status": true
+     }
 	```
 [Back to the top...](#doctor-services)
