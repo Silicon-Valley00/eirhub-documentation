@@ -253,19 +253,49 @@ All errors are of the form shown below:
     - Sample:
         ```json
         {
-            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
-            "appointment_end_time": "09:00:00",
-            "appointment_reason": "Death Soon",
-            "appointment_start_time": "09:00:00",
-            "appointment_status": "Accepted",
-            "appointment_location": "There Naa",
-            "idDoctor": 21,
-            "idPatient": 31
+            "appointment_date": "2022-12-12",
+            "appointment_end_time": "12:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_status" : "Declined",
+            "appointment_start_time": "09:00:00",       
+            "appointment_location": "North Legon Hospital",
+            "id_doctor": 23,
+            "id_patient": 34
         }
         ```
 - QUERY PARAMETERS: Provide the ID of the specific appointment you want to update through query param, `id_appointment`
 - SAMPLE URL: `https://base.com/appointments/?id_appointment=9`
 - Sample response:
+    ```json
+    {
+    "msg": [
+        {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "12:00:00",
+            "appointment_location": "North Legon Hospital",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "09:00:00",
+            "appointment_status": "Declined",
+            "doctor_info": {
+                "first_name": "Janice",
+                "last_name": "Brempong",
+                "middle_name": "Oluwa",
+                "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg"
+            },
+            "id_appointment": 6,
+            "id_doctor": 23,
+            "id_patient": 34,
+            "patient_info": {
+                "fist_name": "Pete",
+                "last_name": "Greg",
+                "middle_name": "Leta",
+                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
+            }
+        }
+    ],
+    "status": true
+    }
+    ```
 
 [Back to the top...](#appointment-services)
 
