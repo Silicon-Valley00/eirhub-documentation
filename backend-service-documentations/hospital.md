@@ -1,10 +1,25 @@
 # Hospital Services
 Jump to ...
+- [Errors](#errors)
 - [Create hospital](#create-hospital)
 - [Delete hospital by id](#delete-hospital-by-id)
 - [Update hospital by id](#update-hospital-by-id)
 - [Get all hospitals](#get-all-hospitals)
 - [Get hospital by id](#get-hospital-by-id)
+
+## Errors
+All errors are of the form shown below:
+```json
+{
+    "msg": {
+        "dev_message": "(Actual Exception generated)",
+        "message": "Connection error: Unable to delete hospital"
+    },
+    "status": false
+}
+```
+[Back to the top...](#doctor-services)
+
 
 ## Create hospital
 
