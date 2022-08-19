@@ -17,6 +17,7 @@ Jump to...
             "uploaddate": "Thu, 21 Jul 2022 19:01:51 GMT"
         }
         ```
+- SAMPLE URL: `https://base.com/report`
 - RESPONSE:
     ```json
      {
@@ -35,6 +36,7 @@ Jump to...
 ## Get All reports
 - GET: /reports
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/reports`
 - RESPONSE:
     ```json
     [
@@ -74,6 +76,7 @@ Jump to...
 ## Delete Report By Report ID
 - DELETE: /report/`idReport`
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/report/?id_report=20`
 - RESPONSE:
     ```json
         {
@@ -100,6 +103,7 @@ Jump to...
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         }
     ```
+- SAMPLE URL: `https://base.com/report/?id_report=20`
 - RESPONSE:
     ```json
         {
@@ -118,6 +122,7 @@ Jump to...
 ## Get Report By Patient ID
 - GET: /report/`idReport`
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/report/?id_report=20`
 - RESPONSE:
     ```json
         {

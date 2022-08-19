@@ -10,6 +10,7 @@ Jump to...
 ## Get Prescription By ID
 - GET: /prescription/`idPatient`
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/prescription`
 
 - RESPONSE:
     ```json
@@ -60,6 +61,7 @@ Jump to...
 ## Get All Prescriptions
 - GET: /prescription 
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/prescription`
 
 - RESPONSE:
      ```json
@@ -131,6 +133,8 @@ Jump to...
         "idPatient":28
     }
     ```
+
+- SAMPLE URL: `https://base.com/prescription`
 - RESPONSE:
     ```json
     {
@@ -163,6 +167,7 @@ Jump to...
     "idPatient":28
     }
 	```
+- SAMPLE URL: `https://base.com/prescription/?id_prescription=20`
 - RESPONSE:
     ```json
     {
@@ -184,6 +189,7 @@ Jump to...
 ## Delete Prescription by Prescription ID
 - DELETE: /prescription/`idPrescription`
 - BODY PARAMETERS: None
+- SAMPLE URL: `https://base.com/prescription/?id_prescription=20`
 
 - RESPONSE:
     ```json
