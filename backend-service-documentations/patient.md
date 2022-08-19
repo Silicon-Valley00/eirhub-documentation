@@ -24,7 +24,7 @@ All errors are of the form shown below:
 
 ## Patient Registration		
 
-- POST : /patient/signup      
+- POST : /patients/signup      
 
 - BODY PARAMETERS:`application/json`
     - Sample:
@@ -35,17 +35,15 @@ All errors are of the form shown below:
     "user_email":"greg@st.knust.edu.gh",
     "user_password": "gregy",
     "date_of_birth":"2009-12-01",
-    "doctor_id": 20,
-    "guardian_id": 20
     }
 	```
+- SAMPLE URL: `https://base.com/patients/signup`
 
 - RESPONSE:
 	```json
 	{
     "msg": {
         "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-        "doctor_id": 20,
         "first_name": "Peter",
         "gender": null,
         "guardian_id": 20,
@@ -63,34 +61,36 @@ All errors are of the form shown below:
 
 ## Patient Login
 
-- POST : /patient/login		
+- POST : /patients/login		
 
 - BODY PARAMETERS:`application/json` 	
 
 	```json
-	{
-    "user_email":"baddest69@st.knust.edu.gh",
-    "user_password": "baddestGO@8"
+	 {
+    "user_email": "rick@st.knust.edu.gh",
+    "user_password": "ricksanchez"
     }
 	```
+- SAMPLE URL: `https://base.com/patients/login`
 
 - RESPONSE:
 	```json
 	{
     "msg": {
-        "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-        "doctor_id": 20,
-        "email": "baddest69@st.knust.edu.gh",
-        "first_name": "Rexford",
-        "gender": "Male",
-        "guardian_id": 20,
-        "id_number": "GHA-08008238HJJ",
-        "last_name": "Machu",
-        "middle_name": "Patient",
-        "phone_number": "+233206436575"
+        "date_of_birth": "Sun, 13 Jun 2004 00:00:00 GMT",
+        "first_name": "Richard",
+        "gender": null,
+        "guardian_id": null,
+        "id_doctor": null,
+        "id_number": null,
+        "id_patient": 42,
+        "last_name": "Smith",
+        "middle_name": null,
+        "phone_number": null,
+        "user_email": "rick@st.knust.edu.gh"
     },
     "status": true
-    }
+   }
 	```
 
 [Back to top](#patient-services)
@@ -98,9 +98,11 @@ All errors are of the form shown below:
 
 ## Get All Patients
 
-- GET : /patient
+- GET : /patients
 
 - BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/patients`
 
 - RESPONSE:
 
@@ -108,22 +110,23 @@ All errors are of the form shown below:
     {
         "msg": {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-            "email": "molly@st.knust.edu.gh",
             "first_name": "Molly",
             "gender": "Male",
             "house_address": "House-4",
-            "idDoctor": 20,
-            "idGuardian": 20,
-            "idPatient": 30,
+            "id_doctor": 20,
+            "id_guardian": 20,
             "id_number": "GHA-00809238HJJ",
+            "id_patient": 30,
             "last_name": "Malloy",
             "middle_name": "Patient",
             "nationality": "Ghanaian",
-            "person_image": "https://img.com/G.O.A.T",
-            "phone_number": "+233206436575"
+            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "phone_number": "+233206436575",
+            "user_email": "molly@st.knust.edu.gh"
         },
         "status": true
-    }
+    },
+  
     ```    
 
 [Back to top](#patient-services)
@@ -131,32 +134,34 @@ All errors are of the form shown below:
 
 ## Get Patient by ID
 
-- GET : /patient/`patientID`
+- GET : /patients/`patientID`
 
 - BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/patients/30`
 
 - RESPONSE:
 
     ```json
-    {
-        "msg": {
-            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-            "email": "molly@st.knust.edu.gh",
-            "first_name": "Molly",
-            "gender": "Male",
-            "house_address": "House-4",
-            "idDoctor": 20,
-            "idGuardian": 20,
-            "idPatient": 30,
-            "id_number": "GHA-00809238HJJ",
-            "last_name": "Malloy",
-            "middle_name": "Patient",
-            "nationality": "Ghanaian",
-            "person_image": "https://img.com/G.O.A.T",
-            "phone_number": "+233206436575"
-        },
-        "status": true
-    }
+   {
+    "msg": {
+        "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+        "first_name": "Molly",
+        "gender": "Male",
+        "house_address": "House-4",
+        "id_doctor": 20,
+        "id_guardian": 20,
+        "id_number": "GHA-00809238HJJ",
+        "id_patient": 30,
+        "last_name": "Malloy",
+        "middle_name": "Patient",
+        "nationality": "Ghanaian",
+        "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+        "phone_number": "+233206436575",
+        "user_email": "molly@st.knust.edu.gh"
+    },
+    "status": true
+   }
 
     ```
 
@@ -165,9 +170,11 @@ All errors are of the form shown below:
 
 ## Delete patient
 
-- DELETE: /patient/`patientID`
+- DELETE: /patients/`patientID`
 
 - BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/patients/24`
 
 - RESPONSE:
 
@@ -195,46 +202,51 @@ All errors are of the form shown below:
 
 ## Update patient details by ID
 
-- PUT: /patient/`patientID`
+- PUT: /patients/`patientID`
 
 - BODY PARAMETERS:`application/json`
 
     ```json
-   {
-        "first_name": "Pete",
-        "middle_name":"Leta",
-        "last_name": "Greg",
-        "person_image":"https://img.com/profilePicture",
-        "email":"Gregy@st.knust.edu.gh",
-        "date_of_birth":"2001-07-03",
-        "house_address": "12 sesame street",
+    {
+        "first_name": "Richard",
+        "middle_name":"Sanchez",
+        "last_name": "Smith",
+        "person_image":"https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+        "user_email":"rick@st.knust.edu.gh",
+        "date_of_birth":"2004-06-13",
+        "house_address": "06 Ridge avenue",
         "gender":"male",
-        "phone_number" : "+233265936575",
-        "id_number": "GHA-08006335HJJ",
+        "phone_number" : "+233243725466",
+        "id_number": "GHA-08006635LTF",
         "nationality":"Ghanaian",
-        "doctor_id": 20,
-        "guardian_id": 20
+        "id_doctor": 25,
+        "id_guardian": 23
     }
+
     ```
+- SAMPLE URL: `https://base.com/patients/34`
 
 - RESPONSE:
     ```json
     {
     "msg": {
-        "email": "Gregy@st.knust.edu.gh",
-        "first_name": "Pete",
-        "house_address": "12 sesame street",
-        "id": 34,
-        "idDoctor": 20,
-        "idGuardian": 20,
-        "id_number": "GHA-08006335HJJ",
-        "last_name": "Greg",
-        "middle_name": "Leta",
+        "date_of_birth": "Sun, 13 Jun 2004 00:00:00 GMT",
+        "first_name": "Richard",
+        "gender": "male",
+        "house_address": "06 Ridge avenue",
+        "id_doctor": 25,
+        "id_guardian": 23,
+        "id_number": "GHA-08006635LTF",
+        "id_patient": 42,
+        "last_name": "Smith",
+        "middle_name": "Sanchez",
         "nationality": "Ghanaian",
-        "person_image": "https://img.com/profilePicture"
+        "person_image": "https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+        "phone_number": "+233243725466",
+        "user_email": "rick@st.knust.edu.gh"
     },
     "status": true
-    } 
+    }
     ```
 
 [Back to top](#patient-services)

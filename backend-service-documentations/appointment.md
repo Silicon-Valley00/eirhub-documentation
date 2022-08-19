@@ -28,7 +28,7 @@ All errors are of the form shown below:
 - Sample response:
     ```json
     {
-        "detail": [
+        "msg": [
             {
                 "appointment_date": "Fri, 21 Oct 2022 00:00:00 GMT",
                 "appointment_end_time": "11:00:00",
@@ -39,7 +39,8 @@ All errors are of the form shown below:
                 "doctor_info": {
                     "first_name": "Rexford",
                     "last_name": "Machu",
-                    "middle_name": "G.O.A.T.II"
+                    "middle_name": "G.O.A.T.II",
+                    "person_image": "..."
                 },
                 "idAppointment": 3,
                 "idDoctor": 21,
@@ -47,7 +48,8 @@ All errors are of the form shown below:
                 "patient_info": {
                     "fist_name": "Pete",
                     "last_name": "Greg",
-                    "middle_name": "Leta"
+                    "middle_name": "Leta",
+                    "person_image": "..."
                 }
             },
             {
@@ -60,7 +62,8 @@ All errors are of the form shown below:
                 "doctor_info": {
                     "first_name": "Rexford",
                     "last_name": "Machu",
-                    "middle_name": "G.O.A.T"
+                    "middle_name": "G.O.A.T",
+                    "person_image": "..."
                 },
                 "idAppointment": 5,
                 "idDoctor": 20,
@@ -68,7 +71,8 @@ All errors are of the form shown below:
                 "patient_info": {
                     "fist_name": "Pete",
                     "last_name": "Greg",
-                    "middle_name": "Leta"
+                    "middle_name": "Leta",
+                    "person_image": "..."
                 }
             }
         ],
@@ -85,7 +89,7 @@ All errors are of the form shown below:
 - Sample response:
     ```json
     {
-        "detail": [
+        "msg": [
             {
                 "appointment_date": "Fri, 21 Oct 2022 00:00:00 GMT",
                 "appointment_end_time": "11:00:00",
@@ -96,7 +100,8 @@ All errors are of the form shown below:
                 "doctor_info": {
                     "first_name": "Rexford",
                     "last_name": "Machu",
-                    "middle_name": "G.O.A.T.II"
+                    "middle_name": "G.O.A.T.II",
+                    "person_image": "..."
                 },
                 "idAppointment": 3,
                 "idDoctor": 21,
@@ -112,7 +117,8 @@ All errors are of the form shown below:
                 "doctor_info": {
                     "first_name": "Rexford",
                     "last_name": "Machu",
-                    "middle_name": "G.O.A.T"
+                    "middle_name": "G.O.A.T",
+                    "person_image": "..."
                 },
                 "idAppointment": 4,
                 "idDoctor": 20,
@@ -128,7 +134,8 @@ All errors are of the form shown below:
                 "doctor_info": {
                     "first_name": "Rexford",
                     "last_name": "Machu",
-                    "middle_name": "G.O.A.T"
+                    "middle_name": "G.O.A.T",
+                    "person_image": "..."
                 },
                 "idAppointment": 5,
                 "idDoctor": 20,
@@ -148,7 +155,7 @@ All errors are of the form shown below:
 - Sample response:
     ```json
     {
-        "detail": [
+        "msg": [
             {
                 "appointment_date": "Mon, 21 Nov 2022 00:00:00 GMT",
                 "appointment_end_time": "13:00:00",
@@ -162,7 +169,8 @@ All errors are of the form shown below:
                 "patient_info": {
                     "fist_name": "Pete",
                     "last_name": "Greg",
-                    "middle_name": "Leta"
+                    "middle_name": "Leta",
+                    "person_image": "..."
                 }
             },
             {
@@ -178,7 +186,8 @@ All errors are of the form shown below:
                 "patient_info": {
                     "fist_name": "Pete",
                     "last_name": "Greg",
-                    "middle_name": "Leta"
+                    "middle_name": "Leta",
+                    "person_image": "..."
                 }
             }
         ],
@@ -208,27 +217,31 @@ All errors are of the form shown below:
 - Sample response:
     ```json
     {
-        "detail": {
-            "appointment_date": "0000-00-00",
-            "appointment_end_time": "09:00:00",
-            "appointment_location": "There Naa",
-            "appointment_reason": "Death Soon",
-            "appointment_start_time": "09:00:00",
-            "appointment_status": "Pending",
-            "doctor_info": {
-                "first_name": "Rexford",
-                "last_name": "Machu",
-                "middle_name": "G.O.A.T.II"
-            },
-            "idAppointment": 9,
-            "idDoctor": 21,
-            "idPatient": 31,
-            "patient_info": {
-                "fist_name": "Max",
-                "last_name": "Mawube",
-                "middle_name": "Ahiamadzor"
+        "msg": [
+            {
+                "appointment_date": "0000-00-00",
+                "appointment_end_time": "09:00:00",
+                "appointment_location": "There Naa",
+                "appointment_reason": "Death Soon",
+                "appointment_start_time": "09:00:00",
+                "appointment_status": "Pending",
+                "doctor_info": {
+                    "first_name": "Rexford",
+                    "last_name": "Machu",
+                    "middle_name": "G.O.A.T.II",
+                    "person_image": "..."
+                },
+                "idAppointment": 9,
+                "idDoctor": 21,
+                "idPatient": 31,
+                "patient_info": {
+                    "fist_name": "Max",
+                    "last_name": "Mawube",
+                    "middle_name": "Ahiamadzor",
+                    "person_image": "..."
+                }
             }
-        },
+        ],
         "status": true
     }
     ```
@@ -240,19 +253,49 @@ All errors are of the form shown below:
     - Sample:
         ```json
         {
-            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
-            "appointment_end_time": "09:00:00",
-            "appointment_reason": "Death Soon",
-            "appointment_start_time": "09:00:00",
-            "appointment_status": "Accepted",
-            "appointment_location": "There Naa",
-            "idDoctor": 21,
-            "idPatient": 31
+            "appointment_date": "2022-12-12",
+            "appointment_end_time": "12:00:00",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_status" : "Declined",
+            "appointment_start_time": "09:00:00",       
+            "appointment_location": "North Legon Hospital",
+            "id_doctor": 23,
+            "id_patient": 34
         }
         ```
 - QUERY PARAMETERS: Provide the ID of the specific appointment you want to update through query param, `id_appointment`
 - SAMPLE URL: `https://base.com/appointments/?id_appointment=9`
 - Sample response:
+    ```json
+    {
+    "msg": [
+        {
+            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "12:00:00",
+            "appointment_location": "North Legon Hospital",
+            "appointment_reason": "Severe abdominal pains",
+            "appointment_start_time": "09:00:00",
+            "appointment_status": "Declined",
+            "doctor_info": {
+                "first_name": "Janice",
+                "last_name": "Brempong",
+                "middle_name": "Oluwa",
+                "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg"
+            },
+            "id_appointment": 6,
+            "id_doctor": 23,
+            "id_patient": 34,
+            "patient_info": {
+                "fist_name": "Pete",
+                "last_name": "Greg",
+                "middle_name": "Leta",
+                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
+            }
+        }
+    ],
+    "status": true
+    }
+    ```
 
 [Back to the top...](#appointment-services)
 
@@ -260,21 +303,30 @@ All errors are of the form shown below:
 - DELETE: /appointments/
 - BODY PARAMETERS: None
 - QUERY PARAMETERS: Provide the ID of the appointment through the query param, `id_appointment`
+- SAMPLE URL: `https://base.com/appointments/?id_appointment=10`
 - Sample response:
     ```json
     {
-        "detail": {
+        "msg": {
             "appointment_date": "0000-00-00",
             "appointment_end_time": "09:00:00",
             "appointment_location": "There Naa",
             "appointment_reason": "Death Soon",
             "appointment_start_time": "09:00:00",
             "appointment_status": "Pending",
-            "doctor_info": "",
+            "doctor_info": {
+                "first_name": "Rexford",
+                "last_name": "Machu",
+                "middle_name": "G.O.A.T.II"
+            },
             "idAppointment": 10,
             "idDoctor": 21,
             "idPatient": 31,
-            "patient_info": ""
+            "patient_info": {
+                "fist_name": "Max",
+                "last_name": "Mawube",
+                "middle_name": "Ahiamadzor"
+            }
         },
         "status": true
     }
