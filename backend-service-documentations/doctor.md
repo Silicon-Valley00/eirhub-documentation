@@ -134,67 +134,8 @@ All errors are of the form shown below:
             "middle_name": "Elorm",
             "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
             "user_email": "nathaniel@gmail.com"
-        },
-        {
-            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "doctor_ratings": 3,
-            "doctor_specialties": "Dentistry",
-            "first_name": "Janice",
-            "gender": "Female",
-            "hospital_code": "hoc01",
-            "house_address": "House 34",
-            "id_doctor": 23,
-            "last_name": "Brempong",
-            "license_number": "80043269",
-            "middle_name": "Oluwa",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "user_email": "janice@gmail.com"
-        },
-        {
-            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "doctor_ratings": 2,
-            "doctor_specialties": "Dentistry",
-            "first_name": "Kemi",
-            "gender": "Female",
-            "hospital_code": "hoc02",
-            "house_address": "House-7",
-            "id_doctor": 24,
-            "last_name": "Otedola",
-            "license_number": "80043223",
-            "middle_name": "Oti",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "user_email": "kemi@gmail.com"
-        },
-        {
-            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "doctor_ratings": 4,
-            "doctor_specialties": "Oncology",
-            "first_name": "Maleek",
-            "gender": "Male",
-            "hospital_code": "hoc02",
-            "house_address": "House-14",
-            "id_doctor": 25,
-            "last_name": "Dray",
-            "license_number": "80043272",
-            "middle_name": "Zumi",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "user_email": "maleekd@gmail.com"
-        },
-        {
-            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "doctor_ratings": 2,
-            "doctor_specialties": "Pediatrics",
-            "first_name": "Maleek",
-            "gender": "Male",
-            "hospital_code": "hoc03",
-            "house_address": "House-45",
-            "id_doctor": 26,
-            "last_name": "Dembele",
-            "license_number": "80043273",
-            "middle_name": "Usman",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "user_email": "dembe@gmail.com"
         }
+       
     ],
     "status": true
        }
