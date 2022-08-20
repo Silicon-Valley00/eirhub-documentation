@@ -7,9 +7,11 @@ Jump to...
 - [Update prescription by prescription ID](#update-prescription-by-prescription-id)
 - [Delete prescription by prescription ID](#delete-prescription-by-prescription-id)
 
-## Get Prescription By ID
+## Get Prescription By patient ID
 - GET: /prescription/`idPatient`
+
 - BODY PARAMETERS: None
+
 - SAMPLE URL: `https://base.com/prescription`
 
 - RESPONSE:
@@ -60,7 +62,9 @@ Jump to...
 
 ## Get All Prescriptions
 - GET: /prescription 
+
 - BODY PARAMETERS: None
+
 - SAMPLE URL: `https://base.com/prescription`
 
 - RESPONSE:
@@ -120,6 +124,7 @@ Jump to...
 
 ## Create A Prescription For A Patient
 - POST : /prescription
+
 - BODY PARAMETERS: 
     - Sample
     ```json
@@ -135,9 +140,10 @@ Jump to...
     ```
 
 - SAMPLE URL: `https://base.com/prescription`
+
 - RESPONSE:
     ```json
-    {
+   {
     "msg": {
         "dosage": "2/day",
         "drug_name": "laravelS",

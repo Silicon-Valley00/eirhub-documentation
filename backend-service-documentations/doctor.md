@@ -26,27 +26,33 @@ All errors are of the form shown below:
 - BODY PARAMETERS: 
     - Sample:
         ```json
-        {
-            "first_name": "Gaglo",
-            "last_name": "Nathaniel",
-            "user_email":"Nathaniel@gmail.com",
-            "user_password":"Elormpassword",
-            "date_of_birth":"1988-10-04",
-            "hospital_code":"hoc01"
+       {
+            "first_name": "Benedict",
+            "last_name": "Freeman",
+            "user_email":"Freeman@gmail.com",
+            "user_password":"freeben1990",
+            "date_of_birth":"1990-12-18",
+            "hospital_code":"RMC04"
         }
         ```
 - SAMPLE URL: `https://base.com/doctor/signup`          
 - RESPONSE:
 	```json
-        {
-        "msg": {
-            "first_name": "Rexford",
-            "last_name": "Machu",
-            "license_number": "80034903",
-            "middle_name": "G.O.A.T"
-        },
-        "status": true
-        }
+       {
+    "msg": {
+        "date_of_birth": "Tue, 18 Dec 1990 00:00:00 GMT",
+        "first_name": "Benedict",
+        "gender": null,
+        "hospital_code": "RMC04",
+        "hospital_name": "Ridge Medical Center",
+        "id_doctor": 28,
+        "last_name": "Freeman",
+        "license_number": null,
+        "middle_name": null,
+        "user_email": "Freeman@gmail.com"
+    },
+    "status": true
+    }
 	```    
 [Back to the top...](#doctor-services)
 
@@ -88,57 +94,42 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/doctors`  
 - RESPONSE:
 	```json
-        {
+       {
     "msg": [
-        {
-            "date_of_birth": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
-            "doctor_ratings": 3,
-            "doctor_specialties": "Gynaecology, Paediatric",
-            "first_name": "Rexford",
-            "gender": "Male",
-            "hospital_code": "0",
-            "house_address": "House-4",
-            "id_doctor": 20,
-            "last_name": "Machu",
-            "license_number": "80034903",
-            "middle_name": "G.O.A.T",
-            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
-            "user_email": "baddest69@st.knust.edu.gh"
-        },
-        {
-            "date_of_birth": "https://img.com/G.O.A.T.II",
-            "doctor_ratings": 3,
-            "doctor_specialties": "Gynaecology, Paediatric, General",
-            "first_name": "Rexford",
-            "gender": "Male",
-            "hospital_code": "0",
-            "house_address": "House-4",
-            "id_doctor": 21,
-            "last_name": "Machu",
-            "license_number": "8003490390",
-            "middle_name": "G.O.A.T.II",
-            "person_image": "https://img.com/G.O.A.T.II",
-            "user_email": "baddest70@st.knust.edu.gh"
-        },
-        {
-            "date_of_birth": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
+       {
+            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
             "doctor_ratings": 3,
             "doctor_specialties": "Oncology",
             "first_name": "Gaglo",
             "gender": "Male",
-            "hospital_code": "hoc01",
+            "hospital_code": "KAT02",
+            "hospital_name": "Komfo Anokye Teaching Hospital",
             "house_address": "House-5",
             "id_doctor": 22,
             "last_name": "Nathaniel",
             "license_number": "80043267",
             "middle_name": "Elorm",
-            "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
             "user_email": "nathaniel@gmail.com"
-        }
-       
-    ],
-    "status": true
-       }
+        },
+        {
+            "date_of_birth": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "doctor_ratings": 4,
+            "doctor_specialties": "Obstetrics",
+            "first_name": "Janice",
+            "gender": "Female",
+            "hospital_code": "NL05",
+            "hospital_name": "North Legon Hospital",
+            "house_address": "House-64",
+            "id_doctor": 23,
+            "last_name": "Brempong",
+            "license_number": "80043248",
+            "middle_name": "Abena",
+            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "user_email": "janice@gmail.com"
+        },
+    ]
+    }
 	```    
 
 [Back to the top...](#doctor-services)
@@ -148,20 +139,19 @@ All errors are of the form shown below:
 - BODY PARAMETERS: `application/json`	
     - Sample:
         ```json
-        {
+       {
 
             "first_name": "Gaglo",
             "middle_name": "Elorm",
             "last_name": "Nathaniel",
-            "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
             "user_email": "nathaniel@gmail.com",
             "date_of_birth": "1988-10-04",
             "house_address": "House-5",
             "license_number": "80043267",
-            "doctor_ratings": "4",
             "doctor_specialties": "Oncology",
             "gender": "Male",
-            "hospital_code": "hoc01"
+            "hospital_code": "KAT02"
         
         }
 
@@ -169,52 +159,57 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/doctor/21`  
 - RESPONSE:
     ```json
-      {
+     {
     "msg": {
         "date_of_birth": "Tue, 04 Oct 1988 00:00:00 GMT",
         "doctor_ratings": 3,
         "doctor_specialties": "Oncology",
         "first_name": "Gaglo",
         "gender": "Male",
-        "hospital_code": "hoc01",
-        "house_address": "House-5",
-        "id_doctor": 22,
-        "last_name": "Nathaniel",
-        "license_number": "80043267",
-        "middle_name": "Elorm",
-        "person_image": "https://hddesktopwallpapers.in/wp-content/uploads/2015/09/resting-images.jpg",
-        "user_email": "nathaniel@gmail.com"
-    },
-    "status": true
-     }
-        ```    
-
-    
-[Back to the top...](#doctor-services)
-
-## Get Doctor By Id		
-- GET : /doctor/`doctorId`       
-- BODY PARAMETERS: None
-- SAMPLE URL: `https://base.com/doctor/21` 
-- RESPONSE:
-	```json
-       {
-    "msg": {
-        "date_of_birth": "Tue, 04 Oct 1988 00:00:00 GMT",
-        "doctor_ratings": 4,
-        "doctor_specialties": "Clinical pharmacy",
-        "first_name": "Gaglo",
-        "gender": "Male",
-        "hospital_code": "hoc01",
+        "hospital_code": "KAT02",
+        "hospital_name": "Komfo Anokye Teaching Hospital",
         "house_address": "House-5",
         "id_doctor": 22,
         "last_name": "Nathaniel",
         "license_number": "80043267",
         "middle_name": "Elorm",
         "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-        "user_email": "Nathaniel@gmail.com"
+        "user_email": "nathaniel@gmail.com"
     },
     "status": true
-     }
+    }
+        ```    
+
+    
+[Back to the top...](#doctor-services)
+
+## Get Doctor By Id		
+- GET : /doctor/`doctorId`
+
+- BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/doctor/21` 
+
+- RESPONSE:
+	```json
+     {
+    "msg": {
+        "date_of_birth": "Mon, 19 Sep 1994 00:00:00 GMT",
+        "doctor_ratings": 4,
+        "doctor_specialties": "Obstetrics",
+        "first_name": "Janice",
+        "gender": "Female",
+        "hospital_code": "NL05",
+        "hospital_name": "North Legon Hospital",
+        "house_address": "House-64",
+        "id_doctor": 23,
+        "last_name": "Brempong",
+        "license_number": "80043248",
+        "middle_name": "Abena",
+        "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+        "user_email": "janice@gmail.com"
+    },
+    "status": true
+    }
 	```
 [Back to the top...](#doctor-services)
