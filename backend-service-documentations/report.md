@@ -18,7 +18,7 @@ All errors are of the form shown below:
     "status": false
 }
 ```
-[Back to the top...](#healthdetails-services)
+[Back to the top...](#report-services)
 
 ## Create report
 - POST: /report

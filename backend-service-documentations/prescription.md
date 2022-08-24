@@ -19,7 +19,7 @@ All errors are of the form shown below:
     "status": false
 }
 ```
-[Back to the top...](#healthdetails-services)
+[Back to the top...](#prescription-services)
 
 ## Get Prescription By patient ID
 - GET: /prescription/`idPatient`
