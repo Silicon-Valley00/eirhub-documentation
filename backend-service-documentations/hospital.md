@@ -38,7 +38,7 @@ All errors are of the form shown below:
     }
     ```
 
-- SAMPLE URL: `https://base.com/hospital
+- SAMPLE URL: `https://base.com/hospital`
 
 - RESPONSE:
     ```json
@@ -64,7 +64,7 @@ All errors are of the form shown below:
 
 - BODY PARAMETERS: None
 
-- SAMPLE URL: `https://base.com/hospital/7
+- SAMPLE URL: `https://base.com/hospital/7`
 
 - RESPONSE:
     ```json
@@ -100,7 +100,7 @@ All errors are of the form shown below:
         "phone_number": "0596698071"
     }
     ```
-- SAMPLE URL: `https://base.com/hospital/6
+- SAMPLE URL: `https://base.com/hospital/6`
 
 - RESPONSE:
     ```json
@@ -127,7 +127,7 @@ All errors are of the form shown below:
 
 - BODY PARAMETERS:None
 
-- SAMPLE URL: `https://base.com/hospital/6
+- SAMPLE URL: `https://base.com/hospital/6`
 
 - RESPONSE:
     ```json
@@ -171,7 +171,7 @@ All errors are of the form shown below:
 
 - BODY PARAMETERS: None
 
-- SAMPLE URL: `https://base.com/hospital/6
+- SAMPLE URL: `https://base.com/hospital/6`
 
 - RESPONSE:
     ```json

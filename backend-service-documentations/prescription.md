@@ -1,11 +1,25 @@
 # Prescription Services
 
 Jump to...
-- [Get prescriptions by patient ID](#get-prescription-by-id)
+- [Errors](#errors)
+- [Get prescriptions by patient ID](#get-prescription-by-patient-id)
 - [Get all prescriptions](#get-all-prescriptions)
 - [Create a new prescription by patient ID](#create-a-prescription-for-a-patient)
 - [Update prescription by prescription ID](#update-prescription-by-prescription-id)
 - [Delete prescription by prescription ID](#delete-prescription-by-prescription-id)
+
+## Errors
+All errors are of the form shown below:
+```json
+{
+    "msg": {
+        "dev_message": "(Actual Exception generated)",
+        "message": "Connection Error: Prescriptions not updated"
+    },
+    "status": false
+}
+```
+[Back to the top...](#healthdetails-services)
 
 ## Get Prescription By patient ID
 - GET: /prescription/`idPatient`
