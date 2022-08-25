@@ -213,3 +213,60 @@ All errors are of the form shown below:
     }
 	```
 [Back to the top...](#doctor-services)
+
+## Get Patients by Doctor ID
+
+- GET : /Doctor/
+
+- BODY PARAMETERS: None
+
+- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. This would be used to fetch a list of patients that the doctor is attending to
+- SAMPLE URL: `https://base.com/doctor/?id_doctor=24`
+
+- RESPONSE:
+
+    ```json
+    [
+    {
+        "msg": {
+            "date_of_birth": "Sun, 18 Aug 2002 00:00:00 GMT",
+            "first_name": "Jerry",
+            "gender": "Male",
+            "house_address": "House no.23 Nyame Street",
+            "id_doctor": 24,
+            "id_guardian": 25,
+            "id_number": "GHA-009494-124",
+            "id_patient": 38,
+            "last_name": "Eshun ",
+            "middle_name": "Kwame",
+            "nationality": "Ghanaian",
+            "person_image": "",
+            "phone_number": "0248963578",
+            "user_email": "jerryeshun@gmail.com"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "date_of_birth": "Tue, 12 Jun 2001 00:00:00 GMT",
+            "first_name": "Richard",
+            "gender": "male",
+            "house_address": "06 Ridge avenue",
+            "id_doctor": 24,
+            "id_guardian": 23,
+            "id_number": "GHA-08006635LTF",
+            "id_patient": 42,
+            "last_name": "Smith",
+            "middle_name": "Sanchez",
+            "nationality": "Ghanaian",
+            "person_image": "https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+            "phone_number": "+233243725466",
+            "user_email": "rick@st.knust.edu.gh"
+        },
+        "status": true
+    }
+  ]
+    ```
+
+[Back to top](#patient-services)
+
