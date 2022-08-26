@@ -275,7 +275,7 @@ All errors are of the form shown below:
 
 
 ## Get number of Patients assigned to Doctor
-- GET :/doctor/patients/
+- GET :/doctors/patients/
 
 - BODY PARAMETERS: None
 
@@ -294,7 +294,7 @@ All errors are of the form shown below:
 
 
 ## Get number of Reports assigned to Doctor
-- GET :/doctor/reports/
+- GET :/doctors/reports/
 
 - BODY PARAMETERS: None
 
@@ -313,7 +313,7 @@ All errors are of the form shown below:
 
 
 ## Get number of Appointments assigned to Doctor
-- GET :/doctor/appointments/
+- GET :/doctors/appointments/
 
 - BODY PARAMETERS: None
 
