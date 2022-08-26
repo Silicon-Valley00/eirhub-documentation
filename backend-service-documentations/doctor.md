@@ -7,6 +7,9 @@ Jump to...
 - [Get all doctors](#get-all-doctors)
 - [Update Doctor by ID](#update-doctor-by-id)
 - [Get Doctor by ID](#get-doctor-by-id)
+- [Get Number of Patients assigned to Doctor](#get-number-of-patients-assigned-to-doctor)
+- [Get Number of Reports assigned to Doctor](#get-number-of-reports-assigned-to-doctor)
+- [Get Number of Appointments assigned to Doctor](#get-number-of-appointments-assigned-to-doctor)
 
 ## Errors
 All errors are of the form shown below:
@@ -214,9 +217,9 @@ All errors are of the form shown below:
 	```
 [Back to the top...](#doctor-services)
 
-## Get Patients by Doctor ID
 
-- GET : /Doctor/
+## Get Patients by Doctor ID
+- GET : /doctor/
 
 - BODY PARAMETERS: None
 
@@ -268,5 +271,61 @@ All errors are of the form shown below:
   ]
     ```
 
-[Back to top](#patient-services)
+[Back to top](#doctor-services)
 
+
+## Get number of Patients assigned to Doctor
+- GET :/doctor/patients/
+
+- BODY PARAMETERS: None
+
+- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
+
+- SAMPLE URL: `https://base.com/doctor/patients/?id_doctor=22`
+
+- RESPONSE:
+    ```json
+    {
+        "number_of_patients": 2
+    }
+    ```
+
+[Back to top](#doctor-services)
+
+
+## Get number of Reports assigned to Doctor
+- GET :/doctor/reports/
+
+- BODY PARAMETERS: None
+
+- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
+
+- SAMPLE URL: `https://base.com/doctor/reports/?id_doctor=22`
+
+- RESPONSE:
+    ```json
+    {
+        "number_of_reports": 1
+    }
+    ```
+
+[Back to top](#doctor-services)
+
+
+## Get number of Appointments assigned to Doctor
+- GET :/doctor/appointments/
+
+- BODY PARAMETERS: None
+
+- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
+
+- SAMPLE URL: `https://base.com/doctor/patients/?id_doctor=22`
+
+- RESPONSE:
+    ```json
+    {
+        "number_of_appointments": 3
+    
+    ```
+
+[Back to top](#doctor-services)
