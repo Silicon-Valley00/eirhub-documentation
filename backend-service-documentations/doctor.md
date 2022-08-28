@@ -281,7 +281,7 @@ All errors are of the form shown below:
 
 - QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
 
-- SAMPLE URL: `https://base.com/doctor/patients/?id_doctor=22`
+- SAMPLE URL: `https://base.com/doctors/patients/?id_doctor=22`
 
 - RESPONSE:
     ```json
@@ -300,7 +300,7 @@ All errors are of the form shown below:
 
 - QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
 
-- SAMPLE URL: `https://base.com/doctor/reports/?id_doctor=22`
+- SAMPLE URL: `https://base.com/doctors/reports/?id_doctor=22`
 
 - RESPONSE:
     ```json
@@ -319,7 +319,7 @@ All errors are of the form shown below:
 
 - QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
 
-- SAMPLE URL: `https://base.com/doctor/patients/?id_doctor=22`
+- SAMPLE URL: `https://base.com/doctors/appointments/?id_doctor=22`
 
 - RESPONSE:
     ```json
