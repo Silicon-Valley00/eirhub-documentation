@@ -5,8 +5,11 @@ Jump to...
 - [Patient Login](#patient-login)
 - [Get all patients](#get-all-patients)
 - [Get patient by ID](#get-patient-by-id)
-- [Delete patient](#delete-patient)
+- [Get doctor by patient ID](#get-doctor-by-patient-id)
 - [Update patient by ID](#update-patient-details-by-id)
+- [Delete patient](#delete-patient)
+
+
 
 
 ## Errors

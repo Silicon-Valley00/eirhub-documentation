@@ -7,9 +7,14 @@ Jump to...
 - [Get all doctors](#get-all-doctors)
 - [Update Doctor by ID](#update-doctor-by-id)
 - [Get Doctor by ID](#get-doctor-by-id)
+- [Get patients by Doctor ID](#get-patients-by-doctor-id)
 - [Get Number of Patients assigned to Doctor](#get-number-of-patients-assigned-to-doctor)
 - [Get Number of Reports assigned to Doctor](#get-number-of-reports-assigned-to-doctor)
 - [Get Number of Appointments assigned to Doctor](#get-number-of-appointments-assigned-to-doctor)
+
+
+
+
 
 ## Errors
 All errors are of the form shown below:
@@ -325,6 +330,7 @@ All errors are of the form shown below:
     ```json
     {
         "number_of_appointments": 3
+    }    
     
     ```
 

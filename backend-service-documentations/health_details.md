@@ -90,7 +90,7 @@ All errors are of the form shown below:
 [Back to the top...](#healthdetails-services)
 
 ## Create Health Details   
-- POST: /healthdetails
+- POST: /healthdetails/`patientId`
 
 - BODY PARAMETERS:
     - Sample
