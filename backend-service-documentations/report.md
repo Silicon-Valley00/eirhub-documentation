@@ -1,10 +1,24 @@
 # Report Services
 Jump to...
+- [Errors](#errors)
 - [Create report](#create-report)
 - [Get all reports](#get-all-reports)
 - [Delete report by report ID](#delete-report-by-report-id)  
 - [Update report by report ID](#update-report-by-report-id)
 - [Get report by patient ID](#get-report-by-patient-id)
+
+## Errors
+All errors are of the form shown below:
+```json
+{
+    "msg": {
+        "dev_message": "(Actual Exception generated)",
+        "message": "Connection Error: Prescriptions not updated"
+    },
+    "status": false
+}
+```
+[Back to the top...](#report-services)
 
 ## Create report
 - POST: /report

@@ -5,8 +5,11 @@ Jump to...
 - [Patient Login](#patient-login)
 - [Get all patients](#get-all-patients)
 - [Get patient by ID](#get-patient-by-id)
-- [Delete patient](#delete-patient)
+- [Get doctor by patient ID](#get-doctor-by-patient-id)
 - [Update patient by ID](#update-patient-details-by-id)
+- [Delete patient](#delete-patient)
+
+
 
 
 ## Errors
@@ -168,36 +171,42 @@ All errors are of the form shown below:
 [Back to top](#patient-services)
 
 
-## Delete patient
+## Get Doctor by Patient ID
 
-- DELETE: /patients/`patientID`
+- GET : /patients/
 
 - BODY PARAMETERS: None
 
-- SAMPLE URL: `https://base.com/patients/24`
+- QUERY PARAMETERS: Provide the ID of the patient through the query param, `id_patient`. This would be used to fetch the current doctor the patient with the corresponding ID is seeing. 
+
+- SAMPLE URL: `https://base.com/patients/?id_patient=38`
 
 - RESPONSE:
 
     ```json
     {
         "msg": {
-            "email": "Jackman@gmail.com",
-            "first_name": "Jerry",
-            "house_address": "12 molly street",
-            "idPatient": 24,
-            "idDoctor": null,
-            "idGuardian": null,
-            "id_number": "57849003",
-            "last_name": "Jackman",
-            "middle_name": "Leo",
-            "nationality": "Ghanaian",
-            "person_image": "https:/myImage.com"
+            "date_of_birth": "Sat, 21 Jun 1997 00:00:00 GMT",
+            "doctor_ratings": 2,
+            "doctor_specialties": "Dentistry",
+            "first_name": "Kemi",
+            "gender": "Female",
+            "hospital_code": "KAT02",
+            "house_address": "House-7",
+            "id_doctor": 24,
+            "last_name": "Otedola",
+            "license_number": "80043223",
+            "middle_name": "Oti",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "user_email": "kemi@gmail.com"
         },
         "status": true
     }
+
     ```
 
 [Back to top](#patient-services)
+
 
 
 ## Update patient details by ID
@@ -251,5 +260,36 @@ All errors are of the form shown below:
 
 [Back to top](#patient-services)
 
+
+## Delete patient
+
+- DELETE: /patients/`patientID`
+
+- BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/patients/24`
+
+- RESPONSE:
+
+    ```json
+    {
+        "msg": {
+            "email": "Jackman@gmail.com",
+            "first_name": "Jerry",
+            "house_address": "12 molly street",
+            "idPatient": 24,
+            "idDoctor": null,
+            "idGuardian": null,
+            "id_number": "57849003",
+            "last_name": "Jackman",
+            "middle_name": "Leo",
+            "nationality": "Ghanaian",
+            "person_image": "https:/myImage.com"
+        },
+        "status": true
+    }
+    ```
+
+[Back to top](#patient-services)
 
 
