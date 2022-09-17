@@ -74,13 +74,59 @@ All errors are of the form shown below:
     },
     {
         "msg": {
+            "description": "Lab report ordered by Dr.Raymond Brown",
+            "idReport": 9,
+            "report_type": "Lab report",
+            "upload_date": "Thu, 24 Jun 2022 19:04:12 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "covid test conducted by the CDC",
+            "idReport": 13,
+            "report_type": "Covid-19 test results",
+            "upload_date": "Thu, 08 Sept 2022 19:04:12 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "vaccination for chicken Pox",
+            "idReport": 16,
+            "report_type": "vaccination card",
+            "upload_date": "Thu, 09 Aug 2022 19:04:12 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
             "description": "This report is for medication",
-            "idReport": 5,
+            "idReport": 18,
             "report_type": "Medication",
+            "upload_date": "Thu, 25 Aug 2022 19:04:12 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "This report is for medication",
+            "idReport": 21,
+            "report_type": "Medication",
+            "upload_date": "Thu, 25 Aug 2022 19:04:12 GMT"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "description": "Lab report order by Dr.Gaglo Odartey",
+            "idReport": 23,
+            "report_type": "Lab report",
             "upload_date": "Thu, 21 Jul 2022 19:04:12 GMT"
         },
         "status": true
     }
+    
     ]
     ```
 [Back to the top...](#report-services)
@@ -134,9 +180,9 @@ All errors are of the form shown below:
 
 
 ## Get Report By Patient ID
-- GET: /report/`idReport`
+- GET: /report/`idPatient`
 - BODY PARAMETERS: None
-- SAMPLE URL: `https://base.com/report/?id_report=20`
+- SAMPLE URL: `https://base.com/report/?id_report=30`
 - RESPONSE:
     ```json
         {
@@ -152,12 +198,6 @@ All errors are of the form shown below:
             "id_report": 4,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
-            },
-            {
-            "description": "This report is for medication",
-            "id_report": 5,
-            "report_type": "Medication",
-            "upload_date": "Thu, 21 Jul 2022 19:04:12 GMT"
             }
         ],
         "status": true

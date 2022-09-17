@@ -34,30 +34,30 @@ All errors are of the form shown below:
     "msg": [
         {
         "dosage": "1/x3",
-        "drug_name": "Ibuprofen",
-        "end_date": "2023-12-31",
-        "id": 12,
+        "drug_name": "paracetamol",
+        "end_date": "2022-12-31",
+        "id": 25,
         "last_taken_date": "2022-12-31",
-        "start_date": "2022-12-19",
-        "time_of_administration": "12:23:45"
+        "start_date": "2022-10-31",
+        "time_of_administration": "Before Meals"
+        },
+        {
+        "dosage": "1/x2",
+        "drug_name": "trimetazol",
+        "end_date": "2022-12-31",
+        "id": 26,
+        "last_taken_date": "2022-12-31",
+        "start_date": "2022-12-31",
+        "time_of_administration": "Before Meals"
         },
         {
         "dosage": "1/x2",
         "drug_name": "trimetazol",
         "end_date": "2022-12-31",
         "id": 27,
-        "last_taken_date": "2022-12-31",
-        "start_date": "2022-12-31",
-        "time_of_administration": "23:59:40"
-        },
-        {
-        "dosage": "1/x2",
-        "drug_name": "paracetamol",
-        "end_date": "2022-12-31",
-        "id": 28,
-        "last_taken_date": "2022-12-31",
-        "start_date": "2022-12-31",
-        "time_of_administration": "23:59:40"
+        "last_taken_date": "2022-08-13",
+        "start_date": "2022-12-09",
+        "time_of_administration": "After Meals"
         },
         {
         "dosage": "1/x2",
@@ -66,7 +66,7 @@ All errors are of the form shown below:
         "id": 29,
         "last_taken_date": "2022-12-31",
         "start_date": "2022-12-31",
-        "time_of_administration": "23:59:40"
+        "time_of_administration": "Before Meals"
         }
     ],
     "status": true
