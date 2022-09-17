@@ -102,10 +102,26 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/doctors`  
 - RESPONSE:
 	```json
-       {
+    {
     "msg": [
-       {
-            "date_of_birth": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+        {
+            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+            "doctor_ratings": 3,
+            "doctor_specialties": "Gynaecology, Paediatric, General",
+            "first_name": "Rexford",
+            "gender": "Male",
+            "hospital_code": "0",
+            "hospital_name": "",
+            "house_address": "House-4",
+            "id_doctor": 21,
+            "last_name": "Machu",
+            "license_number": "8003490390",
+            "middle_name": "G.O.A.T.II",
+            "person_image": "https://img.com/G.O.A.T.II",
+            "user_email": "baddest70@st.knust.edu.gh"
+        },
+        {
+            "date_of_birth": "Mon, 15 Feb 1999 00:00:00 GMT",
             "doctor_ratings": 3,
             "doctor_specialties": "Oncology",
             "first_name": "Gaglo",
@@ -114,14 +130,14 @@ All errors are of the form shown below:
             "hospital_name": "Komfo Anokye Teaching Hospital",
             "house_address": "House-5",
             "id_doctor": 22,
-            "last_name": "Nathaniel",
-            "license_number": "80043267",
-            "middle_name": "Elorm",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "last_name": "nathaniel",
+            "license_number": "80043262",
+            "middle_name": "Odartey",
+            "person_image": "...",
             "user_email": "nathaniel@gmail.com"
         },
         {
-            "date_of_birth": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "date_of_birth": "Wed, 21 Sep 1994 00:00:00 GMT",
             "doctor_ratings": 4,
             "doctor_specialties": "Obstetrics",
             "first_name": "Janice",
@@ -133,12 +149,93 @@ All errors are of the form shown below:
             "last_name": "Brempong",
             "license_number": "80043248",
             "middle_name": "Abena",
-            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "person_image": "http://res.cloudinary.com/eirhub-siliconvalley/image/upload/v1662052543/doctor_images/lkfnkpvitofadlqgxcna.jpg",
             "user_email": "janice@gmail.com"
         },
-    ]
+        {
+            "date_of_birth": "Sat, 21 Jun 1997 00:00:00 GMT",
+            "doctor_ratings": 2,
+            "doctor_specialties": "Dentistry",
+            "first_name": "Kemi",
+            "gender": "Female",
+            "hospital_code": "KAT02",
+            "hospital_name": "Komfo Anokye Teaching Hospital",
+            "house_address": "House-7",
+            "id_doctor": 24,
+            "last_name": "Otedola",
+            "license_number": "80043223",
+            "middle_name": "Oti",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "user_email": "kemi@gmail.com"
+        },
+        {
+            "date_of_birth": "Sun, 04 Oct 1992 00:00:00 GMT",
+            "doctor_ratings": 4,
+            "doctor_specialties": "Oncology",
+            "first_name": "Maleek",
+            "gender": "Male",
+            "hospital_code": "GS07",
+            "hospital_name": "",
+            "house_address": "House-14",
+            "id_doctor": 25,
+            "last_name": "Dray",
+            "license_number": "80043272",
+            "middle_name": "Zumi",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "user_email": "maleekd@gmail.com"
+        },
+        {
+            "date_of_birth": "Sun, 16 Nov 1997 00:00:00 GMT",
+            "doctor_ratings": 2,
+            "doctor_specialties": "Pediatrics",
+            "first_name": "Maleek",
+            "gender": "Male",
+            "hospital_code": "LHM08",
+            "hospital_name": "",
+            "house_address": "House-45",
+            "id_doctor": 26,
+            "last_name": "Dembele",
+            "license_number": "80043273",
+            "middle_name": "Usman",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "user_email": "dembe@gmail.com"
+        },
+        {
+            "date_of_birth": "Sat, 06 Oct 2001 00:00:00 GMT",
+            "doctor_ratings": 4,
+            "doctor_specialties": "Nephrology",
+            "first_name": "Solace",
+            "gender": "Female",
+            "hospital_code": "KU03",
+            "hospital_name": "",
+            "house_address": "House-34",
+            "id_doctor": 27,
+            "last_name": "Bamfi",
+            "license_number": "80043268",
+            "middle_name": "",
+            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "user_email": "solace@gmail.com"
+        },
+        {
+            "date_of_birth": "Tue, 18 Dec 1990 00:00:00 GMT",
+            "doctor_ratings": 2,
+            "doctor_specialties": "General surgery",
+            "first_name": "Benedict",
+            "gender": "Male",
+            "hospital_code": "RMC04",
+            "hospital_name": "Ridge Medical Center",
+            "house_address": "House no.17 Maple Avenue",
+            "id_doctor": 28,
+            "last_name": "Freeman",
+            "license_number": "80047266",
+            "middle_name": "",
+            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
+            "user_email": "Freeman@gmail.com"
+        }
+    ],
+    "status": true
     }
-	```    
+    ```    
 
 [Back to the top...](#doctor-services)
 
@@ -224,12 +321,12 @@ All errors are of the form shown below:
 
 
 ## Get Patients by Doctor ID
-- GET : /doctor/
+- GET : /doctors/
 
 - BODY PARAMETERS: None
 
 - QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. This would be used to fetch a list of patients that the doctor is attending to
-- SAMPLE URL: `https://base.com/doctor/?id_doctor=24`
+- SAMPLE URL: `https://base.com/doctors/?id_doctor=24`
 
 - RESPONSE:
 
@@ -250,7 +347,8 @@ All errors are of the form shown below:
             "nationality": "Ghanaian",
             "person_image": "",
             "phone_number": "0248963578",
-            "user_email": "jerryeshun@gmail.com"
+            "user_email": "jerryeshun@gmail.com",
+            "person_image": "..."
         },
         "status": true
     },
@@ -310,7 +408,7 @@ All errors are of the form shown below:
 - RESPONSE:
     ```json
     {
-        "number_of_reports": 1
+        "number_of_reports": 4
     }
     ```
 
