@@ -28,7 +28,8 @@ All errors are of the form shown below:
         {
             "report_type":"Lab report",
             "description":"Lab report ordered by Dr.Raymond Brown",
-            "uploaddate": "Thu, 21 Jul 2022 19:01:51 GMT"
+            "id_patient": 30,
+            "created_date": "01-08-2022"
         }
         ```
 - SAMPLE URL: `https://base.com/report`
@@ -37,9 +38,9 @@ All errors are of the form shown below:
      {
         "msg": {
             "description": "Lab report ordered by Dr.Raymond Brown",
-            "idReport": 12,
+            "id_report": 12,
             "report_type": "Lab report",
-	        "uploaddate": "Thu, 21 Jul 2022 19:01:51 GMT"
+	        "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         },
         "status": true
     }
@@ -57,7 +58,7 @@ All errors are of the form shown below:
     {
         "msg": {
             "description": "This report is for medication",
-            "idReport": 3,
+            "id_report": 3,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:21 GMT"
         },
@@ -66,7 +67,7 @@ All errors are of the form shown below:
     {
         "msg": {
             "description": "This report is for medication",
-            "idReport": 4,
+            "id_report": 4,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         },
@@ -75,7 +76,7 @@ All errors are of the form shown below:
     {
         "msg": {
             "description": "This report is for medication",
-            "idReport": 5,
+            "id_report": 5,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:04:12 GMT"
         },
@@ -96,7 +97,7 @@ All errors are of the form shown below:
         {
         "msg": {
             "description": "This report is for medication ",
-            "idReport": 3,
+            "id_report": 3,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         },
@@ -112,7 +113,7 @@ All errors are of the form shown below:
     ```json
         {
             "description": "This report is for medication ",
-            "idReport": 3,
+            "id_report": 3,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         }
@@ -123,7 +124,7 @@ All errors are of the form shown below:
         {
             "msg": {
                 "description": "This report is for medication ",
-                "idReport": 3,
+                "id_report": 3,
                 "report_type": "Medication",
                 "uploaddate": "10/08/22"
             },
