@@ -31,20 +31,20 @@ All errors are of the form shown below:
 
 - RESPONSE:
     ```json
-    {
-    "msg": {
-        "blood_group": "AB",
-        "blood_pressure": "120/80",
-        "blood_sugar": "170",
-        "height": 148.0,
-        "id_patient": 38,
-        "last_visit": "Mon, 08 Aug 2022 00:00:00 GMT",
-        "pulse": 116.0,
-        "respiratory_rate": "116",
-        "temperature": 34.6,
-        "weight": 87.9
-    },
-    "status": true
+        {
+        "msg": {
+            "blood_group": "B",
+            "blood_pressure": "27/120",
+            "blood_sugar": "119",
+            "height": 132.0,
+            "id_patient": 34,
+            "last_visit": "Sun, 08 Sep 2002 00:00:00 GMT",
+            "pulse": 98.9,
+            "respiratory_rate": "116",
+            "temperature": 36.0,
+            "weight": 87.9
+        },
+        "status": true
     }
     ```
 [Back to the top...](#healthdetails-services)
@@ -140,34 +140,71 @@ All errors are of the form shown below:
 
 - RESPONSE:
     ```json
-   {
-    "msg": [
-        {
-            "blood_group": "A",
-            "blood_pressure": "10/120",
-            "blood_sugar": "20",
-            "height": 200.0,
-            "id_patient": 31,
-            "last_visit": "Mon, 10 Aug 2009 00:00:00 GMT",
-            "pulse": 29.0,
-            "respiratory_rate": "34",
-            "temperature": 36.3,
-            "weight": 90.0
-        },
-        {
-            "blood_group": "O",
-            "blood_pressure": "120/120",
-            "blood_sugar": "119",
-            "height": 132.0,
-            "id_patient": 30,
-            "last_visit": "Thu, 08 Sep 2022 00:00:00 GMT",
-            "pulse": 116.0,
-            "respiratory_rate": "119",
-            "temperature": 34.0,
-            "weight": 87.9
-        }
-    ]
-   }
+    {
+        "msg": [
+            {
+                "blood_group": "A",
+                "blood_pressure": "10/120",
+                "blood_sugar": "20",
+                "height": 200.0,
+                "id_patient": 31,
+                "last_visit": "Wed, 12 Aug 2009 00:00:00 GMT",
+                "pulse": 29.0,
+                "respiratory_rate": "34",
+                "temperature": 36.3,
+                "weight": 90.0
+            },
+            {
+                "blood_group": "O",
+                "blood_pressure": "120/120",
+                "blood_sugar": "119",
+                "height": 132.0,
+                "id_patient": 30,
+                "last_visit": "Thu, 08 Sep 2022 00:00:00 GMT",
+                "pulse": 116.0,
+                "respiratory_rate": "119",
+                "temperature": 34.0,
+                "weight": 87.9
+            },
+            {
+                "blood_group": "B",
+                "blood_pressure": "27/120",
+                "blood_sugar": "119",
+                "height": 132.0,
+                "id_patient": 34,
+                "last_visit": "Sun, 08 Sep 2002 00:00:00 GMT",
+                "pulse": 98.9,
+                "respiratory_rate": "116",
+                "temperature": 36.0,
+                "weight": 87.9
+            },
+            {
+                "blood_group": "AB",
+                "blood_pressure": "120/80",
+                "blood_sugar": "170",
+                "height": 148.0,
+                "id_patient": 38,
+                "last_visit": "Mon, 08 Aug 2022 00:00:00 GMT",
+                "pulse": 116.0,
+                "respiratory_rate": "116",
+                "temperature": 34.6,
+                "weight": 87.9
+            },
+            {
+                "blood_group": "A",
+                "blood_pressure": "150/80",
+                "blood_sugar": "120",
+                "height": 173.0,
+                "id_patient": 42,
+                "last_visit": "Wed, 08 Sep 2021 00:00:00 GMT",
+                "pulse": 116.0,
+                "respiratory_rate": "20",
+                "temperature": 37.0,
+                "weight": 52.0
+            }
+        ],
+        "status": true
+    }
     ```
 [Back to the top...](#healthdetails-services)
 
