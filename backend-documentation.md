@@ -886,7 +886,7 @@ RESPONSE:
 
 - **Create hospital**
 
-POST: /hospitals
+POST: /hospital
 
 BODY PARAMS: 
 ```json
@@ -965,7 +965,7 @@ RESPONSE:
 
 
 - **Get all hospitals**
-GET: /hospitals
+GET: /hospital
 
 BODY PARAMS:None
 
@@ -1015,7 +1015,7 @@ RESPONSE:
 
 
 - **Get hospital based on id**
-GET:/hospitals/`idHospital`
+GET:/hospital/`idHospital`
 
 
 BODY PARAMS: None
@@ -1054,7 +1054,7 @@ RESPONSE:
     {
     "report_type":"Lab report",
     "description":"Lab report ordered by Dr.Raymond Brown",
-    "uploaddate": 10/08/22
+    "upload_date": 10/08/22
     }
     ```
 
@@ -1064,9 +1064,9 @@ RESPONSE:
      {
         "msg": {
             "description": "Lab report ordered by Dr.Raymond Brown",
-            "idReport": 12,
-            "report_type": "Lab report"
-	    "uploaddate": 10/08/22
+            "id_report": 12,
+            "report_type": "Lab report",
+	        "upload_date": 10/08/22
         },
         "status": true
     }
@@ -1096,7 +1096,7 @@ RESPONSE:
     {
         "msg": {
             "description": "This report is for medication",
-            "idReport": 4,
+            "id_report": 4,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
         },
@@ -1105,7 +1105,7 @@ RESPONSE:
     {
         "msg": {
             "description": "This report is for medication",
-            "idReport": 5,
+            "id_report": 5,
             "report_type": "Medication",
             "upload_date": "Thu, 21 Jul 2022 19:04:12 GMT"
         },
@@ -1129,9 +1129,9 @@ RESPONSE:
     ```json
         "msg": {
             "description": "This report is for medication ",
-            "idReport": 3,
-            "report_type": "Medication"
-        "uploaddate": 10/08/22
+            "id_report": 3,
+            "report_type": "Medication",
+            "upload_date": 10/08/22
         },
         "status": true
     ```	
@@ -1146,7 +1146,7 @@ BODY PARAMS:
     ```json
 	{
         "description": "This report is for medication ",
-        "idReport": 3,
+        "id_report": 3,
         "report_type": "Medication",
 	    "upload_date": "10/08/22"
     }
@@ -1159,9 +1159,9 @@ BODY PARAMS:
     {
         "msg": {
             "description": "This report is for medication ",
-            "idReport": 3,
+            "id_report": 3,
             "report_type": "Medication",
-            "uploaddate": "10/08/22"
+            "upload_date": "10/08/22"
         },
         "status": true
     }
@@ -1180,7 +1180,7 @@ BODY PARAMS:
         ```json
         "msg": {
             "description": "This report is for medication ",
-            "idReport": 3,
+            "id_report": 3,
             "report_type": "Medication",
             "upload_date": "10/08/22"
         },

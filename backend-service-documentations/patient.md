@@ -112,23 +112,61 @@ All errors are of the form shown below:
     ```json
     {
         "msg": {
-            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
-            "first_name": "Molly",
-            "gender": "Male",
-            "house_address": "House-4",
-            "id_doctor": 20,
+            "date_of_birth": "Tue, 03 Jul 2001 00:00:00 GMT",
+            "first_name": "Pete",
+            "gender": "male",
+            "house_address": "12 sesame street",
+            "id_doctor": 22,
             "id_guardian": 20,
-            "id_number": "GHA-00809238HJJ",
-            "id_patient": 30,
-            "last_name": "Malloy",
-            "middle_name": "Patient",
+            "id_number": "GHA-08006335HJJ",
+            "id_patient": 34,
+            "last_name": "Greg",
+            "middle_name": "Leta",
             "nationality": "Ghanaian",
             "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
-            "phone_number": "+233206436575",
-            "user_email": "molly@st.knust.edu.gh"
+            "phone_number": "+233265936575",
+            "user_email": "Gregy@st.knust.edu.gh"
         },
         "status": true
     },
+    {
+        "msg": {
+            "date_of_birth": "Sun, 18 Aug 2002 00:00:00 GMT",
+            "first_name": "Jerry",
+            "gender": "Male",
+            "house_address": "House no.23 Nyame Street",
+            "id_doctor": 24,
+            "id_guardian": 25,
+            "id_number": "GHA-009494-124",
+            "id_patient": 38,
+            "last_name": "Eshun ",
+            "middle_name": "Kwame",
+            "nationality": "Ghanaian",
+            "person_image": "",
+            "phone_number": "0248963578",
+            "user_email": "jerryeshun@gmail.com"
+        },
+        "status": true
+    },
+    {
+        "msg": {
+            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+            "first_name": "Rexford",
+            "gender": null,
+            "house_address": null,
+            "id_doctor": null,
+            "id_guardian": null,
+            "id_number": null,
+            "id_patient": 39,
+            "last_name": "Machu",
+            "middle_name": null,
+            "nationality": null,
+            "person_image": null,
+            "phone_number": null,
+            "user_email": "baddest9@st.knust.edu.gh"
+        },
+        "status": true
+    } 
   
     ```    
 
@@ -186,23 +224,23 @@ All errors are of the form shown below:
     ```json
     {
         "msg": {
-            "date_of_birth": "Sat, 21 Jun 1997 00:00:00 GMT",
-            "doctor_ratings": 2,
-            "doctor_specialties": "Dentistry",
-            "first_name": "Kemi",
-            "gender": "Female",
-            "hospital_code": "KAT02",
-            "house_address": "House-7",
+            "date_of_birth": "Sun, 18 Aug 2002 00:00:00 GMT",
+            "first_name": "Jerry",
+            "gender": "Male",
+            "house_address": "House no.23 Nyame Street",
             "id_doctor": 24,
-            "last_name": "Otedola",
-            "license_number": "80043223",
-            "middle_name": "Oti",
-            "person_image": "https://blackvoicenews.com/wp-content/uploads/2017/04/maxresdefault.jpg",
-            "user_email": "kemi@gmail.com"
+            "id_guardian": 25,
+            "id_number": "GHA-009494-124",
+            "id_patient": 38,
+            "last_name": "Eshun ",
+            "middle_name": "Kwame",
+            "nationality": "Ghanaian",
+            "person_image": "",
+            "phone_number": "0248963578",
+            "user_email": "jerryeshun@gmail.com"
         },
         "status": true
     }
-
     ```
 
 [Back to top](#patient-services)

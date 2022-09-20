@@ -73,21 +73,81 @@ All errors are of the form shown below:
 - RESPONSE:
     ```json
     {
-    "msg": [
-       {
-            "date_of_birth": "Mon, 25 Dec 2000 00:00:00 GMT",
-            "first_name": "Rexford ",
-            "gender": "Male",
-            "house_address": "House - 6",
-            "id_guardian": 20,
-            "id_number": "GHA-009494-233",
-            "last_name": "Machu",
-            "middle_name": "Rechu",
-            "phone_number": "0500000000",
-            "user_email": "rechuMachu@gmail.com"
-        }
-    ],
-    "status": true
+        "msg": [
+            {
+                "date_of_birth": "Mon, 25 Dec 2000 00:00:00 GMT",
+                "first_name": "Rexford ",
+                "gender": "Male",
+                "house_address": "House - 6",
+                "id_guardian": 20,
+                "id_number": "GHA-009494-233",
+                "last_name": "Machu",
+                "middle_name": "Rechu",
+                "phone_number": "0500000000",
+                "user_email": "rechuMachu@gmail.com"
+            },
+            {
+                "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
+                "first_name": "Redford ",
+                "gender": "Male",
+                "house_address": "House - 4",
+                "id_guardian": 21,
+                "id_number": "GHA-009494-233",
+                "last_name": "Tahu",
+                "middle_name": "Guardian",
+                "phone_number": "0206436575",
+                "user_email": "guardianofgalaxy@gmail.com"
+            },
+            {
+                "date_of_birth": "Thu, 22 Sep 1983 00:00:00 GMT",
+                "first_name": "Maxford",
+                "gender": "Male",
+                "house_address": "House no. 25",
+                "id_guardian": 22,
+                "id_number": "GHA-009494-154",
+                "last_name": "Rechu",
+                "middle_name": "Daug",
+                "phone_number": "0206445925",
+                "user_email": "Rechu@gmail.com"
+            },
+            {
+                "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
+                "first_name": "Richard",
+                "gender": "Male",
+                "house_address": "House - 6",
+                "id_guardian": 23,
+                "id_number": "GHA-009494-233",
+                "last_name": "Smith",
+                "middle_name": "Daug",
+                "phone_number": "0206436575",
+                "user_email": "Daug1@gmail.com"
+            },
+            {
+                "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
+                "first_name": "Maxford",
+                "gender": "Male",
+                "house_address": "House - 6",
+                "id_guardian": 24,
+                "id_number": "GHA-009494-233",
+                "last_name": "Rechu",
+                "middle_name": "Daug",
+                "phone_number": "0206436575",
+                "user_email": "Daug34@gmail.com"
+            },
+            {
+                "date_of_birth": "Sun, 29 Jun 1986 00:00:00 GMT",
+                "first_name": "Beth",
+                "gender": "Female",
+                "house_address": "08 Oman Street",
+                "id_guardian": 25,
+                "id_number": "GHA-009494-159",
+                "last_name": "smith",
+                "middle_name": "Nana-Yaa",
+                "phone_number": "0559565489",
+                "user_email": "bethsmith@gmail.com"
+            }
+        ],
+        "status": true
     }
     ``` 
 [Back to the top...](#guardian-person-services)
@@ -101,21 +161,21 @@ All errors are of the form shown below:
 
 - RESPONSE: 
     ```json
-  {
-    "msg": {
-        "date_of_birth": "Sun, 29 Jun 1986 00:00:00 GMT",
-        "first_name": "Beth",
-        "gender": "Female",
-        "house_address": "08 Oman Street",
-        "id_guardian": 25,
-        "id_number": "GHA-009494-159",
-        "last_name": "smith",
-        "middle_name": "Nana-Yaa",
-        "phone_number": "0559565489",
-        "user_email": "bethsmith@gmail.com"
-    },
-    "status": true
-   }
+    {
+        "msg": {
+            "date_of_birth": "Sun, 29 Jun 1986 00:00:00 GMT",
+            "first_name": "Beth",
+            "gender": "Female",
+            "house_address": "08 Oman Street",
+            "id_guardian": 25,
+            "id_number": "GHA-009494-159",
+            "last_name": "smith",
+            "middle_name": "Nana-Yaa",
+            "phone_number": "0559565489",
+            "user_email": "bethsmith@gmail.com"
+        },
+        "status": true
+    }
     ```    
 [Back to the top...](#guardian-person-services)
 
