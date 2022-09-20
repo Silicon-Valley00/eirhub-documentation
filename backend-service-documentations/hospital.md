@@ -131,37 +131,83 @@ All errors are of the form shown below:
 
 - RESPONSE:
     ```json
-   {
-    "msg": [
-        {
-            "hospital_code": "KBT01",
-            "hospital_name": "Korle Bu Teahing Hospital",
-            "hospital_specialities": "General",
-            "id_hospital": 1,
-            "location": "Accra",
-            "number_of_doctors": 767,
-            "phone_number": "0302739510"
-        },
-        {
-            "hospital_code": "KAT02",
-            "hospital_name": "Komfo Anokye Teaching Hospital",
-            "hospital_specialities": "General",
-            "id_hospital": 2,
-            "location": "Kumasi",
-            "number_of_doctors": 485,
-            "phone_number": "0556490029"
-        },
-        {
-            "hospital_code": "KU03",
-            "hospital_name": "KNUST University Hospital",
-            "hospital_specialities": "General",
-            "id_hospital": 3,
-            "location": "Kumasi",
-            "number_of_doctors": 187,
-            "phone_number": "0204412599"
-        }
-        ]
-   }
+    {
+        "msg": [
+            {
+                "hospital_code": "KBT01",
+                "hospital_name": "Korle Bu Teahing Hospital",
+                "hospital_specialities": "General",
+                "id_hospital": 1,
+                "location": "Accra",
+                "number_of_doctors": 767,
+                "phone_number": "0302739510"
+            },
+            {
+                "hospital_code": "KAT02",
+                "hospital_name": "Komfo Anokye Teaching Hospital",
+                "hospital_specialities": "General",
+                "id_hospital": 2,
+                "location": "Kumasi",
+                "number_of_doctors": 485,
+                "phone_number": "0556490029"
+            },
+            {
+                "hospital_code": "KU03",
+                "hospital_name": "KNUST University Hospital",
+                "hospital_specialities": "General",
+                "id_hospital": 3,
+                "location": "Kumasi",
+                "number_of_doctors": 187,
+                "phone_number": "0204412599"
+            },
+            {
+                "hospital_code": "RMC04",
+                "hospital_name": "Ridge Medical Center",
+                "hospital_specialities": "General",
+                "id_hospital": 4,
+                "location": "Accra",
+                "number_of_doctors": 541,
+                "phone_number": "0551727552"
+            },
+            {
+                "hospital_code": "NL05",
+                "hospital_name": "North Legon Hospital",
+                "hospital_specialities": "General",
+                "id_hospital": 5,
+                "location": "North Legon",
+                "number_of_doctors": 250,
+                "phone_number": "0596698071"
+            },
+            {
+                "hospital_code": "NM06",
+                "hospital_name": "Neptune Medical Center",
+                "hospital_specialities": "General",
+                "id_hospital": 6,
+                "location": "Accra",
+                "number_of_doctors": 112,
+                "phone_number": null
+            },
+            {
+                "hospital_code": "GS07",
+                "hospital_name": "Gbawe SDA Hospital",
+                "hospital_specialities": "General",
+                "id_hospital": 7,
+                "location": "Accra",
+                "number_of_doctors": 204,
+                "phone_number": "0204412599"
+            },
+            {
+                "hospital_code": "LHM08",
+                "hospital_name": "Light House Mission Hospital",
+                "hospital_specialities": "General Consultation",
+                "id_hospital": 8,
+                "location": "North Kaneshie",
+                "number_of_doctors": 572,
+                "phone_number": "0302235710"
+            }
+        ],
+        "status": true
+    }
     ```
 [Back to top](#hospital-services)
 
