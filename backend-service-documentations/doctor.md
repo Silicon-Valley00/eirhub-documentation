@@ -279,59 +279,25 @@ All errors are of the form shown below:
 [Back to top](#doctor-services)
 
 
-## Get number of Patients assigned to Doctor
-- GET :/doctors/patients/
+## Get Statistics for Doctor Dashboard
+- GET :/doctors/stats/
 
 - BODY PARAMETERS: None
 
 - QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
 
-- SAMPLE URL: `https://base.com/doctors/patients/?id_doctor=22`
+- SAMPLE URL: `https://base.com/doctors/stats/?id_doctor=22`
 
 - RESPONSE:
     ```json
-    {
-        "number_of_patients": 2
-    }
-    ```
-
-[Back to top](#doctor-services)
-
-
-## Get number of Reports assigned to Doctor
-- GET :/doctors/reports/
-
-- BODY PARAMETERS: None
-
-- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
-
-- SAMPLE URL: `https://base.com/doctors/reports/?id_doctor=22`
-
-- RESPONSE:
-    ```json
-    {
-        "number_of_reports": 1
-    }
-    ```
-
-[Back to top](#doctor-services)
-
-
-## Get number of Appointments assigned to Doctor
-- GET :/doctors/appointments/
-
-- BODY PARAMETERS: None
-
-- QUERY PARAMETERS: Provide the ID of the Doctor through the query param, `id_doctor`. 
-
-- SAMPLE URL: `https://base.com/doctors/appointments/?id_doctor=22`
-
-- RESPONSE:
-    ```json
-    {
-        "number_of_appointments": 3
-    }    
-    
+   {
+    "msg": {
+        "number of appointments": 3,
+        "number of patients": 2,
+        "number of reports": 4
+    },
+    "status": true
+}
     ```
 
 [Back to top](#doctor-services)
