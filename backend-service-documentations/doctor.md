@@ -101,6 +101,11 @@ All errors are of the form shown below:
                 "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
             }
         ],
+        "person_image": ""
+        "user_email": "nathaniel@gmail.com"
+            },
+    "status": true
+    }
 	```
 
 
