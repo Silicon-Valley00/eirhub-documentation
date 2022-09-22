@@ -119,7 +119,8 @@ All errors are of the form shown below:
 - RESPONSE:
 	```json
     {
-    "msg": [
+    "msg": {
+        "doctors": [
         {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
             "doctor_ratings": 3,
@@ -249,6 +250,21 @@ All errors are of the form shown below:
             "user_email": "Freeman@gmail.com"
         }
     ],
+    "hospitals": [
+            "",
+            "Komfo Anokye Teaching Hospital",
+            "North Legon Hospital",
+            "Ridge Medical Center"
+        ],
+        "specialities": [
+            "Gynaecology, Paediatric, General",
+            "Oncology",
+            "Obstetrics",
+            "Dentistry",
+            "Pediatrics",
+            "Nephrology",
+            "General surgery"
+        ]
     "status": true
     }
     ```    
