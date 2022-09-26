@@ -36,31 +36,34 @@ All errors are of the form shown below:
         ```json
        {
             "first_name": "Benedict",
-            "last_name": "Freeman",
-            "user_email":"Freeman@gmail.com",
-            "user_password":"freeben1990",
-            "date_of_birth":"1990-12-18",
-            "hospital_code":"RMC04"
+            "last_name": "Cumberbatch",
+            "user_email":"Sherlock@gmail.com",
+            "user_password":"Sherlock.com1",
+            "date_of_birth":"1991-11-12",
+            "hospital_code":"RMC04",
+            "id_message": ""
         }
         ```
 - SAMPLE URL: `https://base.com/doctor/signup`          
 - RESPONSE:
 	```json
-       {
+    {
     "msg": {
-        "date_of_birth": "Tue, 18 Dec 1990 00:00:00 GMT",
+        "date_of_birth": "Tue, 12 Nov 1991 00:00:00 GMT",
         "first_name": "Benedict",
         "gender": null,
         "hospital_code": "RMC04",
         "hospital_name": "Ridge Medical Center",
-        "id_doctor": 28,
-        "last_name": "Freeman",
+        "id_doctor": 32,
+        "id_message": null,
+        "last_name": "Cumberbatch",
         "license_number": null,
         "middle_name": null,
-        "user_email": "Freeman@gmail.com"
+        "person_image": "https://avatars.dicebear.com/api/bottts/$14.png",
+        "user_email": "sherlock@gmail.com"
     },
     "status": true
-    }
+   }
 	```    
 [Back to the top...](#doctor-services)
 
@@ -69,9 +72,9 @@ All errors are of the form shown below:
 - BODY PARAMETERS:`application/json`
     - Sample:
         ```json
-        {
-        "user_email":"nathaniel@gmail.com",
-        "user_password":"Elormpassword"
+       {
+        "user_email":"sherlock@gmail.com",
+        "user_password":"Sherlock.com1"
         }
         ```
 - SAMPLE URL: `https://base.com/doctor/login`        
@@ -79,31 +82,18 @@ All errors are of the form shown below:
     ```json
     {
     "msg": {
-        "date_of_birth": "Mon, 15 Feb 1999 00:00:00 GMT",
-        "first_name": "Gaglo",
-        "gender": "Male",
-        "hospital_code": "KAT02",
-        "id_doctor": 22,
-        "last_name": "nathaniel",
-        "license_number": "80043262",
-        "middle_name": "Odartey",
-        "patients": [
-            {
-                "first_name": "Pete",
-                "id_patient": 34,
-                "last_name": "Greg",
-                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
-            },
-            {
-                "first_name": "Molly",
-                "id_patient": 30,
-                "last_name": "Malloy",
-                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
-            }
-        ],
-        "person_image": ""
-        "user_email": "nathaniel@gmail.com"
-            },
+        "date_of_birth": "Tue, 12 Nov 1991 00:00:00 GMT",
+        "first_name": "Benedict",
+        "gender": null,
+        "hospital_code": "RMC04",
+        "id_doctor": 32,
+        "id_message": null,
+        "last_name": "Cumberbatch",
+        "license_number": null,
+        "middle_name": null,
+        "person_image": "https://avatars.dicebear.com/api/bottts/$14.png",
+        "user_email": "sherlock@gmail.com"
+    },
     "status": true
     }
 	```
@@ -293,7 +283,7 @@ All errors are of the form shown below:
         }
 
 	    ```
-- SAMPLE URL: `https://base.com/doctor/21`  
+- SAMPLE URL: `https://base.com/doctor/22`  
 - RESPONSE:
     ```json
      {
@@ -307,6 +297,7 @@ All errors are of the form shown below:
         "hospital_name": "Komfo Anokye Teaching Hospital",
         "house_address": "House-5",
         "id_doctor": 22,
+        "id_message": "",
         "last_name": "Nathaniel",
         "license_number": "80043267",
         "middle_name": "Elorm",
@@ -314,7 +305,7 @@ All errors are of the form shown below:
         "user_email": "nathaniel@gmail.com"
     },
     "status": true
-    }
+   }
         ```    
 
     
@@ -363,47 +354,25 @@ All errors are of the form shown below:
 - RESPONSE:
 
     ```json
-    [
-    {
-        "msg": {
-            "date_of_birth": "Sun, 18 Aug 2002 00:00:00 GMT",
-            "first_name": "Jerry",
-            "gender": "Male",
-            "house_address": "House no.23 Nyame Street",
-            "id_doctor": 24,
-            "id_guardian": 25,
-            "id_number": "GHA-009494-124",
-            "id_patient": 38,
-            "last_name": "Eshun ",
-            "middle_name": "Kwame",
-            "nationality": "Ghanaian",
-            "person_image": "",
-            "phone_number": "0248963578",
-            "user_email": "jerryeshun@gmail.com",
-            "person_image": "..."
+   {
+    "msg": [
+        {
+            "first_name": "Pete",
+            "id_message": "",
+            "id_patient": 34,
+            "last_name": "Greg",
+            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
         },
-        "status": true
-    },
-    {
-        "msg": {
-            "date_of_birth": "Tue, 12 Jun 2001 00:00:00 GMT",
-            "first_name": "Richard",
-            "gender": "male",
-            "house_address": "06 Ridge avenue",
-            "id_doctor": 24,
-            "id_guardian": 23,
-            "id_number": "GHA-08006635LTF",
-            "id_patient": 42,
-            "last_name": "Smith",
-            "middle_name": "Sanchez",
-            "nationality": "Ghanaian",
-            "person_image": "https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
-            "phone_number": "+233243725466",
-            "user_email": "rick@st.knust.edu.gh"
-        },
-        "status": true
-    }
-  ]
+        {
+            "first_name": "Fred",
+            "id_message": "",
+            "id_patient": 43,
+            "last_name": "Adamu",
+            "person_image": null
+        }
+    ],
+    "status": true
+  }
     ```
 
 [Back to top](#doctor-services)
