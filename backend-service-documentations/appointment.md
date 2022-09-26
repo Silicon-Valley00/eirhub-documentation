@@ -1,12 +1,14 @@
 # Appointment Services
 Jump to...
 - [Errors](#errors)
-- [Getting all appointments](#getting-all-appointments-from-table)
-- [Getting appointments of a specific patient](#getting-all-appointments-related-to-a-particular-patient-given-the-patients-id)
-- [Getting appointments of a specific doctor](#getting-all-appointments-related-to-a-particular-doctor-given-the-doctors-id)
-- [Adding appointment to the table](#adding-an-appointment-to-the-table)
-- [Updating an appointment](#updating-an-appointment-by-its-id)
-- [Deleting an appointment](#deleting-an-appointment-by-providing-its-id)
+- [Get all appointments](#get-all-appointments-from-table)
+- [Get appointments of a specific patient](#get-all-appointments-related-to-a-particular-patient-given-the-patients-id)
+- [Get appointments of a specific doctor](#get-all-appointments-related-to-a-particular-doctor-given-the-doctors-id)
+- [Add appointment to the table](#adding-an-appointment-to-the-table)
+- [Update an appointment](#update-an-appointment-by-its-id)
+- [Get patient's doctors based on patient_id](#get-patients-doctors-based-on-patientid)
+- [Get doctor's patients based on doctor_id](#get-doctors-patients-based-on-doctorid)
+- [Delete an appointment](#delete-an-appointment-by-providing-its-id)
 ## Errors
 All errors are of the form shown below:
 ```json
@@ -20,7 +22,7 @@ All errors are of the form shown below:
 ```
 [Back to the top...](#appointment-services)
 
-## Getting all appointments from table
+## Get all appointments from table
 - GET: /appointments
 - BODY PARAMETERS: None
 - QUERY PARAMETERS: None
@@ -81,7 +83,7 @@ All errors are of the form shown below:
     ```
 [Back to the top...](#appointment-services)
 
-## Getting all appointments related to a particular patient given the patient's ID
+## Get all appointments related to a particular patient given the patient's ID
 - GET: /appointments/
 - BODY PARAMETERS: None
 - QUERY PARAMETERS: Provide the ID of the patient through the query param, `id_patient`. You could also filter more by providing an extra query paramter, `accepted` which could either take values `true` or `false`.
@@ -147,7 +149,7 @@ All errors are of the form shown below:
     ```
 [Back to the top...](#appointment-services)
 
-## Getting all appointments related to a particular doctor given the doctor's ID
+## Get all appointments related to a particular doctor given the doctor's ID
 - GET: /appointments/
 - BODY PARAMETERS: None
 - QUERY PARAMETERS: Provide the ID of the doctor through the query param, `id_doctor`. You could also filter more by providing an extra query paramter, `accepted` which could either take values `true` or `false`.
@@ -196,58 +198,58 @@ All errors are of the form shown below:
     ```
 [Back to the top...](#appointment-services)
 
-## Adding an appointment to the table
+## Add an appointment to the table
 - POST: /appointments
 - BODY PARAMETERS: `application/json`
     - Sample:
         ```json
-        {
-            "appointment_date": "Mon, 12 Dec 2022 00:00:00 GMT",
-            "appointment_end_time": "09:00:00",
-            "appointment_reason": "Death Soon",
-            "appointment_start_time": "09:00:00",
-            "appointment_status": "Pending",
-            "appointment_location": "There Naa",
-            "idDoctor": 21,
-            "idPatient": 31
-        }
+       {
+        "appointment_date": "2022-12-13",
+        "appointment_end_time": "09:00:00",
+        "appointment_reason": "Boils in nose",
+        "appointment_start_time": "09:00:00",
+        "appointment_status": "Pending",
+        "appointment_location": "Ridge Medical center",
+        "id_doctor": 21,
+        "id_patient": 30
+       } 
         ```
 - QUERY PARAMETERS: None
 - SAMPLE URL: `https://base.com/appointments/`
 - Sample response:
     ```json
-    {
-        "msg": [
-            {
-                "appointment_date": "0000-00-00",
-                "appointment_end_time": "09:00:00",
-                "appointment_location": "There Naa",
-                "appointment_reason": "Death Soon",
-                "appointment_start_time": "09:00:00",
-                "appointment_status": "Pending",
-                "doctor_info": {
-                    "first_name": "Rexford",
-                    "last_name": "Machu",
-                    "middle_name": "G.O.A.T.II",
-                    "person_image": "..."
-                },
-                "idAppointment": 9,
-                "idDoctor": 21,
-                "idPatient": 31,
-                "patient_info": {
-                    "fist_name": "Max",
-                    "last_name": "Mawube",
-                    "middle_name": "Ahiamadzor",
-                    "person_image": "..."
-                }
+   {
+    "msg": [
+        {
+            "appointment_date": "Tue, 13 Dec 2022 00:00:00 GMT",
+            "appointment_end_time": "09:00:00",
+            "appointment_location": "Ridge Medical center",
+            "appointment_reason": "Boils in nose",
+            "appointment_start_time": "09:00:00",
+            "appointment_status": "Pending",
+            "doctor_info": {
+                "first_name": "Rexford",
+                "last_name": "Machu",
+                "middle_name": "G.O.A.T.II",
+                "person_image": "https://img.com/G.O.A.T.II"
+            },
+            "id_appointment": 29,
+            "id_doctor": 21,
+            "id_patient": 30,
+            "patient_info": {
+                "first_name": "Molly",
+                "last_name": "Malloy",
+                "middle_name": "Patient",
+                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
             }
-        ],
-        "status": true
-    }
+        }
+    ],
+    "status": true
+   }
     ```
 [Back to the top...](#appointment-services)
 
-## Updating an appointment by its ID
+## Update an appointment by its ID
 - PUT: /appointments/
 - BODY PARAMETERS: `application/json`
     - Sample:
@@ -299,7 +301,90 @@ All errors are of the form shown below:
 
 [Back to the top...](#appointment-services)
 
-## Deleting an appointment by providing its ID
+## Get patient's doctors based on patient_id
+- GET: /appointmentspatients/
+- BODY PARAMETERS: None
+- QUERY PARAMETERS: Provide the ID of the patient through the query param, `id_patient`
+- SAMPLE URL: `https://base.com/appointmentspatients/?id_patient=34`
+- Sample response:
+    ```json
+   {
+    "msg": [
+       
+        {
+            "date_of_birth": "Wed, 21 Sep 1994 00:00:00 GMT",
+            "doctor_ratings": 4,
+            "doctor_specialties": "Obstetrics",
+            "first_name": "Janice",
+            "gender": "Female",
+            "hospital_code": "NL05",
+            "hospital_name": "North Legon Hospital",
+            "house_address": "House-64",
+            "id_doctor": 23,
+            "id_message": "",
+            "last_name": "Brempong",
+            "license_number": "80043248",
+            "middle_name": "Ama",
+            "person_image": "http://res.cloudinary.com/eirhub-siliconvalley/image/upload/v1662052543/doctor_images/lkfnkpvitofadlqgxcna.jpg",
+            "user_email": "janice@gmail.com"
+        },
+        {
+            "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+            "doctor_ratings": 3,
+            "doctor_specialties": "Gynaecology, Paediatric, General",
+            "first_name": "Rexford",
+            "gender": "Male",
+            "hospital_code": "0",
+            "hospital_name": "",
+            "house_address": "House-4",
+            "id_doctor": 21,
+            "id_message": "",
+            "last_name": "Machu",
+            "license_number": "8003490390",
+            "middle_name": "G.O.A.T.II",
+            "person_image": "https://img.com/G.O.A.T.II",
+            "user_email": "baddest70@st.knust.edu.gh"
+        }
+    ],
+    "status": true
+    }
+    ```
+[Back to the top...](#appointment-services)
+
+## Get doctor's patients based on doctor_id
+- GET: /appointmentsdoctors/
+- BODY PARAMETERS: None
+- QUERY PARAMETERS: Provide the ID of the doctor through the query param, `id_doctor`
+- SAMPLE URL: `https://base.com/appointmentsdoctors/?id_doctor=22`
+- Sample response:
+    ```json
+   {
+    "msg": [
+        {
+            "date_of_birth": "Tue, 03 Jul 2001 00:00:00 GMT",
+            "first_name": "Pete",
+            "gender": "male",
+            "house_address": "12 sesame street",
+            "id_doctor": 22,
+            "id_guardian": 20,
+            "id_message": "",
+            "id_number": "GHA-08006335HJJ",
+            "id_patient": 34,
+            "last_name": "Greg",
+            "middle_name": "Leta",
+            "nationality": "Ghanaian",
+            "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI",
+            "phone_number": "+233265936575",
+            "user_email": "Gregy@st.knust.edu.gh"
+        }
+       
+    ],
+    "status": true
+      }
+    ```
+[Back to the top...](#appointment-services)
+
+## Delete an appointment by providing its ID
 - DELETE: /appointments/
 - BODY PARAMETERS: None
 - QUERY PARAMETERS: Provide the ID of the appointment through the query param, `id_appointment`
