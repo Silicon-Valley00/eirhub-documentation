@@ -77,19 +77,35 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/doctor/login`        
 - RESPONSE:
     ```json
-       {
+    {
     "msg": {
-        "date_of_birth": "Tue, 04 Oct 1988 00:00:00 GMT",
+        "date_of_birth": "Mon, 15 Feb 1999 00:00:00 GMT",
         "first_name": "Gaglo",
         "gender": "Male",
+        "hospital_code": "KAT02",
         "id_doctor": 22,
-        "last_name": "Nathaniel",
-        "license_number": "80043267",
-        "middle_name": "Elorm",
+        "last_name": "nathaniel",
+        "license_number": "80043262",
+        "middle_name": "Odartey",
+        "patients": [
+            {
+                "first_name": "Pete",
+                "id_patient": 34,
+                "last_name": "Greg",
+                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
+            },
+            {
+                "first_name": "Molly",
+                "id_patient": 30,
+                "last_name": "Malloy",
+                "person_image": "https://i.picsum.photos/id/992/200/300.jpg?hmac=TOD4LGE2HuM8Q68o5uzIoFvhlsBAiTJGRGHNMqeJTtI"
+            }
+        ],
+        "person_image": ""
         "user_email": "nathaniel@gmail.com"
-    },
+            },
     "status": true
-      }
+    }
 	```
 
 
@@ -103,7 +119,8 @@ All errors are of the form shown below:
 - RESPONSE:
 	```json
     {
-    "msg": [
+    "msg": {
+        "doctors": [
         {
             "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
             "doctor_ratings": 3,
@@ -233,6 +250,21 @@ All errors are of the form shown below:
             "user_email": "Freeman@gmail.com"
         }
     ],
+    "hospitals": [
+            "",
+            "Komfo Anokye Teaching Hospital",
+            "North Legon Hospital",
+            "Ridge Medical Center"
+        ],
+        "specialities": [
+            "Gynaecology, Paediatric, General",
+            "Oncology",
+            "Obstetrics",
+            "Dentistry",
+            "Pediatrics",
+            "Nephrology",
+            "General surgery"
+        ]
     "status": true
     }
     ```    
