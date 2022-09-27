@@ -2,9 +2,9 @@
 
 Jump to...
 - [Errors](#errors)
+- [Create Health Details](#create-health-details)
 - [Get health details by patient ID](#get-health-details-by-patient-id)
 - [Update Health details](#update-health-details)
-- [Create Health Details](#create-health-details)
 - [Get all health details](#get-all-health-details)
 - [Delete Health Details by ID](#delete-health-details-by-id)
 
@@ -21,6 +21,47 @@ All errors are of the form shown below:
 ```
 [Back to the top...](#healthdetails-services)
 
+## Create Health Details   
+- POST: /healthdetails/`patientId`
+
+- BODY PARAMETERS:
+    - Sample
+        ```json
+        {
+            "id_patient": "42",
+            "last_visit": "2021-09-08",
+            "blood_group": "A",
+            "blood_pressure": "150/80",
+            "respiratory_rate": "20",
+            "temperature": "37.0",
+            "pulse": "116",
+            "blood_sugar": "120",
+            "weight": "52",
+            "height": "173"
+        }
+        ```
+
+- SAMPLE URL: `https://base.com/healthdetails` 
+
+- RESPONSE:
+    ```json
+    {
+    "msg": {
+        "blood_group": "A",
+        "blood_pressure": "150/80",
+        "blood_sugar": "120",
+        "height": 173.0,
+        "id_patient": 42,
+        "last_visit": "Wed, 08 Sep 2021 00:00:00 GMT",
+        "pulse": 116.0,
+        "respiratory_rate": "20",
+        "temperature": 37.0,
+        "weight": 52.0
+    },
+    "status": true
+    }
+    ```
+[Back to the top...](#healthdetails-services)
 
 ## Get health details by patient ID
 - GET: /healthdetails/`patientID`
@@ -89,47 +130,7 @@ All errors are of the form shown below:
     ```
 [Back to the top...](#healthdetails-services)
 
-## Create Health Details   
-- POST: /healthdetails/`patientId`
 
-- BODY PARAMETERS:
-    - Sample
-        ```json
-        {
-            "id_patient": "42",
-            "last_visit": "2021-09-08",
-            "blood_group": "A",
-            "blood_pressure": "150/80",
-            "respiratory_rate": "20",
-            "temperature": "37.0",
-            "pulse": "116",
-            "blood_sugar": "120",
-            "weight": "52",
-            "height": "173"
-        }
-        ```
-
-- SAMPLE URL: `https://base.com/healthdetails` 
-
-- RESPONSE:
-    ```json
-    {
-    "msg": {
-        "blood_group": "A",
-        "blood_pressure": "150/80",
-        "blood_sugar": "120",
-        "height": 173.0,
-        "id_patient": 42,
-        "last_visit": "Wed, 08 Sep 2021 00:00:00 GMT",
-        "pulse": 116.0,
-        "respiratory_rate": "20",
-        "temperature": 37.0,
-        "weight": 52.0
-    },
-    "status": true
-    }
-    ```
-[Back to the top...](#healthdetails-services)
 
 ## Get all health details
 - GET: /healthdetails

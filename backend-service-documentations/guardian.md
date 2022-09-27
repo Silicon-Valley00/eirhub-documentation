@@ -25,7 +25,7 @@ All errors are of the form shown below:
 
 
 ## Create Guardian Person		
-- POST : /guardian      
+- POST : /guardians      
 - BODY PARAMETERS: 	
     - Sample
         ```json
@@ -41,7 +41,7 @@ All errors are of the form shown below:
             "gender" : "Male"
         }
         ```
-- SAMPLE URL: `https://base.com/guardian`   
+- SAMPLE URL: `https://base.com/guardians`   
 
 - RESPONSE:
     ```json
@@ -75,18 +75,6 @@ All errors are of the form shown below:
     {
         "msg": [
             {
-                "date_of_birth": "Mon, 25 Dec 2000 00:00:00 GMT",
-                "first_name": "Rexford ",
-                "gender": "Male",
-                "house_address": "House - 6",
-                "id_guardian": 20,
-                "id_number": "GHA-009494-233",
-                "last_name": "Machu",
-                "middle_name": "Rechu",
-                "phone_number": "0500000000",
-                "user_email": "rechuMachu@gmail.com"
-            },
-            {
                 "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",
                 "first_name": "Redford ",
                 "gender": "Male",
@@ -97,18 +85,6 @@ All errors are of the form shown below:
                 "middle_name": "Guardian",
                 "phone_number": "0206436575",
                 "user_email": "guardianofgalaxy@gmail.com"
-            },
-            {
-                "date_of_birth": "Thu, 22 Sep 1983 00:00:00 GMT",
-                "first_name": "Maxford",
-                "gender": "Male",
-                "house_address": "House no. 25",
-                "id_guardian": 22,
-                "id_number": "GHA-009494-154",
-                "last_name": "Rechu",
-                "middle_name": "Daug",
-                "phone_number": "0206445925",
-                "user_email": "Rechu@gmail.com"
             },
             {
                 "date_of_birth": "Thu, 21 Dec 2000 00:00:00 GMT",

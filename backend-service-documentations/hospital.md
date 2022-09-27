@@ -2,10 +2,10 @@
 Jump to ...
 - [Errors](#errors)
 - [Create hospital](#create-hospital)
-- [Delete hospital by id](#delete-hospital-by-id)
 - [Update hospital by id](#update-hospital-by-id)
 - [Get all hospitals](#get-all-hospitals)
 - [Get hospital by id](#get-hospital-by-id)
+- [Delete hospital by id](#delete-hospital-by-id)
 
 ## Errors
 All errors are of the form shown below:
@@ -58,32 +58,6 @@ All errors are of the form shown below:
 [Back to top](#hospital-services)
 
 
-## Delete hospital by id
-
-- DELETE: /hospital/`idHospital`
-
-- BODY PARAMETERS: None
-
-- SAMPLE URL: `https://base.com/hospital/7`
-
-- RESPONSE:
-    ```json
-   {
-    "msg": {
-        "hospital_code": "LHM09",
-        "hospital_name": "Light House Mission Hospital",
-        "hospital_specialities": "General Consultation",
-        "id": 9,
-        "id_hospital": 9,
-        "location": "North Kaneshie",
-        "number_of_doctors": 572,
-        "phone_number": "0302235710"
-    },
-    "status": true
-    }
-    ```
-[Back to top](#hospital-services)
-
 ## Update hospital by id
 
 - PUT: /hospital/`idHospital`
@@ -127,7 +101,7 @@ All errors are of the form shown below:
 
 - BODY PARAMETERS:None
 
-- SAMPLE URL: `https://base.com/hospital/6`
+- SAMPLE URL: `https://base.com/hospital`
 
 - RESPONSE:
     ```json
@@ -197,14 +171,7 @@ All errors are of the form shown below:
                 "phone_number": "0204412599"
             },
             {
-                "hospital_code": "LHM08",
-                "hospital_name": "Light House Mission Hospital",
-                "hospital_specialities": "General Consultation",
-                "id_hospital": 8,
-                "location": "North Kaneshie",
-                "number_of_doctors": 572,
-                "phone_number": "0302235710"
-            }
+       
         ],
         "status": true
     }
@@ -230,6 +197,32 @@ All errors are of the form shown below:
         "location": "Accra",
         "number_of_doctors": 112,
         "phone_number": null
+    },
+    "status": true
+    }
+    ```
+[Back to top](#hospital-services)
+
+## Delete hospital by id
+
+- DELETE: /hospital/`idHospital`
+
+- BODY PARAMETERS: None
+
+- SAMPLE URL: `https://base.com/hospital/7`
+
+- RESPONSE:
+    ```json
+   {
+    "msg": {
+        "hospital_code": "LHM09",
+        "hospital_name": "Light House Mission Hospital",
+        "hospital_specialities": "General Consultation",
+        "id": 9,
+        "id_hospital": 9,
+        "location": "North Kaneshie",
+        "number_of_doctors": 572,
+        "phone_number": "0302235710"
     },
     "status": true
     }

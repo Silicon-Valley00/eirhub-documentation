@@ -25,25 +25,30 @@ All errors are of the form shown below:
 - BODY PARAMETERS:
     - Sample
         ```json
-        {
-            "report_type":"Lab report",
-            "description":"Lab report ordered by Dr.Raymond Brown",
+      {
+            "report_type":"Test results",
+            "report_url":"report_url",
+            "description":"paternity test results ordered by Dr.Melody Hoppins",
             "id_patient": 30,
-            "created_date": "01-08-2022"
+            "id_doctor": 22,
+            "upload_date": "2022-11-18"
         }
         ```
 - SAMPLE URL: `https://base.com/report`
 - RESPONSE:
     ```json
      {
-        "msg": {
-            "description": "Lab report ordered by Dr.Raymond Brown",
-            "id_report": 12,
-            "report_type": "Lab report",
-	        "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
-        },
-        "status": true
-    }
+    "msg": {
+        "description": "paternity test results ordered by Dr.Melody Hoppins",
+        "id_doctor": 22,
+        "id_patient": 30,
+        "id_report": 24,
+        "report_type": "Test results",
+        "report_url": "report_url",
+        "upload_date": "Fri, 18 Nov 2022 00:00:00 GMT"
+    },
+    "status": true
+  }
     ```
 [Back to the top...](#report-services)
 
@@ -54,37 +59,30 @@ All errors are of the form shown below:
 - SAMPLE URL: `https://base.com/reports`
 - RESPONSE:
     ```json
-    [
+   [
     {
         "msg": {
-<<<<<<< HEAD
-            "description": "This report is for medication",
-            "id_report": 3,
-            "report_type": "Medication",
-=======
             "description": "This report is now for urology medication",
             "doctor_first_name": "Kemi",
             "doctor_last_name": "Otedola",
             "id_patient": 30,
             "id_report": 3,
             "report_type": "Urology Medication",
->>>>>>> afab7fbb75becb62981d1f58261bc36ca2c7c82d
-            "upload_date": "Thu, 21 Jul 2022 19:01:21 GMT"
+            "report_url": "",
+            "upload_date": "Thu, 21 Jul 2022 12:01:21 GMT"
         },
         "status": true
     },
     {
         "msg": {
             "description": "This report is for medication",
-<<<<<<< HEAD
-=======
             "doctor_first_name": "Gaglo",
-            "doctor_last_name": "nathaniel",
+            "doctor_last_name": "Nathaniel",
             "id_patient": 30,
->>>>>>> afab7fbb75becb62981d1f58261bc36ca2c7c82d
             "id_report": 4,
             "report_type": "Medication",
-            "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
+            "report_url": "",
+            "upload_date": "Thu, 21 Jul 2022 12:01:51 GMT"
         },
         "status": true
     },
@@ -96,7 +94,8 @@ All errors are of the form shown below:
             "id_patient": 31,
             "id_report": 9,
             "report_type": "Lab report",
-            "upload_date": "Sun, 24 Jul 2022 04:36:42 GMT"
+            "report_url": "",
+            "upload_date": "Sat, 23 Jul 2022 21:36:42 GMT"
         },
         "status": true
     },
@@ -108,59 +107,12 @@ All errors are of the form shown below:
             "id_patient": 31,
             "id_report": 13,
             "report_type": "Covid-19 test results",
-            "upload_date": "Tue, 09 Aug 2022 00:11:11 GMT"
+            "report_url": "",
+            "upload_date": "Mon, 08 Aug 2022 17:11:11 GMT"
         },
         "status": true
     },
-    {
-        "msg": {
-            "description": "vaccination for chicken Pox",
-            "doctor_first_name": "Kemi",
-            "doctor_last_name": "Otedola",
-            "id_patient": 31,
-            "id_report": 16,
-            "report_type": "vaccination card",
-            "upload_date": "Tue, 09 Aug 2022 00:58:05 GMT"
-        },
-        "status": true
-    },
-    {
-        "msg": {
-            "description": "This report is for medication",
-            "doctor_first_name": "Gaglo",
-            "doctor_last_name": "nathaniel",
-            "id_patient": 34,
-            "id_report": 18,
-            "report_type": "Medication",
-            "upload_date": "Thu, 25 Aug 2022 23:00:50 GMT"
-        },
-        "status": true
-    },
-    {
-        "msg": {
-            "description": "This report is for medication ",
-            "doctor_first_name": "Gaglo",
-            "doctor_last_name": "nathaniel",
-            "id_patient": 31,
-            "id_report": 21,
-            "report_type": "Medication",
-            "upload_date": null
-        },
-        "status": true
-    },
-    {
-        "msg": {
-            "description": "Lab report order by Dr.Gaglo Odartey",
-            "doctor_first_name": "Gaglo",
-            "doctor_last_name": "nathaniel",
-            "id_patient": 34,
-            "id_report": 23,
-            "report_type": "Lab report",
-            "upload_date": "Thu, 21 Jul 2022 19:01:21 GMT"
-        },
-        "status": true
-    }
-    ]
+]
     ```
 [Back to the top...](#report-services)
 
@@ -169,18 +121,19 @@ All errors are of the form shown below:
 ## Delete Report By Report ID
 - DELETE: /report/`idReport`
 - BODY PARAMETERS: None
-- SAMPLE URL: `https://base.com/report/?id_report=20`
+- SAMPLE URL: `https://base.com/report/?id_report=21`
 - RESPONSE:
     ```json
-        {
-        "msg": {
-            "description": "This report is for medication ",
-            "id_report": 3,
-            "report_type": "Medication",
-            "upload_date": "Thu, 21 Jul 2022 19:01:51 GMT"
-        },
-        "status": true
-        }
+     {
+    "msg": {
+        "description": "This report is for medication",
+        "id_report": 18,
+        "report_type": "Medication",
+        "report_url": "",
+        "upload_date": "Thu, 25 Aug 2022 16:00:50 GMT"
+    },
+    "status": true
+   }
     ```	
 [Back to the top...](#report-services)
 
@@ -215,7 +168,7 @@ All errors are of the form shown below:
 ## Get Report By Patient ID
 - GET: /report/`idPatient`
 - BODY PARAMETERS: None
-- SAMPLE URL: `https://base.com/report/?id_report=30`
+- SAMPLE URL: `https://base.com/report/30`
 - RESPONSE:
     ```json
         {
