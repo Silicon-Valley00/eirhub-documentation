@@ -32,12 +32,14 @@ All errors are of the form shown below:
 - BODY PARAMETERS:`application/json`
     - Sample:
 	```json
-	{
+	 {
     "first_name": "Peter",
-    "last_name": "Gregory",
-    "user_email":"greg@st.knust.edu.gh",
-    "user_password": "gregy",
-    "date_of_birth":"2009-12-01",
+    "last_name": "Griffin",
+    "user_email":"peterG@yahoo.lol",
+    "user_password": "familydaddy1.",
+    "date_of_birth":"2012-11-07",
+    "id_guardian": "26",
+    "id_message": ""
     }
 	```
 - SAMPLE URL: `https://base.com/patients/signup`
@@ -46,15 +48,17 @@ All errors are of the form shown below:
 	```json
 	{
     "msg": {
-        "date_of_birth": "Tue, 01 Dec 2009 00:00:00 GMT",
+        "date_of_birth": "Wed, 07 Nov 2012 00:00:00 GMT",
         "first_name": "Peter",
         "gender": null,
-        "guardian_id": 20,
+        "id_message": null,
         "id_number": null,
-        "last_name": "Gregory",
+        "id_patient": 55,
+        "last_name": "Griffin",
         "middle_name": null,
+        "person_image": "https://avatars.dicebear.com/api/bottts/$20.png",
         "phone_number": null,
-        "user_email": "greg@st.knust.edu.gh"
+        "user_email": "peterg@yahoo.lol"
     },
     "status": true
     }
@@ -80,16 +84,18 @@ All errors are of the form shown below:
 	```json
 	{
     "msg": {
-        "date_of_birth": "Sun, 13 Jun 2004 00:00:00 GMT",
+        "date_of_birth": "Tue, 12 Jun 2001 00:00:00 GMT",
         "first_name": "Richard",
-        "gender": null,
-        "guardian_id": null,
-        "id_doctor": null,
-        "id_number": null,
+        "gender": "Male",
+        "id_doctor": 24,
+        "id_guardian": 23,
+        "id_message": "",
+        "id_number": "GHA-08006635LTF",
         "id_patient": 42,
         "last_name": "Smith",
-        "middle_name": null,
-        "phone_number": null,
+        "middle_name": "Sanchez",
+        "person_image": "https://i.pinimg.com/736x/d5/e2/e1/d5e2e1879a602c81cce3f134f0386e4c--black-models-portraits.jpg",
+        "phone_number": "+233243725466",
         "user_email": "rick@st.knust.edu.gh"
     },
     "status": true
