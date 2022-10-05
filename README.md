@@ -2,10 +2,9 @@
 
 Repository for Healthcare webapp (Year 3 Semester 2 Software Engineering project)  
 Document to track Decision Making : [Silicon Valley - EirHub Decision Document](https://docs.google.com/document/d/1_Skgoi0TOdXuyFRiUJWxwfKSewkepBe6-_71LRvHhEc/edit)
+Demo Video of Eirhub: [Demo video](https://drive.google.com/file/d/1MS9WwhQWQbBO-UJMZ89ZmW-AkbRAh8wT/view?usp=sharing)
 
 # Contributors
-
-## Add your name
 
 -  Agbesi Jerry : Team Lead
 -  Rexford Machu : Project Manager
